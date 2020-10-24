@@ -14,3 +14,15 @@ export const ProjectTitle = styled.h4`
 export const SkillContainer = styled.div`
   margin-top: 1.2rem;
 `
+
+export const MediaContainer = styled.div`
+  ${'' /* margin-bottom: 1.2rem; */}
+`
+
+export const VideoContainer = styled.div`
+  margin-bottom: 1.2rem;
+`
+
+export const ImageContainer = styled.div`
+  margin: 1.2rem;
+`
