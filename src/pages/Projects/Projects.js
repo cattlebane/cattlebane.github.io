@@ -14,16 +14,12 @@ const Projects = ({ user }) => {
             <ProjectItem key={i}>
               <MediaContainer key={"videoContainer" + i}>
                 {[...project.videos].map((item, j) => (
-                  <VideoContainer key={"video" + j}>
-                    <iframe key={j} width="560" height="315" src={"https://www.youtube.com/embed/" + item.sourceId} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </VideoContainer>
+                    <iframe key={"video" + j} width="560" height="315" style={{margin: "0 1.2rem 1.2rem 0"}} src={"https://www.youtube.com/embed/" + item.sourceId} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 ))}
               </MediaContainer>
               <MediaContainer key={"MediaContainer" + i}>
                 {[...project.images].map((item, j) => (
-                  <ImageContainer key={"image" + j}>
-                    <a href={item.resolutions.desktop.url} target="_blank"><img key={j} src={item.resolutions.thumbnail.url} width={item.resolutions.thumbnail.width} height={item.resolutions.thumbnail.height} /></a>
-                  </ImageContainer>
+                    <a key={"imaeLink" + j} href={item.resolutions.desktop.url} target="_blank"><img key={"image" + j} src={item.resolutions.thumbnail.url} width={item.resolutions.thumbnail.width} height={item.resolutions.thumbnail.height} style={{margin: "0 1.2rem 1.2rem 0"}} /></a> 
                 ))}
               </MediaContainer>
               <ProjectTitle>{project.displayName}</ProjectTitle>
