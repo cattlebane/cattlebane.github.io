@@ -8,6 +8,7 @@ export const SectionTitle = styled.h3`
 
 export const Paragraph = styled.p`
   white-space: pre-wrap;
+  max-width: 600px;
 `;
 
 export const Pill = styled.span`

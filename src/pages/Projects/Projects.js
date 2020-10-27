@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Pill } from '../../styles';
-import { ProjectItem, ProjectTitle, SkillContainer, MediaContainer, VideoContainer, ImageContainer } from './styles';
+import { ProjectItem, ProjectTitle, SkillContainer, MediaContainer, VideoContainer, ImageContainer, ProjectSummary } from './styles';
 
 const Projects = ({ user }) => {
 
@@ -23,7 +23,7 @@ const Projects = ({ user }) => {
                 ))}
               </MediaContainer>
               <ProjectTitle>{project.displayName}</ProjectTitle>
-              <p>{project.summary}</p>
+              <ProjectSummary><p>{project.summary}</p></ProjectSummary>
               <SkillContainer>
                 {[...project.languages, ...project.libraries].map((item, j) => (
                   <Pill key={j}>{item}</Pill>
