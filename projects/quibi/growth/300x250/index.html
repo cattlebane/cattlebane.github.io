@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html>
+  <!-- BUILD SOURCE: Standard - Base / OPTIONS:  / @ff0000-ad-tech/build-source-assembler: 3.6.7 / Created: 01/13/20 09:14pm -->
+
+  <head>
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <meta name="ad.size" content="width=300,height=250" />
+    <!-- Red.Network.meta.start -->
+    <!-- Red.Network.meta.end -->
+
+    <title>Quibi - HTML Growth - 300x250</title>
+
+    <script type="text/javascript">
+      /*-- Red.Network.clicktags.start --*/
+      var clickTag = "http://www.changeme.com/";
+      var collapsedExit = "http://www.changeme.com/";
+      var expandedExit = "http://www.changeme.com/";
+      /*-- Red.Network.clicktags.end --*/
+
+      /* -- INDEX SETTINGS ---------------------------------------------------------------------------
+       *
+       *
+       *	API Documentation is here: https://ff0000-ad-tech.github.io/ad-docs/
+       *
+       *
+       *
+       */
+var adParams = {
+	"networkId": "STANDARD",
+	"adWidth": 300,
+	"adHeight": 250,
+	"environmentId": "debug",
+	"politeLoadAfter": 1,
+	"failoverOnError": true,
+	"version": {
+		"major": 3,
+		"minor": 6,
+		"patch": 7
+	},
+	"shows": [
+		{
+			"images": {
+				"hero": "show.jpg",
+				"top": "show_top.png"
+			}
+		}
+	],
+	"copy": {
+		"header": "START YOUR FREE TRIAL",
+		"sub": "NEW EPISODES EVERY DAY.",
+		"cta": "SIGN UP"
+	}
+};
+
+var assets = {
+	"preloader": {
+		"backgroundColor": "#7725ff",
+		"borderColor": "#7725ff",
+		"borderWidth": 1,
+		"startDelay": 1.5,
+		"images": [
+			{
+				"source": "preloader_quibi.gif"
+			}
+		]
+	},
+	"failover": {
+		"images": [
+			{
+				"source": "backup.jpg"
+			}
+		]
+	},
+	"payload": {
+		"text": [
+			"build.bundle.js"
+		],
+		"binary": [
+			"fba-payload.png"
+		]
+	}
+};
+
+var environments = [
+	{
+		"id": "debug",
+		"runPath": "",
+		"adPath": ""
+	}
+];
+
+      /*-- Red.Settings.external_includes.start --*/
+      var externalIncludes = [
+        "https://s0.2mdn.net/ads/studio/cached_libs/cssplugin_1.18.0_71489205621d46cbe88348eeb8fe493f_min.js",
+        "https://s0.2mdn.net/ads/studio/cached_libs/easepack_1.18.0_ed5816e732515f56d96a67f6a2a15ccb_min.js",
+        "https://s0.2mdn.net/ads/studio/cached_libs/tweenlite_1.18.0_56fa823cfbbef1c2f4d4346f0f0e6c3c_min.js"
+      ];
+      /*-- Red.Settings.external_includes.end --*/
+
+      function onImpression(binaryAssets) {
+        console.log("Index.onImpression()");
+        Ad.launch(binaryAssets);
+      }
+
+      function isDevEnvironment() {
+        return (
+          adParams.environmentId == "debug" ||
+          window.location.href.match(/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+:[0-9]+/)
+        );
+      }
+    </script>
+
+    <style type="text/css">
+      html,
+      body,
+      #view {
+        width: 100%;
+        height: 100%;
+      }
+
+      #view {
+        overflow: hidden;
+      }
+
+      body {
+        margin: 0px;
+        outline: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+    </style>
+    <style type="text/css" id="RED_uiBorder">
+      .ui-border {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border-width: 0px;
+        border-style: solid;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+    </style>
+
+    <!-- Red.Network.script.start -->
+    <!-- Red.Network.script.end -->
+  </head>
+
+  <body>
+    <div id="view">
+      <div id="main"></div>
+      <div id="aux">
+        <div id="preloader" class="ui-border"></div>
+        <div id="fail"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+!function(e,n){"object"==typeof exports&&"undefined"!=typeof module?n():"function"==typeof define&&define.amd?define(n):n()}(0,function(){"use strict";function e(){}function n(e){if(!(this instanceof n))throw new TypeError("Promises must be constructed via new");if("function"!=typeof e)throw new TypeError("not a function");this._state=0,this._handled=!1,this._value=undefined,this._deferreds=[],f(e,this)}function t(e,t){for(;3===e._state;)e=e._value;0!==e._state?(e._handled=!0,n._immediateFn(function(){var n=1===e._state?t.onFulfilled:t.onRejected;if(null!==n){var i;try{i=n(e._value)}catch(f){return void r(t.promise,f)}o(t.promise,i)}else(1===e._state?o:r)(t.promise,e._value)})):e._deferreds.push(t)}function o(e,t){try{if(t===e)throw new TypeError("A promise cannot be resolved with itself.");if(t&&("object"==typeof t||"function"==typeof t)){var o=t.then;if(t instanceof n)return e._state=3,e._value=t,void i(e);if("function"==typeof o)return void f(function(e,n){return function(){e.apply(n,arguments)}}(o,t),e)}e._state=1,e._value=t,i(e)}catch(u){r(e,u)}}function r(e,n){e._state=2,e._value=n,i(e)}function i(e){2===e._state&&0===e._deferreds.length&&n._immediateFn(function(){e._handled||n._unhandledRejectionFn(e._value)});for(var o=0,r=e._deferreds.length;r>o;o++)t(e,e._deferreds[o]);e._deferreds=null}function f(e,n){var t=!1;try{e(function(e){t||(t=!0,o(n,e))},function(e){t||(t=!0,r(n,e))})}catch(i){if(t)return;t=!0,r(n,i)}}var u=setTimeout;n.prototype["catch"]=function(e){return this.then(null,e)},n.prototype.then=function(n,o){var r=new this.constructor(e);return t(this,new function(e,n,t){this.onFulfilled="function"==typeof e?e:null,this.onRejected="function"==typeof n?n:null,this.promise=t}(n,o,r)),r},n.prototype["finally"]=function(e){var n=this.constructor;return this.then(function(t){return n.resolve(e()).then(function(){return t})},function(t){return n.resolve(e()).then(function(){return n.reject(t)})})},n.all=function(e){return new n(function(n,t){function o(e,f){try{if(f&&("object"==typeof f||"function"==typeof f)){var u=f.then;if("function"==typeof u)return void u.call(f,function(n){o(e,n)},t)}r[e]=f,0==--i&&n(r)}catch(c){t(c)}}if(!e||"undefined"==typeof e.length)throw new TypeError("Promise.all accepts an array");var r=Array.prototype.slice.call(e);if(0===r.length)return n([]);for(var i=r.length,f=0;r.length>f;f++)o(f,r[f])})},n.resolve=function(e){return e&&"object"==typeof e&&e.constructor===n?e:new n(function(n){n(e)})},n.reject=function(e){return new n(function(n,t){t(e)})},n.race=function(e){return new n(function(n,t){for(var o=0,r=e.length;r>o;o++)e[o].then(n,t)})},n._immediateFn="function"==typeof setImmediate&&function(e){setImmediate(e)}||function(e){u(e,0)},n._unhandledRejectionFn=function(e){void 0!==console&&console&&console.warn("Possible Unhandled Promise Rejection:",e)};var c=function(){if("undefined"!=typeof self)return self;if("undefined"!=typeof window)return window;if("undefined"!=typeof global)return global;throw Error("unable to locate global object")}();c.Promise||(c.Promise=n)});
+
+    </script>
+
+    <!-- preload inline scripts...if not needed until the build, use externalIncludes  -->
+
+    <script type="text/javascript">
+      function useStatic() {
+        console.log("Index.useStatic()");
+        removePreloader();
+        document.getElementById("main").style.display = "none";
+        document.getElementById("aux").style.display = "block";
+        document.body.style =
+          "width: " +
+          adParams.failoverWidth +
+          "px; height: " +
+          adParams.failoverHeight +
+          "px; overflow: hidden;";
+        document.getElementById("fail").style.cssText =
+          "position: absolute; " +
+          "width: " +
+          adParams.failoverWidth +
+          "px; height: " +
+          adParams.failoverHeight +
+          "px; " +
+          "left:" +
+          adParams.failoverX +
+          "px; top:" +
+          adParams.failoverY +
+          "px; " +
+          "background-image: url(" +
+          adParams.adPath +
+          assets.failover.images[0].source +
+          "); background-size: contain; overflow: hidden; ";
+      }
+      function failAd() {
+        console.log("Index.failAd()");
+        useStatic();
+      }
+    </script>
+
+    <script type="text/javascript">
+      var global = this;
+      var View = {};
+      var Network, queryParams, adData;
+
+      /* -- LAUNCH --------------------------------------------
+       *
+       *
+       */
+      // immediatelly invoked in inline_entry (node_modules/ad-entry/index.js)
+      function prepareIndex() {
+        console.log("Index.prepareIndex()");
+        return new Promise(
+          function(resolve) {
+            /*-- Red.Network.onload.start --*/
+            resolve();
+            /*-- Red.Network.onload.end --*/
+          },
+          function(error) {
+            global.failAd();
+          }
+        );
+      }
+
+      // ad-params
+      function prepareAdParamsMisc() {
+        console.log("Index.prepareAdParamsMisc()");
+        return new Promise(
+          function(resolve) {
+            resolve();
+          },
+          function(error) {
+            global.failAd();
+          }
+        );
+      }
+
+      // preloader
+      function preparePreloadMisc() {
+        console.log("Index.preparePreloadMisc()");
+        return new Promise(
+          function(resolve) {
+            makeAuxClickable();
+            resolve();
+          },
+          function(error) {
+            global.failAd();
+          }
+        );
+      }
+      function removePreloader() {
+        console.log("Index.removePreloader()");
+
+        var preloader = document.getElementById("preloader");
+        if (preloader) {
+          var aux = document.getElementById("aux");
+          aux.style.display = "none";
+          aux.removeChild(preloader);
+        }
+      }
+
+      // exits
+      function prepareNetworkExit() {
+        console.log("Index.prepareNetworkExit()");
+        Network = new (function() {
+          /*-- Red.Network.exit.start --*/
+          this.exit = function(clickTag) {
+            console.log("Network -> STANDARD EXIT");
+            window.open(clickTag, "_blank");
+          };
+          /*-- Red.Network.exit.end --*/
+
+          this.appendMacro = function(_macro, _clickTag) {
+            if (_macro.search(/^%%/) > -1) return _clickTag;
+            else return _macro + _clickTag;
+          };
+        })();
+      }
+      function makeAuxClickable() {
+        var aux = document.getElementById("aux");
+        aux.setAttribute("onclick", "handleAuxClick()");
+      }
+      function handleAuxClick() {
+        console.log("Index.handleAuxClick()");
+        /*-- Red.Network.exit_aux.start --*/
+        Network.exit(clickTag);
+        /*-- Red.Network.exit_aux.end --*/
+      }
+
+      // ad-global bundle
+!function(){"use strict";var r=Object.freeze({__proto__:null,getDeployProfile:function(r){for(var a=0;a<environments.length;a++)if(environments[a].id===r)return environments[a];return!1},getQueryParams:function(){var r={},a=window.location.href.split("?");if(a.length>1){var e=a[1].split("&");for(var n in e){var t=e[n].split("=");2==t.length&&(r[t[0]]=decodeURIComponent(t[1]))}}return r},matchProtocolTo:function(r){var a=r.search(/^\/\//)>-1;if(r.search(/^http/)>-1||a){var e=window.location.href.search(/^https/)>-1||window.adParams&&adParams.forceHttps,n=e?"https://":"http://";if(a&&(r=r.replace(/^\/\//,n)),r.search(/.*edgecastcdn/)>-1){var t=e?"ne1."+r.match(/w(a|p)c/i)[0]+".":r.match(/w(a|p)c\.[a-z0-9]*\./i)[0];r=n+t+"edgecastcdn"+r.replace(/.*edgecastcdn/,"")}else if(r.search(/.*paramount\.com/)>-1){r=n+(e?"paramountdlds-a.akamaihd.net":"downloads.paramount.com")+r.replace(/.*paramount\.com/,"")}else r=r.search(/espn\.go\.com/)>-1||r.search(/secure\.espncdn\.com/)>-1?"https://secure.espncdn.com"+r.replace(/^.*\.com/,""):r.replace(/^https?\:\/\//i,n)}return r},isVersionOrNewer:function(r){var a=r.split(".").map((function(r){return parseInt(r)}));if(adParams.version.major>a[0])return!0;if(adParams.version.major===a[0]){if(adParams.version.minor>a[1])return!0;if(adParams.version.minor>a[1]&&adParams.version.patch>=a[2])return!0}return!1},fbaDataToBlobs:function(r){var a=new Uint8Array(4),e=new Uint32Array(a.buffer),n=44,t=new Uint8Array(r,n,1)[0];n+=5;for(var o=[],i=0;i<t;i++){for(var c=new Uint8Array(r,n,4),s=4,p=0;p<4;p++)a[--s]=c[p];var f=e[0];n+=7;var m=String.fromCharCode.apply(String,new Uint8Array(r,n++,1)),l=new Uint8Array(r,n+3,1)[0]||0,d=new Uint8Array(r,n+4,l),v=String.fromCharCode.apply(String,d);l+=4;var u=new Uint8Array(r,n+l,f-l);n+=f+4;var h=v.split("."),w=h[0],g=h[1],y=void 0;y="f"===m?"application/"+("ttf"===h[1]?"x-font-ttf":"font-".concat(h[1])):"image/"+("svg"==h[1]?"svg+xml":h[1]);var U=new Blob([u],{type:y}),P=URL.createObjectURL(U);o.push({path:w,src:P,fileType:g})}return o}});Object.keys(r).forEach((function(a){var e=r[a];window[a]=e}))}();
+
+    </script>
+
+    <!-- ad-load bundle -->
+    <script type="text/javascript">
+      /*-- Red.Inject.commons.start --*/
+      /*-- Red.Inject.commons.end --*/
+    </script>
+
+    <!-- inline bundle -->
+    <script type="text/javascript">
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./1-build/300x250/.inline-imports.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./1-build/300x250/.inline-imports.js":
+/*!********************************************!*\
+  !*** ./1-build/300x250/.inline-imports.js ***!
+  \********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var ad_assets__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ad-assets */ "./1-build/node_modules/@ff0000-ad-tech/ad-assets/index.js");
+/* harmony import */ var _images_preloader_quibi_gif_inline_true__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/preloader_quibi.gif?inline=true */ "./1-build/300x250/images/preloader_quibi.gif?inline=true");
+/* harmony import */ var _images_preloader_quibi_gif_inline_true__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_images_preloader_quibi_gif_inline_true__WEBPACK_IMPORTED_MODULE_1__);
+
+window.InlineSrc = ad_assets__WEBPACK_IMPORTED_MODULE_0__["InlineSrc"];
+
+ad_assets__WEBPACK_IMPORTED_MODULE_0__["InlineSrc"].add('images/preloader_quibi.gif', _images_preloader_quibi_gif_inline_true__WEBPACK_IMPORTED_MODULE_1___default.a, true);
+
+/***/ }),
+
+/***/ "./1-build/300x250/images/preloader_quibi.gif?inline=true":
+/*!****************************************************************!*\
+  !*** ./1-build/300x250/images/preloader_quibi.gif?inline=true ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/gif;base64,R0lGODlhZACCAMQfAP///3op/4Q6//Lq/6p3/9vF/8im/7SG/9S6/5ZX/4tF//n1/+TT/6Jq/+7k/+rd/7yT//7+//38/8Gc//bw//79//z6//v4/51h/5FO/+DN/34x/+bY/82w///+/3cl/yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDggNzkuMTY0MDM2LCAyMDE5LzA4LzEzLTAxOjA2OjU3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjEuMCAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyNENGNUQ0MzJEMzQxMUVBODUzOTg2Rjc3MUUzQkY2QyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyNENGNUQ0NDJEMzQxMUVBODUzOTg2Rjc3MUUzQkY2QyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjI0Q0Y1RDQxMkQzNDExRUE4NTM5ODZGNzcxRTNCRjZDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjI0Q0Y1RDQyMkQzNDExRUE4NTM5ODZGNzcxRTNCRjZDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5k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"
+
+/***/ }),
+
+/***/ "./1-build/node_modules/@ff0000-ad-tech/ad-assets/index.js":
+/*!*****************************************************************!*\
+  !*** ./1-build/node_modules/@ff0000-ad-tech/ad-assets/index.js ***!
+  \*****************************************************************/
+/*! exports provided: InlineSrc */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lib_inline_src_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/inline-src.js */ "./1-build/node_modules/@ff0000-ad-tech/ad-assets/lib/inline-src.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "InlineSrc", function() { return _lib_inline_src_js__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+ // expose the lib packages as modules
+
+
+
+/***/ }),
+
+/***/ "./1-build/node_modules/@ff0000-ad-tech/ad-assets/lib/inline-src.js":
+/*!**************************************************************************!*\
+  !*** ./1-build/node_modules/@ff0000-ad-tech/ad-assets/lib/inline-src.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var InlineSrc =
+/*#__PURE__*/
+function () {
+  function InlineSrc() {
+    this.assets = [];
+  }
+  /**
+  @method add
+  @param {string} path - relative path to an asset, like `'./images/rubber_ducky.png'`
+  @param {string} src - base64-encoded asset, optional
+  @param {boolean} inlined - indicates using base64 alternative to FBA payload, optional
+  @desc Add a path to a component asset. Update a path with a data-src.
+  */
+
+
+  var _proto = InlineSrc.prototype;
+
+  _proto.add = function add(path, src, preloader) {
+    var asset = this.getAsset(path);
+
+    if (asset) {
+      asset.src = src || null;
+      asset.preloader = preloader;
+    } else {
+      this.assets.push({
+        path: path,
+        src: src || null,
+        preloader: preloader
+      });
+    }
+  }
+  /**
+  @method get
+  @param {string} path - relative path to an asset, like `'./images/rubber_ducky.png'`
+  @desc 
+  	If the asset path has been declared, and:
+  	 - if a src has been provided, the asset data will be returned.
+  	 - if a src has NOT been provided, the asset path will be returned. 
+  		If the asset path has NOT been declared:
+  	 - the path will be returned.
+  */
+  ;
+
+  _proto.get = function get(path) {
+    var asset = this.getAsset(path);
+
+    if (asset) {
+      return asset.src || asset.path + "?=" + Date.now();
+    } else {
+      return path;
+    }
+  } // internal
+  ;
+
+  _proto.getAsset = function getAsset(path) {
+    for (var i in this.assets) {
+      console.log(this.assets[i], path);
+
+      if (this.assets[i].path == path) {
+        return this.assets[i];
+      }
+    }
+  };
+
+  return InlineSrc;
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (new InlineSrc());
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=inline.bundle.js.map
+    </script>
+
+    <!-- initial bundle -->
+    <script type="text/javascript">
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./1-build/node_modules/@ff0000-ad-tech/ad-entry/index.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/index.js":
+/*!****************************************************************!*\
+  !*** ./1-build/node_modules/@ff0000-ad-tech/ad-entry/index.js ***!
+  \****************************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var ad_polyfills__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ad-polyfills */ "./1-build/node_modules/@ff0000-ad-tech/ad-polyfills/index.js");
+/* harmony import */ var _lib_scope_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lib/scope.js */ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/scope.js");
+/* harmony import */ var _lib_polite_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./lib/polite.js */ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/polite.js");
+/* harmony import */ var _lib_preloader_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./lib/preloader.js */ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/preloader.js");
+/* harmony import */ var _lib_payloader_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lib/payloader.js */ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/payloader.js");
+/* harmony import */ var _lib_inline_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./lib/inline.js */ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/inline.js");
+
+
+
+
+
+
+/*
+ * 	NOTE:
+ *
+ *	This class expects window-scoped methods to exist
+ *
+ */
+
+_lib_polite_js__WEBPACK_IMPORTED_MODULE_2__["prepare"](window.adParams.politeLoadAfter) // prepare vendor onload (Network.js)
+.then(function () {
+  return window.prepareIndex();
+}) // prepare scope
+.then(function () {
+  return _lib_scope_js__WEBPACK_IMPORTED_MODULE_1__["prepare"]();
+}) // misc index control
+.then(function () {
+  return window.prepareAdParamsMisc();
+}) // prepare network
+.then(function () {
+  return window.prepareNetworkExit();
+}) // prepare preloader
+.then(function () {
+  return _lib_preloader_js__WEBPACK_IMPORTED_MODULE_3__["prepare"]();
+}).then(function () {
+  return window.preparePreloadMisc();
+}) // finish polite timeout
+.then(function () {
+  return _lib_polite_js__WEBPACK_IMPORTED_MODULE_2__["resolveDelay"]();
+}) // prepare payload
+.then(function () {
+  return _lib_payloader_js__WEBPACK_IMPORTED_MODULE_4__["execute"]();
+}) // load any inlined base64 assets
+.then(function (fbaImages) {
+  return _lib_inline_js__WEBPACK_IMPORTED_MODULE_5__["loadAssets"]().then(function (base64Images) {
+    if (base64Images === void 0) {
+      base64Images = [];
+    }
+
+    // get dataRaw from loaders
+    var binaryAssets = base64Images.concat(fbaImages || []);
+    return binaryAssets;
+  });
+}) // launch polite
+.then(function (binaryAssets) {
+  _lib_preloader_js__WEBPACK_IMPORTED_MODULE_3__["isComplete"].then(function () {
+    return window.onImpression(binaryAssets);
+  });
+})["catch"](function (err) {
+  console.error(err);
+  window.failAd();
+});
+
+/***/ }),
+
+/***/ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/environment.js":
+/*!**************************************************************************!*\
+  !*** ./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/environment.js ***!
+  \**************************************************************************/
+/*! exports provided: prepare */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prepare", function() { return prepare; });
+/* -- ENVIRONMENT --------------------------------------------
+ *
+ *	Nominated Deprecation: 11/28/18
+ *	 - depends on FAT-403, which would extend @common, @size, @index paradigm to runtime
+ *
+ */
+function prepare(environmentId) {
+  console.log('Environment.prepare()', environmentId);
+  var environment = getDeployProfile(environmentId);
+  adParams.environmentId = environment.id; // run-path + subpaths
+
+  adParams.runPath = matchProtocolTo(environment.runPath); // must be defined in environment
+  // ad-path and subpaths
+
+  adParams.adPath = adParams.runPath + environment.adPath; // must be defined in environment
+
+  adParams.imagesPath = adParams.adPath + ('imagesPath' in environment ? environment.imagesPath : 'images/');
+  adParams.videosPath = adParams.adPath + ('videosPath' in environment ? environment.videosPath : 'videos/'); // common paths
+
+  adParams.commonPath = adParams.adPath + ('commonPath' in environment ? environment.commonPath : 'common/');
+  adParams.jsPath = adParams.commonPath + ('jsPath' in environment ? environment.jsPath : 'js/');
+  adParams.fontsPath = adParams.commonPath + ('fontsPath' in environment ? environment.fontsPath : 'fonts/');
+}
+
+/***/ }),
+
+/***/ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/inline.js":
+/*!*********************************************************************!*\
+  !*** ./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/inline.js ***!
+  \*********************************************************************/
+/*! exports provided: loadAssets */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadAssets", function() { return loadAssets; });
+/* harmony import */ var _load_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./load.js */ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/load.js");
+
+function loadAssets() {
+  if (window.InlineSrc && InlineSrc.assets) {
+    console.log('Inline.loadAssets()'); // filter out any preloader images
+
+    var inlineAssets = InlineSrc.assets.filter(function (asset) {
+      return !asset.preloader;
+    });
+    var assetProcessPromises = inlineAssets.map(function (asset) {
+      var isImageAsset = asset.src.indexOf('image') >= 0;
+      var processor = isImageAsset ? _load_js__WEBPACK_IMPORTED_MODULE_0__["loadImg"] : _load_js__WEBPACK_IMPORTED_MODULE_0__["loadFont"];
+      return processor(asset);
+    });
+    return Promise.all(assetProcessPromises).then(function (results) {
+      // should return only Images containing base64 image assets
+      return results.filter(function (result) {
+        return result;
+      });
+    });
+  }
+
+  return Promise.resolve();
+}
+
+/***/ }),
+
+/***/ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/load.js":
+/*!*******************************************************************!*\
+  !*** ./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/load.js ***!
+  \*******************************************************************/
+/*! exports provided: loadJs, loadFba, loadFont, loadImg */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadJs", function() { return loadJs; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadFba", function() { return loadFba; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadFont", function() { return loadFont; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadImg", function() { return loadImg; });
+/* harmony import */ var ad_global__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ad-global */ "ad-global");
+/* harmony import */ var ad_global__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(ad_global__WEBPACK_IMPORTED_MODULE_0__);
+
+function loadJs() {
+  var jsLoadPromises = window.adParams.dependencies.map(function (dep) {
+    var jsLoadPromise = new Promise(function (resolve, reject) {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.charset = 'utf-8';
+      script.onload = resolve;
+      script.onerror = reject;
+      script.src = dep;
+      document.getElementsByTagName('head')[0].appendChild(script);
+    });
+    return jsLoadPromise;
+  });
+  return Promise.all(jsLoadPromises);
+}
+function loadFba() {
+  if (window.assets.payload.binary.length) {
+    return new Promise(function (resolve, reject) {
+      var fbaPath = window.adParams.adPath + window.assets.payload.binary[0];
+      var req = new XMLHttpRequest();
+
+      req.onreadystatechange = function (target) {
+        if (req.readyState === 4) {
+          if (req.status == 200) {
+            resolve(req.response);
+          } else {
+            reject({
+              target: target
+            });
+          }
+        }
+      };
+
+      req.open('GET', fbaPath, true);
+      req.responseType = 'arraybuffer';
+      req.send();
+    }).then(function (dataRaw) {
+      var blobAssets = Object(ad_global__WEBPACK_IMPORTED_MODULE_0__["fbaDataToBlobs"])(dataRaw);
+      var assetLoadPromises = blobAssets.map(function (blobAsset) {
+        var isFont = /(ttf|woff)/.test(blobAsset.fileType);
+        var assetLoader = isFont ? loadFont : loadImg;
+        return assetLoader(blobAsset);
+      });
+      return Promise.all(assetLoadPromises) // filter only truthy Promise results
+      .then(function (loadResults) {
+        return loadResults.filter(Boolean);
+      });
+    });
+  } else {
+    return Promise.resolve();
+  }
+}
+function loadFont(asset) {
+  var fontLoadPromise;
+
+  if (document.fonts && window.FontFace && !_hasSafari10Bug()) {
+    var font = new FontFace(asset.path, "url(" + asset.src + ")");
+    fontLoadPromise = font.load().then(function (font) {
+      document.fonts.add(font);
+    })["catch"](function (err) {
+      console.error("Font (" + asset.src + ") failed to load");
+      throw err;
+    });
+  } else {
+    var format = 'truetype';
+
+    if (asset.fileType.match(/woff/)) {
+      format = 'woff';
+    }
+
+    var assembledFontRule = "@font-face { font-family: '" + asset.path + "'; src: url(" + asset.src + ") format('" + format + "'); }";
+    var getSheet = document.getElementById('RED_fontStyleSheet');
+
+    if (getSheet) {
+      getSheet.innerHTML += assembledFontRule;
+    } else {
+      var styleScript = document.createElement('style');
+      styleScript.type = 'text/css';
+      styleScript.media = 'screen';
+      styleScript.id = 'RED_fontStyleSheet';
+      styleScript.appendChild(document.createTextNode(assembledFontRule));
+      document.getElementsByTagName('head')[0].appendChild(styleScript);
+    }
+
+    fontLoadPromise = new Promise(function (resolve, reject) {
+      var font = asset.path;
+      var content = ' !"\\#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~';
+      var css = 'position:absolute; top:-1000px; font-size:100px; font-family:san-serif; font-variant:normal; font-style:normal; font-weight:normal; letter-spacing:0; white-space:nowrap;';
+      var fontLoadChecker = document.createElement('div');
+      fontLoadChecker.innerHTML = content;
+      fontLoadChecker.style.cssText = css;
+      document.body.appendChild(fontLoadChecker);
+      var initWidth = fontLoadChecker.offsetWidth;
+      fontLoadChecker.style.fontFamily = font;
+      var timeout = setTimeout(function () {
+        clearInterval(interval);
+        reject(new Error("Font (" + asset.src + ") failed to load"));
+      }, 5000);
+      var interval = setInterval(function () {
+        if (fontLoadChecker.offsetWidth !== initWidth) {
+          clearTimeout(timeout);
+          clearInterval(interval);
+          resolve();
+        }
+      }, 10);
+    });
+  }
+
+  return fontLoadPromise;
+}
+/**
+ * Safari 10 check borrowed from FontFaceObserver
+ * Certain versions of Safari 10 don't have reliable native font loading
+ * For reference: https://github.com/bramstein/fontfaceobserver/blob/20e40d09331510957d238f55790c83670de40af1/src/observer.js#L98-L126
+ */
+
+function _hasSafari10Bug() {
+  var match = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent);
+  return match && parseInt(match[1], 10) < 603;
+}
+
+function loadImg(asset) {
+  return new Promise(function (resolve, reject) {
+    var img = new Image();
+    img.id = asset.path;
+
+    img.onload = function () {
+      resolve(img);
+    };
+
+    img.onfail = reject;
+    img.src = asset.src;
+  });
+}
+
+/***/ }),
+
+/***/ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/payloader.js":
+/*!************************************************************************!*\
+  !*** ./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/payloader.js ***!
+  \************************************************************************/
+/*! exports provided: execute */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "execute", function() { return execute; });
+/* harmony import */ var _load_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./load.js */ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/load.js");
+
+/* -- PAYLOADER ----------------------------------------------
+ *
+ *
+ */
+
+function execute() {
+  console.log('Payloader.execute()');
+  concatDependencies();
+  return loadDependencies();
+}
+
+function concatDependencies() {
+  window.adParams.dependencies = [].concat(window.externalIncludes).concat(window.adParams.adPath + window.assets.payload.text);
+}
+
+function loadDependencies() {
+  console.log('Payloader.loadDependencies()');
+  return new Promise(function (resolve, reject) {
+    var loadJsPromise = Object(_load_js__WEBPACK_IMPORTED_MODULE_0__["loadJs"])().then(function () {
+      window.jsBundleLoadComplete && jsBundleLoadComplete();
+    });
+    var loadFbaPromise = Object(_load_js__WEBPACK_IMPORTED_MODULE_0__["loadFba"])();
+    Promise.all([loadJsPromise, loadFbaPromise]).then(function (results) {
+      // getting results of loadFba()
+      var fbaImages = results[1];
+      resolve(fbaImages);
+    })["catch"](function (err) {
+      reject(err);
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/polite.js":
+/*!*********************************************************************!*\
+  !*** ./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/polite.js ***!
+  \*********************************************************************/
+/*! exports provided: prepare, resolveDelay */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prepare", function() { return prepare; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resolveDelay", function() { return resolveDelay; });
+var delay;
+var initTime; //
+
+function prepare(politeLoadAfter) {
+  console.log("Polite.prepare()");
+  initTime = Date.now();
+
+  if (isDevEnvironment()) {
+    console.log(" - no polite load delay in dev environment");
+    delay = 0;
+  } else {
+    console.log(" - polite load after " + politeLoadAfter + "s");
+    delay = politeLoadAfter * 1000;
+  }
+
+  return Promise.resolve();
+}
+function resolveDelay() {
+  return new Promise(function (resolve) {
+    try {
+      // attempt to listen for publisher page load event
+      listenPublisher(window.top).then(resolve);
+    } catch (err) {
+      // fall back to IAB-accepted spec of iframe load event
+      listenPublisher(window).then(resolve);
+    }
+  });
+}
+
+function listenPublisher(w) {
+  if (w.document.readyState === 'complete') {
+    return runDelay();
+  } else {
+    return new Promise(function (resolve) {
+      w.addEventListener('load', function () {
+        runDelay().then(function () {
+          return resolve();
+        });
+      });
+    });
+  }
+}
+
+function runDelay() {
+  console.log("Polite.runDelay(), on window[top].onload + " + delay / 1000 + "s..."); // determine time elapsed to now
+
+  var duration = Date.now() - initTime;
+
+  if (duration > delay) {
+    return Promise.resolve();
+  } else {
+    // if required delay is not meant, timeout for remainder
+    return new Promise(function (resolve) {
+      setTimeout(function () {
+        resolve();
+      }, delay - duration);
+    });
+  }
+}
+
+/***/ }),
+
+/***/ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/preloader.js":
+/*!************************************************************************!*\
+  !*** ./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/preloader.js ***!
+  \************************************************************************/
+/*! exports provided: prepare, isComplete */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prepare", function() { return prepare; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isComplete", function() { return isComplete; });
+/* -- PRELOADER ----------------------------------------------
+ *
+ *	Note:
+ *
+ *	`assets` is `window.assets`, declared in the index.html
+ *
+ */
+var preloader;
+var borderWidth; //
+
+function prepare() {
+  console.log('Preloader.prepare()');
+  borderWidth = assets.preloader.borderWidth || 0;
+  preloader = document.getElementById('preloader');
+  preloader.style.display = 'none';
+  return load();
+} // as preloader loads & plays, payload should begin loading as soon as polite-reqs allow (see polite.js)
+
+var completeResolve;
+var completeReject;
+var isComplete = new Promise(function (resolve, reject) {
+  completeResolve = resolve;
+  completeReject = reject;
+});
+
+function resolveIsComplete() {
+  console.log('Preloader.isComplete()');
+  completeResolve();
+}
+
+function load() {
+  assets.preloadedImages = []; // begin loading the images
+
+  var promises = [];
+  assets.preloader.images.forEach(function (pdata) {
+    promises.push(loaderPreloaderImage(pdata));
+  });
+  Promise.all(promises).then(function () {
+    applyContainerStyle(); // do final isComplete resolve once startDelay is passed
+
+    if (assets.preloader.startDelay > 0) {
+      setTimeout(function () {
+        resolveIsComplete();
+      }, assets.preloader.startDelay * 1000);
+    } else {
+      resolveIsComplete();
+    }
+  })["catch"](function (err) {
+    completeReject(err);
+  });
+  return Promise.resolve();
+}
+
+function loaderPreloaderImage(pdata) {
+  function _loadImage(addToLibrary) {
+    var img = new Image();
+
+    img.onload = function (event) {
+      if (addToLibrary) {
+        var id = pdata.source.split('/');
+        img.id = id[id.length - 1].split('.')[0];
+        assets.preloadedImages.push(img);
+      } else {
+        applyImageStyle(img, pdata);
+        preloader.appendChild(img);
+      }
+    }; // ** note: InlineSrc is introduced by the webpack "inline" entry bundle
+
+
+    img.src = window.InlineSrc.get('images/' + pdata.source);
+  }
+
+  return new Promise(function (resolve, reject) {
+    Promise.all([]).then(function () {
+      console.log('\tLoading preloader image for preloader application');
+
+      _loadImage();
+    }).then(function () {
+      console.log('\tLoading preloader image for ImageManager application');
+
+      _loadImage(true);
+    }).then(function () {
+      resolve();
+    })["catch"](function (err) {
+      reject(err);
+    });
+  });
+}
+
+function applyContainerStyle() {
+  var styleCss = 'width: ' + adParams.preloaderWidth + 'px; height: ' + adParams.preloaderHeight + 'px; ';
+  if (adParams.responsive) styleCss = 'width: 100%; height: 100%; ';
+  preloader.style.cssText = 'display: block; overflow: hidden; position: absolute; ' + 'top:' + adParams.preloaderY + 'px; left:' + adParams.preloaderX + 'px; ' + (assets.preloader.gradient ? 'background-image: ' + assets.preloader.gradient + '; ' : '') + styleCss + 'border-color: ' + (assets.preloader.borderColor || assets.preloader.backgroundColor) + '; border-width: ' + borderWidth + 'px; background-color: ' + assets.preloader.backgroundColor + '; ';
+}
+
+function applyImageStyle(img, pdata) {
+  if (!pdata.offset) pdata.offset = {
+    x: 0,
+    y: 0
+  };
+  img.width *= pdata.scale || 1;
+  img.height *= pdata.scale || 1;
+  var left = Math.round((adParams.preloaderWidth - img.width) / 2 + (pdata.offset.x || 0) - borderWidth);
+  var top = Math.round((adParams.preloaderHeight - img.height) / 2 + (pdata.offset.y || 0) - borderWidth);
+  img.style.cssText = 'position: absolute; left: ' + left + 'px; top: ' + top + 'px;';
+}
+
+/***/ }),
+
+/***/ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/scope.js":
+/*!********************************************************************!*\
+  !*** ./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/scope.js ***!
+  \********************************************************************/
+/*! exports provided: prepare */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prepare", function() { return prepare; });
+/* harmony import */ var _environment_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./environment.js */ "./1-build/node_modules/@ff0000-ad-tech/ad-entry/lib/environment.js");
+
+function prepare() {
+  prepareAdParams();
+  prepareQueryParams();
+  checkForAdTagParams();
+  prepareEnvironment();
+  prepareOnError();
+}
+
+function prepareAdParams() {
+  console.log('Scope.prepareAdParams()');
+  adParams.adSize = adParams.adWidth + 'x' + adParams.adHeight;
+  adParams.failoverWidth = adParams.preloaderWidth = adParams.adWidth;
+  adParams.failoverHeight = adParams.preloaderHeight = adParams.adHeight;
+  adParams.failoverX = adParams.preloaderX = 0;
+  adParams.failoverY = adParams.preloaderY = 0;
+}
+
+function prepareQueryParams() {
+  console.log('Scope.prepareQueryParams()');
+  queryParams = getQueryParams();
+}
+
+function checkForAdTagParams() {
+  console.log('Scope.checkForAdTagParams()');
+
+  for (var key in queryParams) {
+    var value = queryParams[key].replace(/^\{/, '').replace(/\}$/, '');
+
+    if (value != '') {
+      console.log(' - applying to global.' + key + ': ' + value);
+      window[key] = value;
+    }
+  }
+}
+
+function prepareEnvironment() {
+  console.log('Scope.prepareEnvironment()');
+  _environment_js__WEBPACK_IMPORTED_MODULE_0__["prepare"](window.adParams.environmentId);
+}
+
+function prepareOnError() {
+  console.log('Scope.prepareOnError()');
+  if (adParams.failoverOnError) onerror = handleError;
+}
+
+function handleError() {
+  console.log('Scope.handleError() - JAVASCRIPT ERROR!'); // ignore known errors. Currently only a DC analytic error happens when tapping on video player in iOS
+
+  var surpressedErrorList = ["TypeError: b.some is not a function. (In 'b.some(function(b){return a.j.includes(b.identifier)})', 'b.some' is undefined)"];
+  var error = arguments[0];
+
+  if (surpressedErrorList.indexOf(error) > -1) {
+    console.log('surpressing known error');
+    return;
+  }
+
+  onerror = function onerror() {}; // after the first error, disable the event listening
+
+
+  window.failAd();
+}
+
+/***/ }),
+
+/***/ "./1-build/node_modules/@ff0000-ad-tech/ad-polyfills/index.js":
+/*!********************************************************************!*\
+  !*** ./1-build/node_modules/@ff0000-ad-tech/ad-polyfills/index.js ***!
+  \********************************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _lib_custom_event__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lib/custom-event */ "./1-build/node_modules/@ff0000-ad-tech/ad-polyfills/lib/custom-event.js");
+/* harmony import */ var _lib_custom_event__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lib_custom_event__WEBPACK_IMPORTED_MODULE_0__);
+ // expose the lib packages as modules
+// TODO: Is there a better way to do this ????
+// export {
+// 	customEvent
+// }
+
+/***/ }),
+
+/***/ "./1-build/node_modules/@ff0000-ad-tech/ad-polyfills/lib/custom-event.js":
+/*!*******************************************************************************!*\
+  !*** ./1-build/node_modules/@ff0000-ad-tech/ad-polyfills/lib/custom-event.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* Method: CustomEvent() */
+try {
+  new CustomEvent('test');
+} catch (e) {
+  var CustomEvent2 = function CustomEvent2(event, params) {
+    params = params || {
+      bubbles: false,
+      cancelable: false,
+      detail: undefined
+    };
+    var evt = document.createEvent('CustomEvent');
+    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+    return evt;
+  };
+
+  console.log(' -> CustomEvent');
+  CustomEvent2.prototype = window.Event.prototype;
+  window.CustomEvent = CustomEvent2;
+}
+
+/***/ }),
+
+/***/ "ad-global":
+/*!*************************!*\
+  !*** external "window" ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = window;
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=initial.bundle.js.map
+    </script>
+  </body>
+</html>
