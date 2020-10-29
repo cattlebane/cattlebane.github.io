@@ -1,11 +1,11 @@
 /* ################################################################################################
  * #
  * #		RED Interactive - Digital Advertising
- * #		Hulu | Pre_Fall_and_Fall_Campaign | RichMedia_Quiz | IMDB_Quiz_Billboard_FT | 2.0
+ * #		Hulu | Pre_Fall_and_Fall_Campaign | RichMedia_Quiz | AV_Club_Quiz_Billboard_FT | 2.0
  * #
  * ################################################################################################ */
 trace( "----------------------------------------------------------------------------------------------------------------------------" );
-trace( " IMDB_Quiz_Billboard_FT_970x250_text_payload.js[ Hulu | Pre_Fall_and_Fall_Campaign | RichMedia_Quiz | IMDB_Quiz_Billboard_FT | 970x250 | 2.0 ]" );
+trace( " AV_Club_Quiz_Billboard_FT_970x250_text_payload.js[ Hulu | Pre_Fall_and_Fall_Campaign | RichMedia_Quiz | AV_Club_Quiz_Billboard_FT | 970x250 | 2.0 ]" );
 trace( "  " );
 trace( "  " );
 trace( "  VERSION - template.txt[ Template: Flashtalking - Base, AdApp: 1.1.99, AdHtml: v2.6.2, Instance: 08/25/16 10:06am ]" );
