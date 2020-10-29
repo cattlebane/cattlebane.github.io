@@ -1,58 +1,20 @@
 <!DOCTYPE HTML>
 <html>
-	<!-- Template: Flashtalking - Base, AdApp: 1.1.99, AdHtml: v2.6.2, Instance: 08/25/16 10:06am -->
 	<head>
 		<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta content="utf-8" http-equiv="encoding">
-
-
-
 		<title>RED[ Hulu | Pre_Fall_and_Fall_Campaign | RichMedia_Quiz | AV_Club_Quiz_Billboard_FT | 970x250 | 2.0 ]</title>
-
 		<script type="text/javascript">
-
-			// standard platform exit - do not assign a url here, or it will override the platform
 			var clickTag 			= [ 1 ];
-			/*var clickTag1 			= [ 2 ];
-			var clickTag2 			= [ 3 ];
-			var clickTag3 			= [ 4 ];
-			var clickTag4 			= [ 5 ];
-			var clickTag5 			= [ 6 ];
-			var clickTag6 			= [ 7 ];
-			var clickTag7 			= [ 8 ];
-			var clickTag8 			= [ 9 ];
-			var clickTag9 			= [ 10 ];
-			var clickTag10 		= [ 11 ];
-			var clickTag11 		= [ 12 ];
-			var clickTag12 		= [ 13 ];
-			var clickTag13 		= [ 14 ];
-			var clickTag14 		= [ 15 ];
-			var clickTag15 		= [ 16 ];
-			var clickTag16 		= [ 17 ];
-			var clickTag17 		= [ 18 ];
-			var clickTag18 		= [ 19 ];
-			var clickTag19 		= [ 20 ];
-			var clickTag20 		= [ 21 ];*/
-
-			// multiple platform exits - do not assign a url here, or it will override the platform
-			/*var secondExit 				= [ 2 ];*/
-
-			// override platform exit
-			/*var overridePlatformExit		= [ 3, "http://example.com" ];*/
-
-			// append query-string to platform exit
-			/*var appendPlatformExit			= [ 4, myFT.getClickTag( 4, "?zipCode=90405" ) ];*/
-
 			var adParams = {
 				networkId				: "FLASHTALKING",
 				adWidth				: 970,
 				adHeight				: 250,
-				environmentId			: "debug",
+				environmentId			: "flashtalking",
 				politeLoadAfter		: 1,
 				failoverOnError		: true,
 			};
-
 			var assets = {
 				preloader: {
 					image: "AV_Club_Quiz_Billboard_FT_970x250_preloader.gif",
@@ -90,13 +52,11 @@
 				],
 				edgeImages: [
 				],
-				
 				payload: {
 					text: [ "AV_Club_Quiz_Billboard_FT_970x250_text_payload.js" ],
 					binary: [],
 				}
 			};
-
 			var environments = [
 				{
 					id: "flashtalking",
@@ -105,18 +65,14 @@
 				},
 				{
 					id: "debug",
-					runPath: "",
+					runPath: "http://red.ff0000-cdn.net/_debug/hulu/2016/pre_fall_and_fall_campaign/richmedia_quiz/av_club_quiz_billboard_ft/970x250/",
 					adPath: "",
 				}
 			];
-
 			var includes = function() { return []};
-
 			var externalIncludes = [
 			];
-
 		</script>
-
 		<style type="text/css">
 			html, body, #redMainContainer {
 				width: 100%;
@@ -128,10 +84,7 @@
 				-webkit-tap-highlight-color:rgba(0,0,0,0);
 			}
 		</style>
-
 	</head>
-
-
 	<body>
 		<div id="redMainContainer">
 			<div id="redAdContainer"></div>
@@ -140,455 +93,7 @@
 				<div id="fail"></div>
 			</div>
 		</div>
-
-		<!-- preload inline scripts...if not needed until the build, use externalIncludes  --> 
-
-
-
-
-		<script type="text/javascript">
-			function failAd() {
-				trace ( "Index.failAd()" );
-				document.getElementById( "redAdContainer" ).style.display = "none";
-				document.getElementById( "redAuxContainer" ).style.display = "block";
-				document.body.style = "width: " + adParams.failoverWidth + "px; height: " + adParams.failoverHeight + "px; overflow: hidden;";
-				document.getElementById( "fail" ).style.cssText = "position: absolute; " +
-					"width: " + adParams.failoverWidth + "px; height: " + adParams.failoverHeight + "px; " +
-					"left:" + adParams.failoverX + "px; top:" + adParams.failoverY + "px; " + 
-					"background-image: url(" + adParams.adPath + assets.failover.image + "); background-size: contain; overflow: hidden; ";
-
-			}
-		</script>
-		<script type="text/javascript">
-			var global = this;
-			var remoteControl = {
-				debug: true
-			};
-			var Network,
-				queryParams,
-				adData;
-
-			/* -- INIT --------------------------------------------------
-			 *
-			 *
-			 */
-			trace( "!!! FLASHTALKING TEMPLATES REQUIRE LOCAL-SERVER !!!" );
-
-			if( isDevEnvironment() ) {
-				var scriptElem = document.createElement( "script" );
-				scriptElem.type = "text/javascript";
-				scriptElem.src = "http://cdn.flashtalking.com/frameworks/js/api/2/9/html5API.js";
-				document.getElementsByTagName( "head" )[ 0 ].appendChild( scriptElem );
-				var ftLoadIntervalId = setInterval( function() {
-					if( typeof myFT != "undefined" ) {
-						clearInterval( ftLoadIntervalId );
-						myFT.on( "instantads", init );
-					}
-				}, 20 );
-			}
-			else init();
-
-
-
-			function init() {
-				trace( "DEPLOYED by AdApp: 1.2.28, 09/15/16 02:12pm" );
-				trace( "----------------------------------------------------------------------------------------------------------------------------" );
-				trace( " AV_Club_Quiz_Billboard_FT_970x250_index_FLASHTALKING.html[ Hulu | Pre_Fall_and_Fall_Campaign | RichMedia_Quiz | AV_Club_Quiz_Billboard_FT | 970x250 | 2.0 ]" );
-				trace( "----------------------------------------------------------------------------------------------------------------------------" );
-				trace( "Index.init()" );
-				queryParams = getQueryParams();
-				adParams.politeLoadAfter = isDevEnvironment() ? 0 : adParams.politeLoadAfter;
-				if( adParams.failoverOnError )
-					window.onerror = handleError;
-				prepareEnvironment( getDeployProfile( adParams.environmentId ));
-				preparePreload();
-				prepareDebug();
-			}
-			function handleError() {
-				trace( "Index.handleError() - JAVASCRIPT ERROR!" );
-				window.onerror = function() {}; // after the first error, disable the event listening
-				failAd();
-			}
-
-
-
-
-
-			/* -- PRE LOAD ----------------------------------------------
-			 *
-			 *
-			 */ 
-			function preparePreload() {
-				trace( "Index.preparePreload()" );
-				prepareAdParams();
-				checkForAdTagParams();
-
-				addContainerStyles();
-				preparePreloader();
-
-				prepareNetwork();
-				makeAuxClickable();
-
-			}
-			function prepareAdParams() {
-				adParams.adSize = adParams.adWidth + "x" + adParams.adHeight;
-				adParams.failoverWidth = adParams.preloaderWidth = adParams.adWidth;
-				adParams.failoverHeight = adParams.preloaderHeight = adParams.adHeight;
-				adParams.failoverX = adParams.preloaderX = 0;
-				adParams.failoverY = adParams.preloaderY = 0;
-				
-			}
-			function checkForAdTagParams() {
-				trace( "Index.checkForAdTagParams()" );
-				for( var key in queryParams ) {
-					var value = queryParams[ key ].replace( /^\{/, "" ).replace( /\}$/, "" );
-					if( value != "" ) {
-						trace( " - applying to global." + key + ": " + value );
-						global[ key ] = value;
-					}
-				}
-			}			
-			function addContainerStyles() {
-				document.getElementById( "redMainContainer" ).style.cssText = "position: relative;";
-				var sizeCss = "width: " + adParams.adWidth + "px; height: " + adParams.adHeight + "px; ";
-				if( adParams.responsive )
-					sizeCss = "width: 100%; height: 100%; ";
-				document.getElementById( "redAdContainer" ).style.cssText = "position: absolute; left: 0px; top: 0px; " + sizeCss +
-					"opacity: 0; overflow: hidden; -webkit-user-select: none; -moz-user-select: none; user-select: none";
-			}
-			function preparePreloader() {
-				var sizeCss = "width: " + adParams.preloaderWidth + "px; height: " + adParams.preloaderHeight + "px; ";
-				if( adParams.responsive )
-					sizeCss = "width: 100%; height: 100%; ";
-				document.getElementById( "preloader" ).style.cssText = "position: absolute; " +
-					"top:" + adParams.preloaderY + "px; left:" + adParams.preloaderX + "px; " + sizeCss + 
-					"background-color: " + assets.preloader.backgroundColor + "; background-position: center center; background-repeat: no-repeat; " +
-					"background-image: url( " + adParams.adPath + assets.preloader.image + " ); ";
-			}
-			function removePreloader() {
-				trace( "Index.removePreloader()");
-				var preloader = document.getElementById( "preloader" )
-				if( preloader ) {
-					var redAuxContainer = document.getElementById( "redAuxContainer" );
-					redAuxContainer.style.display = "none";
-					redAuxContainer.removeChild( preloader );
-				}
-			}
-
-
-
-
-
-
-
-
-
-			/* -- NETWORK --------------------------------------------
-			 *
-			 *
-			 */
-			function prepareNetwork() {
-				trace( "Index.prepareNetwork()" );
-				Network = new function() { 
-					this.exit = function( _clickTag ) {
-						trace( "Network -> FLASHTALKING EXIT" );
-						trace('		_clickTag:' + _clickTag);
-						if( Object.prototype.toString.call( _clickTag ) == "[object Array]" ) {
-							trace('		_clickTag.length:' + _clickTag.length);
-							if( _clickTag.length == 1 ) 
-								myFT.clickTag( _clickTag[ 0 ]);
-							else myFT.clickTag( _clickTag[ 0 ], _clickTag[ 1 ] );
-						}
-						else trace( " - ERROR: a clickTag for this platform needs to be an array with an index that corresponds to the platform. See <Network> docs." );
-					}
-					this.appendMacro = function( _macro, _clickTag ) {
-						if( _macro.search( /^%%/ ) > -1 )
-							return _clickTag;
-						else return _macro + _clickTag;
-					}					
-				};
-			}
-			// auxiliary exits: preload or failover
-			function makeAuxClickable() {
-				var redAuxContainer = document.getElementById( "redAuxContainer" );
-				redAuxContainer.setAttribute( "onclick", "handleAuxClick()" );
-			}
-			function handleAuxClick() {
-				trace( "Index.handleAuxClick()" );
-				Network.exit( clickTag );
-				if( adParams.redAnalytics )
-					trackExit();
-			}
-
-
-
-
-
-
-
-
-
-
-			/* -- ENVIRONMENT --------------------------------------------
-			 *
-			 *
-			 */ 
-			function prepareEnvironment( environment, temp ) {
-				if(!( temp || false )) adParams.environmentId = environment.id;
-				// run-path + subpaths
-				adParams.runPath = matchProtocolTo( environment.runPath ); 	// must be defined in environment
-				adParams.corePath = adParams.runPath + ( "corePath" in environment ? environment.corePath : "_adlib/core/" );
-				adParams.commonPath = adParams.runPath + ( "commonPath" in environment ? environment.commonPath : "_adlib/common/" );
-				adParams.rcPath = adParams.commonPath + ( "rcPath" in environment ? environment.rcPath : "js/" );
-				adParams.jsPath = adParams.commonPath + ( "jsPath" in environment ? environment.jsPath : "js/" );
-				adParams.loaderPath = adParams.jsPath
-				adParams.fontsPath = adParams.commonPath + ( "fontsPath" in environment ? environment.fontsPath : "fonts/" );
-
-				// ad-path and subpaths
-				adParams.adPath = adParams.runPath + environment.adPath;	// must be defined in environment
-				adParams.imagesPath = adParams.adPath + ( "imagesPath" in environment ? environment.imagesPath : "images/" );
-				adParams.edgePath = adParams.imagesPath + ( "edgePath" in environment ? environment.edgePath : "edge/" );
-				adParams.videosPath = adParams.adPath + ( "videosPath" in environment ? environment.videosPath : "videos/" );
-			}
-			function traceDeployProfile() {
-				var line = Array( 120 ).join( "-" )
-				trace( line );
-				trace( " Template: Flashtalking - Base, AdApp: 1.1.99, AdHtml: v2.6.2, Instance: 08/25/16 10:06am " );
-				trace( line );
-				trace( " NETWORK:", adParams.networkId );
-				trace( " AD SIZE:", adParams.adSize );
-				trace( " ENVIRONMENT:", adParams.environmentId );
-				if( adParams.runPath == "" ) trace( "  RUN PATH:", "./" ); else trace( "  RUN PATH:", adParams.runPath );
-				if( adParams.adPath == "" ) trace( "  AD PATH:", "./" ); else trace( "  AD PATH:", adParams.adPath );
-				if( adParams.adManager ) trace( "  JSON PATH:", adParams.adManager.jsonMapUrl );
-				trace( " POLITE LOAD AFTER:", adParams.politeLoadAfter + 's' );
-				trace( line );
-				trace( " AD PARAMS:", adParams );
-				trace( line );
-			}
-
-
-
-
-			/* -- ASSET LOAD --------------------------------------------
-			 *
-			 *
-			 */ 
-			function prepareDebug() {
-				trace( "Index.prepareDebug()" );
-				remoteControl.disable = false; // emergency disable only!!!
-				var debugModeRequested = "debug" in queryParams && queryParams.debug.match( /^(true|yes|t|y|1)/i );
-				//
-				if( remoteControl.disable && !debugModeRequested ) {
-					prepareEnvironment( getDeployProfile( adParams.environmentId ));
-					traceDeployProfile();
-					trace( " - RemoteControl DISABLED, via remoteControl.disable" );
-					var modeInfo = ", because adParams.environmentId = " + adParams.environmentId;
-					if( isDevEnvironment())
-						trace( "    * DEBUG MODE ON" + modeInfo );
-					else {
-						trace( "    !!! LIVE MODE !!!" + modeInfo ); 
-						traceDebugOptions( );
-					}
-					remoteControl.debug = isDevEnvironment();
-					prepareAssetLoad();
-				}
-				else {
-					var debugEnvironment = getDeployProfile( "debug" );
-					if( !debugEnvironment ) {
-						prepareEnvironment( getDeployProfile( adParams.environmentId ));
-						traceDeployProfile();
-						trace( " - RemoteControl DISABLED, no debug environment defined" );
-						prepareAssetLoad();
-					}
-					else {
-						if( debugModeRequested ) {
-							prepareEnvironment( debugEnvironment );
-							traceDeployProfile();
-							trace( " - DEBUG MODE ON, via query-string ?debug=true" );
-							trace( "    * requires \"to_debug/\" is uploaded to: " + debugEnvironment.runPath );
-							prepareAssetLoad();
-						}
-						else { 
-							// - DEBUG MODE, determined by RemoteControl.js
-							remoteControl.debug = true;
-							prepareEnvironment( debugEnvironment, isTemp=true );
-							var scriptElem = document.createElement( "script" );
-							scriptElem.type = "text/javascript";
-							scriptElem.onload = scriptElem.onerror = handleRemoteControl;
-							scriptElem.src = adParams.rcPath + "RemoteControl.js";
-							document.getElementsByTagName( "head" )[ 0 ].appendChild( scriptElem );
-						}
-					}
-				}
-			}
-			function handleRemoteControl() {
-				if( RC !== undefined ) {
-					if( RC.debug ) {
-						traceDeployProfile();
-						trace( " - DEBUG MODE ON, via " + adParams.rcPath + "RemoteControl.js" );
-					}
-					else {
-						prepareEnvironment( getDeployProfile( adParams.environmentId ));
-						traceDeployProfile();
-						trace( "!!! LIVE MODE !!!, via " + adParams.rcPath + "RemoteControl.js" );
-						traceDebugOptions();
-					}
-					remoteControl = RC;
-				}
-				prepareAssetLoad();
-			}
-			function traceDebugOptions() {
-				trace( "    DEBUG OPTIONS:" );
-				trace( "     1) Test using the \"to_debug/\" index" );
-				trace( "     2) Manually put the \"to_debug/\" content at: " + getDeployProfile( "debug" ).runPath );
-				if( !remoteControl.disable ) trace( "         - use RemoteControl.js to switch to DEBUG MODE" );
-				trace( "         - use query-string ?debug=true" );
-				if( !remoteControl.disable ) trace( "     3) AdApp \"Start Debug\"" );
-			}
-
-			function prepareAssetLoad() {
-				trace( "Index.prepareAssetLoad()" );
-				prepareDependencies();
-				prepareExternalDependencies();
-				concatDependencies();
-				loadLoader();
-			}
-
-
-			function prepareDependencies() {
-				adParams.dependencies = [];
-				adParams.optionalDependencies = [];
-			}
-			function prepareExternalDependencies() {
-				adParams.externalDependencies = [
-					// TweenLite dependencies, cached via widespread usage
-					"https://cdn.flashtalking.com/frameworks/js/gsap/1.18.0/plugins/CSSPlugin.min.js",
-					"https://cdn.flashtalking.com/frameworks/js/gsap/1.18.0/easing/EasePack.min.js",
-					"https://cdn.flashtalking.com/frameworks/js/gsap/1.18.0/TweenLite.min.js",
-				];
-			}
-			function concatDependencies() {
-				assets.payload.text = assets.payload.text.map( function( item ) { return adParams.adPath + item; });
-				adParams.dependencies = adParams.dependencies.concat( adParams.optionalDependencies ).concat( includes.call() ).concat( assets.payload.text );
-				for( var i in adParams.dependencies )
-					adParams.dependencies[i] = getMinified( adParams.dependencies[i] );
-				adParams.dependencies = adParams.dependencies.concat( adParams.externalDependencies ).concat( externalIncludes );
-			}	
-
-
-			function loadLoader() {
-				trace( "Index.loadLoader()" );
-				global.addEventListener ( 'loaderControllerReady', loadDependencies );
-
-				var scriptElem = document.createElement( "script" );
-				scriptElem.type = "text/javascript";
-				scriptElem.onerror = failAd;
-				scriptElem.src = getMinified( adParams.loaderPath + "LoaderController.js" );
-				document.getElementsByTagName( "head" )[ 0 ].appendChild( scriptElem );
-			}
-			function loadDependencies() {
-				trace( "Index.loadDependencies()" );
-				setTimeout( function() {
-					new Loader( adParams.dependencies, {
-						name: "coreLibLoader", 
-						onComplete: prepareCore,
-						onFail: failAd, 
-						scope: global
-					}).load();				
-				}, adParams.politeLoadAfter * 1000 );
-			}
-
-
-			function prepareCore() {
-				trace( "\n\n\n -- Index.prepareCore() --" );
-				PrepareCore.init( prepareCommon );
-			}
-			function prepareCommon() {
-				trace( "\n\n\n -- Index.prepareCommon() --" );
-				PrepareCommon.init( prepareBuild );
-			}	
-			function prepareBuild() {
-				trace( "\n\n\n -- Index.prepareBuild() --" );
-				Control.prepareBuild();
-			}
-
-			
-
-
-
-
-
-
-			/* -- GLOBAL UTILITIES --------------------------------------------
-			 *
-			 *
-			 */ 
-			function getDeployProfile( id ) {
-				for( var i = 0; i < environments.length; i++ ) {
-					if( environments[i].id === id ) 
-						return environments[i];
-				}
-				return false;
-			}
-			function isDevEnvironment() {
-				return adParams.environmentId == 'default' ||
-					adParams.environmentId == 'staging' ||
-					adParams.environmentId == 'debug';
-			}
-			function getMinified( _filename ) {
-				if( !remoteControl.debug ) 
-					return _filename.replace( /\.js$/, ".min.js" );
-				else return _filename
-			}
-			function getQueryParams() {
-				var queryParams = {};
-				var query = window.location.href.split( "?" );
-				if( query.length > 1 ) {
-					var params = query[ 1 ].split( "&" );
-					for( var i in params ) {
-						var keyValue = params[ i ].split( "=" );
-						if( keyValue.length == 2 ) 
-							queryParams[ keyValue[ 0 ]] = decodeURIComponent( keyValue[ 1 ]);
-					}
-				}
-				return queryParams;
-			}
-			function matchProtocolTo( _url ) {
-				if( _url.search( /^http/ ) > -1 ) {
-					var _secure = window.location.href.search( /^https/ ) > -1;
-					var _httpProtocol = _secure ? "https://" : "http://";
-					
-					if( _url.search( /.*edgecastcdn/ ) > -1 ) {
-						var _edgecastContext = _secure ? "ne1." + _url.match( /w(a|p)c/i )[ 0 ] + "." : _url.match( /w(a|p)c\.[a-z0-9]*\./i )[ 0 ];
-						_url = _httpProtocol + _edgecastContext + "edgecastcdn" + _url.replace( /.*edgecastcdn/, "" );
-					} 
-					else if( _url.search( /.*paramount\.com/ ) > -1 ) {
-						var _paramountContext = _secure ? "paramountdlds-a.akamaihd.net" : "downloads.paramount.com";
-						_url = _httpProtocol + _paramountContext + _url.replace( /.*paramount\.com/, "" );
-					}
-					else if( _url.search( /espn\.go\.com/ ) > -1 || _url.search( /secure\.espncdn\.com/ ) > -1 ) {
-						var _espnContext = _secure ? "secure.espncdn.com" : "assets.espn.go.com";
-						_url = _httpProtocol + _espnContext + _url.replace( /^.*\.com/, "" );
-					}
-					else {
-						_url = _url.replace( /^https?\:\/\//i, _httpProtocol );
-					}
-				}
-				return _url;
-			}
-			function trace() {
-				if( console && remoteControl.debug ) {
-					var args = ["RED[ 970x250|2.0 ] "];
-					for( var i=0; i < arguments.length; i++ )
-						args.push( arguments[i] );
-					Function.prototype.apply.call( console.log, console, args );
-				}
-			}
-			function getStaticSchedule() {
-				return StaticGenerator.schedule;
-			}
-
-		</script>
+		<script type="text/javascript">function failAd(){trace("Index.failAd()"),document.getElementById("redAdContainer").style.display="none",document.getElementById("redAuxContainer").style.display="block",document.body.style="width: "+adParams.failoverWidth+"px; height: "+adParams.failoverHeight+"px; overflow: hidden;",document.getElementById("fail").style.cssText="position: absolute; width: "+adParams.failoverWidth+"px; height: "+adParams.failoverHeight+"px; left:"+adParams.failoverX+"px; top:"+adParams.failoverY+"px; background-image: url("+adParams.adPath+assets.failover.image+"); background-size: contain; overflow: hidden; "}</script>
+		<script type="text/javascript">function init(){trace("DEPLOYED by AdApp: 1.2.28, 09/15/16 02:12pm"),trace("----------------------------------------------------------------------------------------------------------------------------"),trace(" AV_Club_Quiz_Billboard_FT_970x250_index_FLASHTALKING.html[ Hulu | Pre_Fall_and_Fall_Campaign | RichMedia_Quiz | AV_Club_Quiz_Billboard_FT | 970x250 | 2.0 ]"),trace("----------------------------------------------------------------------------------------------------------------------------"),trace("Index.init()"),queryParams=getQueryParams(),adParams.politeLoadAfter=isDevEnvironment()?0:adParams.politeLoadAfter,adParams.failoverOnError&&(window.onerror=handleError),prepareEnvironment(getDeployProfile(adParams.environmentId)),preparePreload(),prepareDebug()}function handleError(){trace("Index.handleError() - JAVASCRIPT ERROR!"),window.onerror=function(){},failAd()}function preparePreload(){trace("Index.preparePreload()"),prepareAdParams(),checkForAdTagParams(),addContainerStyles(),preparePreloader(),prepareNetwork(),makeAuxClickable()}function prepareAdParams(){adParams.adSize=adParams.adWidth+"x"+adParams.adHeight,adParams.failoverWidth=adParams.preloaderWidth=adParams.adWidth,adParams.failoverHeight=adParams.preloaderHeight=adParams.adHeight,adParams.failoverX=adParams.preloaderX=0,adParams.failoverY=adParams.preloaderY=0}function checkForAdTagParams(){trace("Index.checkForAdTagParams()");for(var e in queryParams){var a=queryParams[e].replace(/^\{/,"").replace(/\}$/,"");""!=a&&(trace(" - applying to global."+e+": "+a),global[e]=a)}}function addContainerStyles(){document.getElementById("redMainContainer").style.cssText="position: relative;";var e="width: "+adParams.adWidth+"px; height: "+adParams.adHeight+"px; ";adParams.responsive&&(e="width: 100%; height: 100%; "),document.getElementById("redAdContainer").style.cssText="position: absolute; left: 0px; top: 0px; "+e+"opacity: 0; overflow: hidden; -webkit-user-select: none; -moz-user-select: none; user-select: none"}function preparePreloader(){var e="width: "+adParams.preloaderWidth+"px; height: "+adParams.preloaderHeight+"px; ";adParams.responsive&&(e="width: 100%; height: 100%; "),document.getElementById("preloader").style.cssText="position: absolute; top:"+adParams.preloaderY+"px; left:"+adParams.preloaderX+"px; "+e+"background-color: "+assets.preloader.backgroundColor+"; background-position: center center; background-repeat: no-repeat; background-image: url( "+adParams.adPath+assets.preloader.image+" ); "}function removePreloader(){trace("Index.removePreloader()");var e=document.getElementById("preloader");if(e){var a=document.getElementById("redAuxContainer");a.style.display="none",a.removeChild(e)}}function prepareNetwork(){trace("Index.prepareNetwork()"),Network=new function(){this.exit=function(e){trace("Network -> FLASHTALKING EXIT"),trace("		_clickTag:"+e),"[object Array]"==Object.prototype.toString.call(e)?(trace("		_clickTag.length:"+e.length),1==e.length?myFT.clickTag(e[0]):myFT.clickTag(e[0],e[1])):trace(" - ERROR: a clickTag for this platform needs to be an array with an index that corresponds to the platform. See <Network> docs.")},this.appendMacro=function(e,a){return e.search(/^%%/)>-1?a:e+a}}}function makeAuxClickable(){var e=document.getElementById("redAuxContainer");e.setAttribute("onclick","handleAuxClick()")}function handleAuxClick(){trace("Index.handleAuxClick()"),Network.exit(clickTag),adParams.redAnalytics&&trackExit()}function prepareEnvironment(e,a){a||(adParams.environmentId=e.id),adParams.runPath=matchProtocolTo(e.runPath),adParams.corePath=adParams.runPath+("corePath"in e?e.corePath:"_adlib/core/"),adParams.commonPath=adParams.runPath+("commonPath"in e?e.commonPath:"_adlib/common/"),adParams.rcPath=adParams.commonPath+("rcPath"in e?e.rcPath:"js/"),adParams.jsPath=adParams.commonPath+("jsPath"in e?e.jsPath:"js/"),adParams.loaderPath=adParams.jsPath,adParams.fontsPath=adParams.commonPath+("fontsPath"in e?e.fontsPath:"fonts/"),adParams.adPath=adParams.runPath+e.adPath,adParams.imagesPath=adParams.adPath+("imagesPath"in e?e.imagesPath:"images/"),adParams.edgePath=adParams.imagesPath+("edgePath"in e?e.edgePath:"edge/"),adParams.videosPath=adParams.adPath+("videosPath"in e?e.videosPath:"videos/")}function traceDeployProfile(){var e=Array(120).join("-");trace(e),trace(" Template: Flashtalking - Base, AdApp: 1.1.99, AdHtml: v2.6.2, Instance: 08/25/16 10:06am "),trace(e),trace(" NETWORK:",adParams.networkId),trace(" AD SIZE:",adParams.adSize),trace(" ENVIRONMENT:",adParams.environmentId),""==adParams.runPath?trace("  RUN PATH:","./"):trace("  RUN PATH:",adParams.runPath),""==adParams.adPath?trace("  AD PATH:","./"):trace("  AD PATH:",adParams.adPath),adParams.adManager&&trace("  JSON PATH:",adParams.adManager.jsonMapUrl),trace(" POLITE LOAD AFTER:",adParams.politeLoadAfter+"s"),trace(e),trace(" AD PARAMS:",adParams),trace(e)}function prepareDebug(){trace("Index.prepareDebug()"),remoteControl.disable=!1;var e="debug"in queryParams&&queryParams.debug.match(/^(true|yes|t|y|1)/i);if(remoteControl.disable&&!e){prepareEnvironment(getDeployProfile(adParams.environmentId)),traceDeployProfile(),trace(" - RemoteControl DISABLED, via remoteControl.disable");var a=", because adParams.environmentId = "+adParams.environmentId;isDevEnvironment()?trace("    * DEBUG MODE ON"+a):(trace("    !!! LIVE MODE !!!"+a),traceDebugOptions()),remoteControl.debug=isDevEnvironment(),prepareAssetLoad()}else{var t=getDeployProfile("debug");if(t)if(e)prepareEnvironment(t),traceDeployProfile(),trace(" - DEBUG MODE ON, via query-string ?debug=true"),trace('    * requires "to_debug/" is uploaded to: '+t.runPath),prepareAssetLoad();else{remoteControl.debug=!0,prepareEnvironment(t,isTemp=!0);var r=document.createElement("script");r.type="text/javascript",r.onload=r.onerror=handleRemoteControl,r.src=adParams.rcPath+"RemoteControl.js",document.getElementsByTagName("head")[0].appendChild(r)}else prepareEnvironment(getDeployProfile(adParams.environmentId)),traceDeployProfile(),trace(" - RemoteControl DISABLED, no debug environment defined"),prepareAssetLoad()}}function handleRemoteControl(){void 0!==RC&&(RC.debug?(traceDeployProfile(),trace(" - DEBUG MODE ON, via "+adParams.rcPath+"RemoteControl.js")):(prepareEnvironment(getDeployProfile(adParams.environmentId)),traceDeployProfile(),trace("!!! LIVE MODE !!!, via "+adParams.rcPath+"RemoteControl.js"),traceDebugOptions()),remoteControl=RC),prepareAssetLoad()}function traceDebugOptions(){trace("    DEBUG OPTIONS:"),trace('     1) Test using the "to_debug/" index'),trace('     2) Manually put the "to_debug/" content at: '+getDeployProfile("debug").runPath),remoteControl.disable||trace("         - use RemoteControl.js to switch to DEBUG MODE"),trace("         - use query-string ?debug=true"),remoteControl.disable||trace('     3) AdApp "Start Debug"')}function prepareAssetLoad(){trace("Index.prepareAssetLoad()"),prepareDependencies(),prepareExternalDependencies(),concatDependencies(),remoteControl.debug?loadLoader():loadDependencies()}function prepareDependencies(){adParams.dependencies=[],adParams.optionalDependencies=[]}function prepareExternalDependencies(){adParams.externalDependencies=["https://cdn.flashtalking.com/frameworks/js/gsap/1.18.0/plugins/CSSPlugin.min.js","https://cdn.flashtalking.com/frameworks/js/gsap/1.18.0/easing/EasePack.min.js","https://cdn.flashtalking.com/frameworks/js/gsap/1.18.0/TweenLite.min.js"]}function concatDependencies(){assets.payload.text=assets.payload.text.map(function(e){return adParams.adPath+e}),adParams.dependencies=adParams.dependencies.concat(adParams.optionalDependencies).concat(includes.call()).concat(assets.payload.text);for(var e in adParams.dependencies)adParams.dependencies[e]=getMinified(adParams.dependencies[e]);adParams.dependencies=adParams.dependencies.concat(adParams.externalDependencies).concat(externalIncludes)}function loadLoader(){trace("Index.loadLoader()"),global.addEventListener("loaderControllerReady",loadDependencies);var e=document.createElement("script");e.type="text/javascript",e.onerror=failAd,e.src=getMinified(adParams.loaderPath+"LoaderController.js"),document.getElementsByTagName("head")[0].appendChild(e)}function loadDependencies(){trace("Index.loadDependencies()"),setTimeout(function(){new Loader(adParams.dependencies,{name:"coreLibLoader",onComplete:prepareCore,onFail:failAd,scope:global}).load()},1e3*adParams.politeLoadAfter)}function prepareCore(){trace("\n\n\n -- Index.prepareCore() --"),PrepareCore.init(prepareCommon)}function prepareCommon(){trace("\n\n\n -- Index.prepareCommon() --"),PrepareCommon.init(prepareBuild)}function prepareBuild(){trace("\n\n\n -- Index.prepareBuild() --"),Control.prepareBuild()}function getDeployProfile(e){for(var a=0;a<environments.length;a++)if(environments[a].id===e)return environments[a];return!1}function isDevEnvironment(){return"default"==adParams.environmentId||"staging"==adParams.environmentId||"debug"==adParams.environmentId}function getMinified(e){return remoteControl.debug?e:e.replace(/\.js$/,".min.js")}function getQueryParams(){var e={},a=window.location.href.split("?");if(a.length>1){var t=a[1].split("&");for(var r in t){var o=t[r].split("=");2==o.length&&(e[o[0]]=decodeURIComponent(o[1]))}}return e}function matchProtocolTo(e){if(e.search(/^http/)>-1){var a=window.location.href.search(/^https/)>-1,t=a?"https://":"http://";if(e.search(/.*edgecastcdn/)>-1){var r=a?"ne1."+e.match(/w(a|p)c/i)[0]+".":e.match(/w(a|p)c\.[a-z0-9]*\./i)[0];e=t+r+"edgecastcdn"+e.replace(/.*edgecastcdn/,"")}else if(e.search(/.*paramount\.com/)>-1){var o=a?"paramountdlds-a.akamaihd.net":"downloads.paramount.com";e=t+o+e.replace(/.*paramount\.com/,"")}else if(e.search(/espn\.go\.com/)>-1||e.search(/secure\.espncdn\.com/)>-1){var n=a?"secure.espncdn.com":"assets.espn.go.com";e=t+n+e.replace(/^.*\.com/,"")}else e=e.replace(/^https?\:\/\//i,t)}return e}function trace(){if(console&&remoteControl.debug){for(var e=["RED[ 970x250|2.0 ] "],a=0;a<arguments.length;a++)e.push(arguments[a]);Function.prototype.apply.call(console.log,console,e)}}function getStaticSchedule(){return StaticGenerator.schedule}function LoaderTicker(){var e=this;e._setTicker=function(a){var t=document.createElement("div");t.innerHTML=a.content,t.style.cssText=a.css||"",document.body.appendChild(t);var r=void 0!=a.width?a.width:t.offsetWidth;t.style.fontFamily=a.font||"";var o=setTimeout(function(){clearInterval(n),e._handleFail()},5e3),n=setInterval(function(){t.offsetWidth!=r&&(clearTimeout(o),clearInterval(n),e._handleTickerComplete(t))},10)},e._removeTickerNode=function(e){e.parentNode.removeChild(e)}}function LoaderBase(){var e=this,a=arguments&&arguments.length>1?arguments[1]:arguments[0]||{};e.onComplete=a.onComplete||function(){},e.onFail=a.onFail||function(){},e.onProgress=a.onProgress||function(){},e.name=a.name||"",e.scope=a.scope||e,e.dataRaw,e.cacheBuster=a.cacheBuster||!1,e._failCalled=!1,e._handleFail=function(){trace("LoaderBase._handleFail()"),e._failCalled||(e._failCalled=!0,e.onFail.call(e.scope,e),trace('Loader "'+e.name+'" Fail:',e.url))}}function LoaderSource(){var e=this,a=arguments&&arguments.length>1?arguments[1]:arguments[0]||{};e.url=global.matchProtocolTo(arguments[0]||""),a.platformGetUrl&&(e.platformGetUrl=a.platformGetUrl,e.url=a.platformGetUrl(e.url)),e.fileName=void 0===a.id?LoaderUtils.getFileName(e.url):a.id,e.fileType=a.fileType||LoaderUtils.getFileType(e.url)}function InlineLoader(){var e=this;LoaderSource.apply(e,arguments),LoaderBase.apply(e,arguments)}function DataLoader(){var e=this;LoaderSource.apply(e,arguments),LoaderBase.apply(e,arguments);var a=arguments&&arguments.length>1?arguments[1]:arguments[0]||{};this.method=(a.method||"get").toLowerCase(),this.query=a.query||null,this.responseType=a.responseType||null}function ImageLoader(){var e=this;LoaderSource.apply(e,arguments),LoaderBase.apply(e,arguments),LoaderTicker.apply(e,arguments);var a=arguments&&arguments.length>1?arguments[1]:arguments[0]||{};e.renderOnly=!!a.renderOnly}function FontLoader(){var e=this;LoaderSource.apply(e,arguments),LoaderBase.apply(e,arguments),LoaderTicker.apply(e,arguments)}function FbvLoader(){var e=this;trace("FbvLoader arguments:",arguments,e),DataLoader.apply(e,arguments);var a=arguments&&arguments.length>1?arguments[1]:arguments[0]||{};e.onSpecs=a.onSpecs||function(){},e.available=0,e.images=[],e.isBytesLoaded=!1,e._imagesRaw=[],e._prev=-1,e._specs,e._byteLength=0,e._byteBuffer=3e3,e._imageRequestMax=6,e._imageRequestExcess=!1}function Loader(){var e=this;LoaderBase.apply(e,arguments);var a=arguments&&arguments.length>1?arguments[1]:arguments[0]||{};e._queue={},e._total=0,e._active=!1,e._startedCount=0,e.prepend=a.prepend||"",e.content=[],e.platformGetUrl=a.platformGetUrl,e.fileType=a.fileType||null,e.add(arguments[0])}var global=this,remoteControl={debug:!0},Network,queryParams,adData;if(trace("!!! FLASHTALKING TEMPLATES REQUIRE LOCAL-SERVER !!!"),isDevEnvironment()){var scriptElem=document.createElement("script");scriptElem.type="text/javascript",scriptElem.src="http://cdn.flashtalking.com/frameworks/js/api/2/9/html5API.js",document.getElementsByTagName("head")[0].appendChild(scriptElem);var ftLoadIntervalId=setInterval(function(){"undefined"!=typeof myFT&&(clearInterval(ftLoadIntervalId),myFT.on("instantads",init))},20)}else init();Polyfills=new function(){function e(e,a){a=a||{bubbles:!1,cancelable:!1,detail:void 0};var t=document.createEvent("CustomEvent");return t.initCustomEvent(e,a.bubbles,a.cancelable,a.detail),t}trace("Polyfills:"),"function"!=typeof Function.prototype.bind&&(trace(" -> bind()"),Function.prototype.bind=function(e){var a=Array.prototype.slice.call(arguments,1),t=this,r=function(){},o=function(){return t.apply(this instanceof r?this:e||{},a.concat(Array.prototype.slice.call(arguments)))};return r.prototype=this.prototype||{},o.prototype=new r,o});try{new CustomEvent("test")}catch(a){trace(" -> CustomEvent"),e.prototype=window.Event.prototype,window.CustomEvent=e}Date.now||(trace(" -> Date.now"),Date.now=function(){return(new Date).getTime()})};var LoaderUtils=new function(){var e=this;e.createXMLHttpRequest=function(){try{return new XMLHttpRequest}catch(e){}try{return new ActiveXObject("Msxml2.XMLHTTP")}catch(e){}return alert("XMLHttpRequest not supported"),null},e.getFileName=function(e){var a=e.lastIndexOf("."),t=e.lastIndexOf("/")+1;return t>a&&(a=void 0),e.substring(t,a)},e.getFontName=function(e){return e.substring(e.lastIndexOf("/")+1,e.indexOf("."))},e.getFileType=function(e){e=e||"";var a=e.indexOf("?");a>-1&&(e=e.substr(0,a));var t=e.match(/[^\\]*\.(\w+)$/),r=e.match(/image\/(jpeg|jpg|png)/),o=t?t[1]:r?r[1]:"unknown";return o},e.getFullUrl=function(e,a,t){var r=LoaderUtils._getUrlPrepend(e),o=global.matchProtocolTo(r+_file);return t&&(o=t(o)),url},e.getUrlPrepend=function(e){return e?e.replace(/\/?$/,"/"):""},e.getParamsFromData=function(e){if("string"==typeof e)return e;var a="";for(var t in e)trace("      prop =",t),a+=t+"="+e[t]+"&";return a.substr(0,a.length-1)},e.binaryToString=function(a){for(var t=e.createXMLHttpRequest(),r=void 0!=t.overrideMimeType,o=[],n=0;n<a.length;n++){var i=a[n];r&&(i=i.charCodeAt(0));var s=String.fromCharCode(255&i);o.push(s)}return o.join("")}};InlineLoader.prototype={load:function(){var e=this,a="css"==e.fileType?e._createLink():e._createScript();a.charset="utf-8",a.onload=e._handleComplete.bind(e),a.onerror=e._handleFail,"css"==e.fileType?a.href=this.url:a.src=e.url,document.getElementsByTagName("head")[0].appendChild(a)},_createScript:function(){var e=document.createElement("script");return e.type="text/javascript",e},_createLink:function(){var e=document.createElement("link");return e.rel="stylesheet",e.type="text/css",e},_handleComplete:function(e){var a=this;a.dataRaw=e.target,a.onComplete.call(a.scope,a)}},InlineLoader.prototype.constructor=InlineLoader,LoaderSource.call(InlineLoader.prototype),LoaderBase.call(InlineLoader.prototype),DataLoader.prototype={load:function(){var e=this,a=null,t="post"===e.method;e.req=LoaderUtils.createXMLHttpRequest(),e.responseType&&(e.req.responseType=e.responseType);var r=e.url;if(e.req.overrideMimeType)switch(e.fileType){case"xml":e.req.overrideMimeType("text/xml");break;case"json":e.req.overrideMimeType("application/json");break;case"fba":case"bin":case"binary":e.req.overrideMimeType("text/plain; charset=x-user-defined")}e.query&&(a=LoaderUtils.getParamsFromData(e.query),encodeURIComponent(a),t||(r+="?"+a,a=null)),e.cacheBuster&&(r+=e.query&&!t?"&":"?",r+="cb="+(new Date).getTime()),e.req.onreadystatechange=e._handleStateChange.bind(e),e.req.open(e.method,r,!0),"post"===e.method&&e.req.setRequestHeader("Content-type","application/x-www-form-urlencoded"),e.req.send(a)},_handleStateChange:function(e){var a=this;switch(a.req.readyState){case 3:200==this.req.status&&(a.dataRaw=a.responseType?a.req.response:a.req.responseText,a._handleProgress(a));break;case 4:200==a.req.status?(a.dataRaw=a.responseType?a.req.response:a.req.responseText,"fba"!=a.fileType||a.req.overrideMimeType||(a.dataRaw=a.req.responseBody.toArray()),a._handleComplete(a)):a._handleFail({target:e})}},_handleProgress:function(){var e=this;e.onProgress.call(e.scope,e)},_handleComplete:function(){var e=this;e.onComplete.call(e.scope,e)}},DataLoader.prototype.constructor=DataLoader,LoaderSource.call(DataLoader.prototype),LoaderBase.call(DataLoader.prototype),ImageLoader.prototype={load:function(){var e=this;if(e.renderOnly)e._setTicker({content:e.url,width:0});else{var a=new Image;a.id=e.fileName,e.url.indexOf("http")>-1&&(a.crossOrigin="anonymous"),a.onload=e._handleComplete.bind(e),a.onerror=e._handleFail,a.src=e.url}},_handleTickerComplete:function(e){for(var a=this,t=e.childNodes,r=0;r<t.length;r++){var o=t[r];if(o instanceof SVGElement){o.id=a.fileName;break}}a._handleComplete({target:o}),a._removeTickerNode(e)},_handleComplete:function(e){trace("ImageLoader complete");var a=this;a.dataRaw=e.target,a.onComplete.call(a.scope,a)}},ImageLoader.prototype.constructor=ImageLoader,LoaderSource.call(ImageLoader.prototype),LoaderBase.call(ImageLoader.prototype),LoaderTicker.call(ImageLoader.prototype),FontLoader.prototype={load:function(){var e=this;e.fileName=e.fileName.split(".")[0];var a="@font-face { font-family: "+e.fileName+"; src: url("+e.url+");}",t=document.getElementById("RED_fontStyleSheet");if(t)t.innerHTML+=a;else{var r=document.createElement("style");r.type="text/css",r.media="screen",r.id="RED_fontStyleSheet",r.appendChild(document.createTextNode(a)),document.getElementsByTagName("head")[0].appendChild(r)}e._setTicker({content:" !\"\\#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^_`abcdefghijklmnopqrstuvwxyz{|}~",css:"position:absolute; top:-1000px; font-size:100px; font-family:san-serif; font-variant:normal; font-style:normal; font-weight:normal; letter-spacing:0; white-space:nowrap;",font:e.fileName})},_handleTickerComplete:function(e){var a=this;setTimeout(function(){a._removeTickerNode(e)},300),a._handleComplete()},_handleComplete:function(e){trace("FontLoader complete");var a=this;a.dataRaw=a.fileName,a.onComplete.call(a.scope,a)}},FontLoader.prototype.constructor=FontLoader,LoaderSource.call(FontLoader.prototype),LoaderBase.call(FontLoader.prototype),LoaderTicker.call(FontLoader.prototype),FbvLoader.prototype=Object.create(DataLoader.prototype),FbvLoader.prototype.constructor=FbvLoader,FbvLoader.prototype._handleProgress=function(e){var a=this;if(a._imageRequestExcess&&!a.isBytesLoaded)return void a._manageImageCreate();var t=e.dataRaw.length-a._byteLength;if(a._byteLength=e.dataRaw.length,t<a._byteBuffer&&t>0&&a._specs)return void trace("skip");if(a._imagesRaw=e.dataRaw.split(":::"),a._imagesRaw.length>1){var r=a._imagesRaw[0].split(";;;");a._specs||(a._specs=JSON.parse(r[0]),trace("FBV Specs:",a._specs),trace(a),a.onSpecs.call(a.scope,a)),a._imagesRaw[0]=r[1],a._manageImageCreate()}},FbvLoader.prototype._manageImageCreate=function(){var e=this,a=e._imagesRaw.length;e.isBytesLoaded||(a-=2);var t=a-e._prev,r=e._prev-e.available;if(r>e._imageRequestMax)return void(e._imageRequestExcess=!0);t>e._imageRequestMax?(e._imageRequestExcess=!0,a=a-t+e._imageRequestMax):e._imageRequestExcess=!1;for(var o=e._prev;a>o;o++)e._imageCreateStart(o);e._imageRequestExcess?e._prev=a:e._prev=e._imagesRaw.length-2},FbvLoader.prototype._imageCreateStart=function(e){if(!(0>e)){var a=this;if(a.images[e])return void trace("FbvLoader : frame "+e+" already populated");var t=a._imagesRaw[e].split(")");a.images[e]={dataRaw:t};var r="data:image/jpg;base64,"+t[1];new ImageLoader(r,{id:e,scope:a,fileType:"jpg",onComplete:a._handleImageLoadComplete,onFail:function(e){trace("FbvLoader : FAILED -> ImageLoader video frame "+e.target.id+" Image")}}).load()}},FbvLoader.prototype._handleImageLoadComplete=function(e){var a=this,t=e.dataRaw;a.images[t.id].image=t,a.available++;a.available/a._specs.frames;a.onProgress.call(a.scope,a,t),a.isBytesLoaded&&a._imageRequestExcess&&a.available+a._imageRequestMax>=a._prev&&a._manageImageCreate(),+t.id===a._specs.frames-1&&(trace("FbvLoader : ALL IMAGES CREATED"),a.onComplete.call(a.scope,a))},FbvLoader.prototype._handleComplete=function(e){trace("FbvLoader : ALL DATA LOADED");var a=this;a.isBytesLoaded=!0,a._handleProgress(e)},Loader.prototype.constructor=Loader,LoaderBase.call(Loader.prototype),Loader.prototype={add:function(e){var a=this;if("string"==typeof e)a._addSingleLoad(e);else if(e instanceof Array)for(var t=0;t<e.length;t++)a._addSingleLoad(e[t]);else e instanceof Loader&&(e.content&&e.content[0]&&"fba"==e.content[0].fileType?a._addFbaSubLoads(e.content[0]):a._addSubLoad(e))},load:function(){var e=this;if(e._active=!0,e._total<=0)trace('Loader "'+e.name+'" has NO assets to be loaded.');else{var a=!1,t="";for(var r in e._queue)if(!(e._queue[r]instanceof Loader)){a||(a=!0,t+='Loader "'+e.name+'" requesting:');var o=e._queue[r].fileName,n=e._queue[r].fileType,i=o.indexOf("."+n),s=i>-1?o:o+"."+n;t+="\n	 -> "+(e._queue[r].prepend||"")+s}a&&trace(t)}e._startSingleLoad(0)},getAllContent:function(){function e(t){for(var r=0;r<t.length;r++)t[r]instanceof Loader?e(t[r].content):a.push(t[r])}var a=[];return e(this.content),a.length<1&&trace("No Content found"),a},getAllContentRaw:function(){for(var e=this.getAllContent(),a=0;a<e.length;a++)e[a]=e[a].dataRaw;return e},getLoader:function(e){function a(r){for(var o=0;o<r.length;o++)r[o]instanceof Loader&&(!r[o]||r[o].name!==e&&r[o]!==e?a(r[o].content):t=r[o])}var t=null;return a(this.content),t||trace("No Loader found of that name"),t},_addSingleLoad:function(e,a,t){var r,o=this,n=o.fileType||LoaderUtils.getFileType(e),i=a||o.prepend+e,s={scope:o,platformGetUrl:o.platformGetUrl,onComplete:o._handleSingleLoadComplete,onFail:o.onFail,fileType:n,renderOnly:t,cacheBuster:o.cacheBuster};switch(n){case"jpg":case"jpeg":case"gif":case"png":case"svg":r=new ImageLoader(i,s);break;case"ttf":r=new FontLoader(i,s);break;case"fba":case"json":case"bin":case"binary":r=new DataLoader(i,s);break;case"fbv":r=new FbvLoader(i,s);break;default:r=new InlineLoader(i,s)}a&&(r.fileName=LoaderUtils.getFileName(e)),r.queueIndex=o._total,o._queue[o._total]=r,o._total++},_addSubLoad:function(e){var a=this;e.onComplete=a._handleSingleLoadComplete.bind(a),e.onProgress=a._handleProgress.bind(a),e.onFail=a._handleFail,e.queueIndex=a._total,a._queue[a._total]=e,a._total++},_addFbaSubLoads:function(e){var a=LoaderUtils.binaryToString(e.dataRaw),t=a.split(":|type|:");t.pop();for(var r=0;r<t.length;r++){var o=t[r].split(":||:"),n=o[1].split(":|~|:");n.pop(),"images"==o[0]&&(this._totalImages=n.length);for(var i=0;i<n.length;i++){var s=n[i].split(":|name|:"),d=!1;switch(o[0]){case"images":var l=s[0].split("."),c="svg"==l[1]?"svg+xml":l[1];s[1]="data:image/"+c+";base64,"+btoa(s[1]),s[0]=l.join(".")}this._addSingleLoad(s[0],s[1],d)}}},_startSingleLoad:function(e){var a=this,t=a._queue[e];0==a._total?a._handleComplete():e<a._total&&(t instanceof Loader||e<a._total-1&&a._startLoadTimeOut(++e),t.load())},_startLoadTimeOut:function(e){var a=this;setTimeout(function(){a._startSingleLoad(e)},10)},_handleSingleLoadComplete:function(e){var a=this;a.content[e.queueIndex]=e,delete a._queue[e.queueIndex],a._handleProgress(),void 0==e.url&&e.queueIndex<a._total-1&&a._startLoadTimeOut(e.queueIndex+1)},_handleProgress:function(){for(var e=this,a=e.content.length,t=0,r=0;a>r;r++)e.content[r]&&t++;var o=t,n=0;t<e._total&&e._queue[t]&&(n=e._queue[t].progress/e._total||0),e.progress=o/e._total+n,e.rawProgress=t/e._total+n,e.onProgress.call(e.scope,e),t>=e._total&&e._handleComplete()},_handleComplete:function(){var e=this;trace('Loader "'+e.name+'" is Complete'),e.onComplete.call(e.scope,e)}};</script>
 	</body>
 </html>
