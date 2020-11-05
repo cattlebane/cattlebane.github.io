@@ -3,8 +3,9 @@ import { white } from '@carbon/colors'
 
 export const ProjectItem = styled.li`
   margin-top: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid ${white};
+  padding: 1rem;
+  ${'' /* border-bottom: 1px solid ${white}; */}
+  background-color: #555555;
 `
 
 export const ProjectTitle = styled.h4`
