@@ -1,0 +1,93 @@
+.Header {
+  background-color: $color-grey-dark-2;
+  color: $color-white;
+  // position: fixed;
+  // top: 0px;
+  height: 4.4rem;
+  // display: grid;
+  // place-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &-lockup {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2.2rem;
+
+    &-apple {
+      position: relative;
+      display: inline-block;
+      margin-left: 2.2rem;
+      font-size: 2.2rem !important;
+    }
+
+    &-title {
+      position: relative;
+      // display: inline-block;
+      display: inherit;
+      text-transform: capitalize;
+
+      font-family: 'SF Pro Display Semibold', 'Helvetica Neue', 'Helvetica',
+        'Arial', sans-serif;
+      font-weight: 600;
+      font-size: 1.9rem;
+      line-height: 2.2rem;
+      color: $color-white;
+
+      ul {
+        list-style-type: none;
+        li {
+          display: inline-block;
+
+        }
+      }
+
+
+      .bread-crumb {
+        &,
+        &:link,
+        &:visited {
+          font-family: 'SF Pro Display Regular', 'Helvetica Neue',
+            'Helvetica', 'Arial', sans-serif;
+          font-size: 1.2rem;
+          line-height: 1.2rem;
+          letter-spacing: 0.05rem;
+          // color: $color-white;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        &:hover {
+          // color: $color-button-over;
+          color: $color-white;
+          text-decoration: underline;
+        }
+
+        &:active,
+        &:focus {
+          color: $color-white;
+        }
+
+        &-white {
+          color: $color-white;
+        }
+        &-grey {
+          color: $color-grey-light;
+        }
+
+        &-separator {
+          margin: 0 7px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

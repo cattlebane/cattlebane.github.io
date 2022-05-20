@@ -1,15 +1,14 @@
-import Layout from '../components/layout/layout';
-import GlobalControlsProvider from '../store/GlobalControlsProvider';
-import '../sass/main.scss';
-import { gsap } from 'gsap';
+import Layout from "../components/Layout";
+import UserProvider from "../store/UserProvider";
+import "../styles/main.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <GlobalControlsProvider>
+    <UserProvider>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </GlobalControlsProvider>
+    </UserProvider>
   );
 }
 

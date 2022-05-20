@@ -1,43 +1,32 @@
-import Link from 'next/link';
-import CampaignList from '../components/campaigns/campaign-list';
-import breadcrumbsContext from '../store/breadcrumbs-context';
-import { getFeaturedEntries } from '../data/dummy-entries';
-import { useContext, useEffect } from 'react';
-import CampaignItem from '../components/campaigns/campaign-item';
+import Head from "next/head";
+import Image from "next/image";
+import { useContext, useEffect } from "react";
+import userContext from "../store/user-context";
+import styles from "@styles/pages/Home.module.scss";
+import Page from "components/Page";
 
-const HomePage = () => {
-  const featuredEntries = getFeaturedEntries();
-  const breadcrumbsCtx = useContext(breadcrumbsContext);
+export default function Home() {
+  const userCtx = useContext(userContext);
 
   useEffect(() => {
-    breadcrumbsCtx.updateBreadcrumbs([{ title: '', path: '/' }]);
+    console.log("Projects");
+    console.log(" » userCtx.data:", userCtx.data);
+
+    const getData = async () => {
+      console.log("   » getData()");
+      // const response = await fetch('/api/projects')
+      const response = await fetch("https://gitconnected.com/v1/portfolio/cattlebane");
+
+      const data = await response.json();
+
+      console.log("   » data:", data);
+      userCtx.setData(data);
+    };
+
+    getData();
   }, []);
 
-  return (
-    <div>
-      <ul>
-        {/* <CampaignItem item={{ title: 'Admin', path: '/admin' }} />
-        <CampaignItem item={{ title: 'Lines Of Business', path: '/lob' }} /> */}
-        <CampaignList
-          items={[
-            { id: 'admin', title: 'Admin', path: '/admin' },
-            { id: 'lob', title: 'Lines Of Business', path: '/lob' },
-          ]}
-        />
+  // useEffect(() => {}, [userCtx.data])
 
-        {/* <li>
-          <Link href="/admin">Admin</Link>
-        </li>
-        <li>
-          <Link href="/lob">Lines Of Business</Link>
-        </li> */}
-      </ul>
-      {/* <div>
-        <h2>Most Recent Campaigns</h2>
-        <CampaignList items={featuredEntries} />
-      </div> */}
-    </div>
-  );
-};
-
-export default HomePage;
+  return <Page title="Home">{userCtx.data ? <p className={styles.description}>Lets put a reel here</p> : <h1 className={styles.title}>LOADING</h1>}</Page>;
+}
