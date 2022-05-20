@@ -1,0 +1,37 @@
+// COLORS
+$color-primary-light: #0071e3;
+$color-primary-dark: #1d1d1f;
+
+$color-grey: #6e6e73;
+$color-grey-light: #86868b;
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #f5f5f7;
+$color-grey-light-3: #e8e8ed;
+$color-grey-light-4: #d2d2d7;
+$color-grey-dark: #515154;
+$color-grey-dark-2: #333;
+
+$color-red: #e30000;
+// $color-red: #af1e2d;
+
+$color-white: #fff;
+$color-black: #1d1d1f;
+
+$color-button: #0071e3;
+$color-button-over: #0077ed;
+$color-link: #0066cc;
+
+// FONT
+$default-font-size: 1.6rem;
+
+// GRID
+// $grid-width: 114rem;
+// $gutter-vertical: 8rem;
+// $gutter-vertical-small: 6rem;
+// $gutter-horizontal: 6rem;
+
+:export {
+  color_primaryLight: $color-primary-light;
+  color_primaryDark: $color-primary-dark;
+  color_white: $color-white;
+}

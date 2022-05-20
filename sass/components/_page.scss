@@ -1,0 +1,12 @@
+.page {
+  padding-top: 3rem;
+
+  &-headline {
+    text-align: center;
+    font-size: 3.4rem;
+    line-height: 1em;
+    color: $color-grey-light;
+    font-family: 'SF Pro Display Semibold', 'Helvetica Neue', 'Helvetica',
+      'Arial', sans-serif;
+  }
+}

@@ -1,0 +1,128 @@
+.Profiles {
+  position: relative;
+  margin: 0.5rem 2.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  color: $color-grey-light;
+  z-index: 999;
+
+  &-dropdown {
+    &,
+    &:link,
+    &:visited {
+      position: relative;
+      border-radius: 16px;
+      // padding: 0.8rem 1.6rem;
+      // font-size: 1.7rem;
+    }
+
+    &-label {
+      font-size: 1.7rem;
+      line-height: 2rem;
+    }
+
+    &-label-selected {
+      font-size: 1.2rem;
+    }
+
+    &-content {
+      display: none;
+      overflow: hidden;
+      border: 1px solid $color-grey-light-4;
+      border-radius: 16px;
+      font-size: 1.7rem;
+      background-color: $color-white;
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      min-width: 100%;
+
+      -webkit-box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.09);
+      box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.09);
+
+      max-height: 80vh;
+      overflow-y: auto;
+
+      &-select {
+        &,
+        &:link,
+        &:visited {
+          display: block;
+          // padding: 0.5rem 1rem;
+          // border: 1px solid $color-grey-light-3;
+          padding: 0.8rem 1.6rem;
+          font-size: 1.7rem;
+          background-color: $color-white;
+          text-align: right;
+          white-space: nowrap;
+          // &:first-child {
+          border-bottom: 1px $color-grey-light-4 solid;
+          // }
+        }
+
+        &-active {
+          &::before {
+            // content: '&#xF30B; ';
+            content: ' ';
+            font-family: 'SF Pro Icons';
+          }
+        }
+
+        &:active,
+        &:focus {
+          outline: none;
+        }
+        &-remove {
+          display: inline-block;
+          margin-left: 1rem;
+          // opacity: 0;
+        }
+      }
+      &-blue:hover {
+        color: $color-white;
+        background-color: $color-button-over;
+      }
+      &-remove {
+        display: block;
+        // margin-left: 1rem;
+        position: absolute;
+        top: 0.8rem;
+        right: 1.6rem;
+        opacity: 0;
+        &:hover {
+          &:first-of-type + a {
+            color: $color-white;
+            background-color: $color-red;
+          }
+        }
+      }
+      &-wrapper {
+        position: relative;
+      }
+      // }
+    }
+  }
+  &-add {
+    display: grid;
+    place-items: center;
+
+    a {
+      &,
+      &:link,
+      &:visited {
+        color: $color-grey-light;
+        padding: 0.8rem;
+      }
+
+      &:hover {
+        color: $color-button-over;
+      }
+    }
+  }
+}
+
+.btn-dropdown:hover .Profiles-dropdown-content {
+  display: block;
+}
