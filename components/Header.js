@@ -10,7 +10,8 @@ const Header = (props) => {
       <div className={styles["Header-lockup"]}>
         <Link href="/">
           <a className={`${btnStyles["btn-global-controls"]} ${btnStyles["btn-global-controls-white"]} ${styles["Header-lockup-apple"]}`}>
-            <span className={btnStyles["btn-global-controls-icon"]}></span> Jacques
+            {/* <span className={btnStyles["btn-global-controls-icon"]}></span> Jacques */}
+            Jacques Altounian
           </a>
         </Link>
         <h1 className={styles["Header-lockup-title"]}>

@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useState, useEffect, useContext } from "react";
-import styles from "@styles/pages/Home.module.scss";
+import styles from "@styles/pages/experience.module.scss";
 import Page from "components/Page";
 import userContext from "../store/user-context";
+import Card from "components/Card";
 
 export default function Experience() {
   const [experiences, setExperiences] = useState(null);
@@ -16,23 +17,25 @@ export default function Experience() {
     if (userCtx.data) {
       const experienceItems = userCtx.data.work.map((work, index) => {
         return (
-          <li key={`work-${index}`} style={{ border: "1px solid grey", margin: "15px" }}>
-            <ul>
-              <li>
-                {work.name}, {work.location.split(",")[0]} - {work.position}
-              </li>
-              <li>
-                {months[work.start.month - 1]} {work.start.year} - {months[work.end.month - 1]} {work.end.year}
-              </li>
-              <li>{work.summary}</li>
-              <li>
-                <ul>
-                  {work.highlights.map((highlight, index) => {
-                    return <li key={`highlight-${index}`}>{highlight}</li>;
-                  })}
-                </ul>
-              </li>
-            </ul>
+          <li key={`work-${index}`} className={styles.experience}>
+            <Card>
+              <ul>
+                <li className={styles.headline}>
+                  {work.name}, {work.location.split(",")[0]} - {work.position}
+                </li>
+                <li>
+                  {months[work.start.month - 1]} {work.start.year} - {months[work.end.month - 1]} {work.end.year}
+                </li>
+                <li>{work.summary}</li>
+                <li>
+                  <ul>
+                    {work.highlights.map((highlight, index) => {
+                      return <li key={`highlight-${index}`}>{highlight}</li>;
+                    })}
+                  </ul>
+                </li>
+              </ul>
+            </Card>
           </li>
         );
       });

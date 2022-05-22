@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useState, useEffect, useContext } from "react";
-import styles from "@styles/pages/Home.module.scss";
+import styles from "@styles/pages/projects.module.scss";
 import Page from "components/Page";
 import userContext from "../store/user-context";
+import Card from "components/Card";
 
 export default function Projects() {
   const [projects, setProjects] = useState(null);
@@ -16,51 +17,53 @@ export default function Projects() {
       const projectItems = userCtx.data.projects.map((project, index) => {
         const sizes = project.summary.split(",");
         return (
-          <li key={`project-${index}`} style={{ border: "1px solid grey", margin: "15px" }}>
-            <ul>
-              <li>{project.name}</li>
-              <li>
-                <ul>
-                  {project.images.map((imageData, imageIndex) => {
-                    return (
-                      <li key={`project-${index}-image-${imageIndex}`}>
-                        <img src={`https://www.youtube.com/embed/${imageData.sourceId}`} alt="" />
-                      </li>
-                    );
-                  })}
-                  {project.videos.map((videoData, videoIndex) => {
-                    const videoSize = sizes[videoIndex].split("x");
-                    return (
-                      <li key={`project-${index}-video-${videoIndex}`}>
-                        <iframe
-                          width={videoSize[0]}
-                          height={videoSize[1]}
-                          // width="560"
-                          // height="315"
-                          // style={{ width: "100px", height: "auto" }}
-                          src={`https://www.youtube.com/embed/${videoData.sourceId}`}
-                          title="YouTube video player"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </li>
-              <li>{project.description}</li>
-              <li>
-                Libraries
-                <br />
-                {project.libraries}
-              </li>
-              <li>
-                Languages
-                <br />
-                {project.languages}
-              </li>
-            </ul>
+          <li key={`project-${index}`} className={styles.projects}>
+            <Card>
+              <ul>
+                <li>{project.name}</li>
+                <li>
+                  <ul>
+                    {project.images.map((imageData, imageIndex) => {
+                      return (
+                        <li key={`project-${index}-image-${imageIndex}`}>
+                          <img src={`https://www.youtube.com/embed/${imageData.sourceId}`} alt="" />
+                        </li>
+                      );
+                    })}
+                    {project.videos.map((videoData, videoIndex) => {
+                      const videoSize = sizes[videoIndex].split("x");
+                      return (
+                        <li key={`project-${index}-video-${videoIndex}`}>
+                          <iframe
+                            width={videoSize[0]}
+                            height={videoSize[1]}
+                            // width="560"
+                            // height="315"
+                            // style={{ width: "100px", height: "auto" }}
+                            src={`https://www.youtube.com/embed/${videoData.sourceId}`}
+                            title="YouTube video player"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          ></iframe>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </li>
+                <li className={styles.description}>{project.description}</li>
+                <li>
+                  Libraries
+                  <br />
+                  {project.libraries}
+                </li>
+                <li>
+                  Languages
+                  <br />
+                  {project.languages}
+                </li>
+              </ul>
+            </Card>
           </li>
         );
       });
