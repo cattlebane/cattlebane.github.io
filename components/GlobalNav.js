@@ -38,9 +38,6 @@ const GlobalNav = (props) => {
   }, [router, globalNavCtx]);
 
   useEffect(() => {
-    if (!globalNavCtx.currentSection) {
-      return;
-    }
     const allItems = document.querySelectorAll(".nav-item");
     const activeItemID = `nav-${globalNavCtx.currentSection}`;
     const activeItem = document.querySelector(`#${activeItemID}`);
