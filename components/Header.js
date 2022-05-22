@@ -2,6 +2,7 @@ import styles from "@styles/components/Header.module.scss";
 import btnStyles from "@styles/components/button.module.scss";
 import Link from "next/link";
 import GlobalNav from "./GlobalNav";
+import GlobalNavProvider from "../store/GlobalNavProvider";
 
 const Header = (props) => {
   return (
@@ -14,7 +15,9 @@ const Header = (props) => {
         </Link>
         <h1 className={styles["Header-lockup-title"]}>
           &nbsp;
-          <GlobalNav />
+          <GlobalNavProvider>
+            <GlobalNav />
+          </GlobalNavProvider>
         </h1>
       </div>
     </header>
