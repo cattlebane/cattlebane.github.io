@@ -50,47 +50,6 @@
         }
       }
 
-      .active-nav-section {
-        color: $color-white!important;
-      }
-
-      .bread-crumb {
-        &,
-        &:link,
-        &:visited {
-          font-family: 'SF Pro Display Regular', 'Helvetica Neue',
-            'Helvetica', 'Arial', sans-serif;
-          font-size: 1.2rem;
-          line-height: 1.2rem;
-          letter-spacing: 0.05rem;
-          // color: $color-white;
-          text-decoration: none;
-          cursor: pointer;
-        }
-
-        &:hover {
-          // color: $color-button-over;
-          color: $color-white;
-          text-decoration: underline;
-        }
-
-        &:active,
-        &:focus {
-          color: $color-white;
-        }
-
-        &-white {
-          color: $color-white;
-        }
-        &-grey {
-          color: $color-grey-light;
-        }
-
-        &-separator {
-          margin: 0 7px;
-          display: inline-block;
-        }
-      }
     }
   }
 }

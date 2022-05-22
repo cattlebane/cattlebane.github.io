@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState, useContext } from "react";
-import styles from "@styles/components/Header.module.scss";
-import btnStyles from "@styles/components/button.module.scss";
+import styles from "@styles/components/globalNav.module.scss";
 import GlobalNavContext from "../store/globalNav-context";
 import { useRouter } from "next/router";
 
@@ -55,12 +54,12 @@ const GlobalNav = (props) => {
       return;
     }
 
-    const dash = <span className={`${styles["bread-crumb-separator"]} ${styles["bread-crumb-grey"]}`}></span>;
+    const dash = <span className={`${styles["nav-item-separator"]} ${styles["nav-item-grey"]}`}></span>;
     const navElements = navData.map((item, index) => {
       return (
         <li key={`nav-${item.id}`}>
           <Link href={`/${item.id}`}>
-            <a id={`nav-${item.id}`} className={`nav-item ${styles["bread-crumb"]} ${styles["bread-crumb-grey"]}`}>
+            <a id={`nav-${item.id}`} className={`nav-item ${styles["nav-item"]} ${styles["nav-item-grey"]}`}>
               {item.title}
             </a>
           </Link>
