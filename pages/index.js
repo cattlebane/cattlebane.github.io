@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
 import { useContext, useEffect } from "react";
 import userContext from "../store/user-context";
 import styles from "@styles/pages/Home.module.scss";
@@ -9,7 +7,7 @@ export default function Home() {
   const userCtx = useContext(userContext);
 
   useEffect(() => {
-    console.log("Projects");
+    console.log("Home");
     console.log(" » userCtx.data:", userCtx.data);
 
     const getData = async () => {
@@ -27,6 +25,11 @@ export default function Home() {
   }, []);
 
   // useEffect(() => {}, [userCtx.data])
+
+  useEffect(() => {
+    console.log("Home");
+    console.log(" » userCtx.data:", userCtx.data);
+  }, [userCtx.data]);
 
   return <Page title="Home">{userCtx.data ? <p className={styles.description}>Lets put a reel here</p> : <h1 className={styles.title}>LOADING</h1>}</Page>;
 }

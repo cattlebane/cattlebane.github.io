@@ -1,8 +1,8 @@
-import { createContext } from 'react';
+import { createContext } from "react";
 
 const UserContext = createContext({
   setData: () => {},
-  data: () => {},
+  data: {},
 });
 
 export default UserContext;
