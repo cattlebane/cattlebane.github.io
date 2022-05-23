@@ -16,52 +16,74 @@ export default function Projects() {
     if (userCtx.data) {
       const projectItems = userCtx.data.projects.map((project, index) => {
         const sizes = project.summary.split(",");
+        const libraries = project.libraries.map((lib) => {
+          return (
+            <li key={`stack-${lib}`} className={styles.stackItem}>
+              {lib}
+            </li>
+          );
+        });
+        const languages = project.languages.map((lang) => {
+          return (
+            <li key={`stack-${lang}`} className={styles.stackItem}>
+              {lang}
+            </li>
+          );
+        });
+        const stack = [...libraries, ...languages];
         return (
           <li key={`project-${index}`} className={styles.projects}>
             <Card>
               <ul>
-                <li>{project.name}</li>
                 <li>
-                  <ul>
+                  <h2>{project.displayName}</h2>
+                </li>
+                <li>
+                  <ul className={styles.mediaList}>
                     {project.images.map((imageData, imageIndex) => {
                       return (
                         <li key={`project-${index}-image-${imageIndex}`}>
-                          <img src={`https://www.youtube.com/embed/${imageData.sourceId}`} alt="" />
+                          <img src={imageData.resolutions.desktop.url} style={{ maxWidth: "400px" }} alt="" />
                         </li>
                       );
                     })}
                     {project.videos.map((videoData, videoIndex) => {
                       const videoSize = sizes[videoIndex].split("x");
+                      const videoWidth = videoSize[0] > window.innerWidth * 0.8 ? window.innerWidth * 0.8 : videoSize[0];
+                      const videoHeight = videoWidth != videoSize[0] ? videoSize[1] * (videoWidth / videoSize[0]) : videoSize[1];
                       return (
                         <li key={`project-${index}-video-${videoIndex}`}>
                           <iframe
-                            width={videoSize[0]}
-                            height={videoSize[1]}
+                            width={videoWidth}
+                            height={videoHeight}
                             // width="560"
                             // height="315"
                             // style={{ width: "100px", height: "auto" }}
                             src={`https://www.youtube.com/embed/${videoData.sourceId}`}
                             title="YouTube video player"
                             frameBorder="0"
+                            controls="0"
+                            iv_load_policy="3"
+                            modestBranding="1"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
+                            allowFullScreen="1"
                           ></iframe>
                         </li>
                       );
                     })}
                   </ul>
                 </li>
-                <li className={styles.description}>{project.description}</li>
-                <li>
-                  Libraries
-                  <br />
-                  {project.libraries}
+                <li className={styles.content}>{project.description}</li>
+                <li className={styles.content}>
+                  <h3>Tech Stack</h3>
+                  <ul>{stack}</ul>
+                  {/* {project.libraries} */}
                 </li>
-                <li>
+                {/* <li>
                   Languages
-                  <br />
                   {project.languages}
-                </li>
+                  <br />
+                </li> */}
               </ul>
             </Card>
           </li>
@@ -90,7 +112,8 @@ export default function Projects() {
         <title>Jacques Altounian - Creative Technologist - Projects</title>
       </Head>
 
-      <Page title="Projects">
+      {/* <Page title="Projects"> */}
+      <Page>
         <ul>{projects || ""}</ul>
       </Page>
     </>

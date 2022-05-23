@@ -4,6 +4,7 @@ import { useState, useEffect, useContext } from "react";
 import styles from "@styles/pages/Home.module.scss";
 import Page from "components/Page";
 import userContext from "../store/user-context";
+import Card from "components/Card";
 
 export default function About() {
   const userCtx = useContext(userContext);
@@ -56,7 +57,7 @@ export default function About() {
       });
       setSkills(skillsItems);
       const volunteerItems = userCtx.data.volunteer.map((item, index) => {
-        return <li key={`volunteer-${index}`}>{item.name}</li>;
+        return <li key={`volunteer-${index}`}>{item.organization}</li>;
       });
       setVolunteer(volunteerItems);
     } else {
@@ -85,28 +86,38 @@ export default function About() {
       </Head>
 
       <Page title="About">
-        <ul>{basics}</ul>
+        <Card>{basics}</Card>
         <br />
         <ul>
           <li>
-            <h1>My skills</h1>
-            <ul>{skills}</ul>
+            <Card>
+              <h2>My skills</h2>
+              <ul>{skills}</ul>
+            </Card>
           </li>
           <li>
-            <h1>My languages</h1>
-            <ul>{languages}</ul>
+            <Card>
+              <h1>My languages</h1>
+              <ul>{languages}</ul>
+            </Card>
           </li>
           <li>
-            <h1>My awards</h1>
-            <ul>{awards}</ul>
+            <Card>
+              <h1>My awards</h1>
+              <ul>{awards}</ul>
+            </Card>
           </li>
           <li>
-            <h1>My hobbies (guitar/photography/toy collecting)</h1>
-            <ul>{interests}</ul>
+            <Card>
+              <h1>My hobbies (guitar/photography/toy collecting)</h1>
+              <ul>{interests}</ul>
+            </Card>
           </li>
           <li>
-            <h1>volunteer</h1>
-            <ul>{volunteer}</ul>
+            <Card>
+              <h1>volunteer</h1>
+              <ul>{volunteer}</ul>
+            </Card>
           </li>
         </ul>
       </Page>

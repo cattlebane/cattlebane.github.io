@@ -1,6 +1,37 @@
 .projects {
+    display: inline-block;
+    vertical-align: top;
+    width: min-content;
 
-    .description {
+    .content {
         max-width: 600px;
+        color: $color-grey-dark;
+        padding: 1rem 0;
+    }
+
+    .mediaList {
+        // display: flex;
+        // justify-content: space-evenly;
+        
+        li {
+            margin: 1rem auto;
+            display: inline-block;
+            vertical-align: top;
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+          }
+    }
+
+    .stackItem {
+        background-color: $color-grey-light-2;
+        color: $color-grey;
+        border-radius: 11px;
+        display: inline-block;
+        padding: 1rem 1.2rem;
+        margin: .5rem auto;
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
     }
 }
