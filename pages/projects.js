@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useState, useEffect, useContext } from "react";
-import styles from "@styles/pages/projects.module.scss";
 import Page from "components/Page";
 import userContext from "../store/user-context";
 import Card from "components/Card";
+
+import styles from "@styles/pages/projects.module.scss";
 
 export default function Projects() {
   const [projects, setProjects] = useState(null);
@@ -75,7 +76,7 @@ export default function Projects() {
                 </li>
                 <li className={styles.content}>{project.description}</li>
                 <li className={styles.content}>
-                  <h3>Tech Stack</h3>
+                  <h4>Tech Stack</h4>
                   <ul>{stack}</ul>
                   {/* {project.libraries} */}
                 </li>

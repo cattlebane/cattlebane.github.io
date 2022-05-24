@@ -1,10 +1,14 @@
 import Head from "next/head";
 // import Image from "next/image";
 import { useState, useEffect, useContext } from "react";
-import styles from "@styles/pages/Home.module.scss";
 import Page from "components/Page";
 import userContext from "../store/user-context";
 import Card from "components/Card";
+import BioCard from "components/BioCard";
+
+import bioCardStyles from "@styles/components/bioCard.module.scss";
+import styles from "@styles/pages/about.module.scss";
+import btnStyles from "@styles/components/button.module.scss";
 
 export default function About() {
   const userCtx = useContext(userContext);
@@ -18,22 +22,43 @@ export default function About() {
   useEffect(() => {
     console.log("Experience");
     console.log(" » userCtx.data:", userCtx.data);
+    const addLinks = (copy) => {
+      const splitCopy = copy.split(" ");
+      const processedCopy = splitCopy.map((fragment) => {
+        if (fragment.indexOf(".com") > -1) {
+          return `<a href="http://www.${fragment}" className=${btnStyles["btn-text"]}>${fragment}</a>`;
+          /* return (
+            <a href={`http://www.${fragment}`} className={btnStyles["btn-text"]}>
+              {fragment}
+            </a>
+          ); */
+        } else {
+          return fragment;
+        }
+      });
+      return <div>{processedCopy.join(" ")}</div>;
+    };
+    const htmlToElement = (html) => {
+      var template = document.createElement("template");
+      html = html.trim(); // Never return a text node of whitespace as the result
+      template.innerHTML = html;
+      return template.content.firstChild;
+    };
     if (userCtx.data) {
       const { name, label, image, headline, summary } = userCtx.data.basics;
       const basicsItems = (
         <ul>
-          <li>
+          {/* <li>
             <h1>{name || ""}</h1>
-          </li>
-          <li>
-            <h2>{label || ""}</h2>
-          </li>
-          <li>
+          </li> */}
+          <li className={bioCardStyles.headline}>
             <img src={image || ""} alt="hero image" style={{ width: "100px" }} />
+            <div className={bioCardStyles.copyBlock}>
+              <h2>{label || ""}</h2>
+              <h3>{headline || ""}</h3>
+            </div>
           </li>
-          <li>
-            <h3>{headline || ""}</h3>
-          </li>
+          <li></li>
           <li>
             <p>{summary || ""}</p>
           </li>
@@ -41,19 +66,42 @@ export default function About() {
       );
       setBasics(basicsItems);
       const awardsItems = userCtx.data.awards.map((item, index) => {
-        return <li key={`awards-${index}`}>{`${item.awarder} - ${item.title}`}</li>;
+        return (
+          <li key={`awards-${index}`} className={styles.award}>
+            <h3>{item.title}</h3>
+            <h4>
+              {item.awarder} | {item.fullDate.year}
+            </h4>
+            {/* <p>{String.raw`${item.summary}`}</p> */}
+            <p>{item.summary}</p>
+          </li>
+        );
       });
       setAwards(awardsItems);
       const interestsItems = userCtx.data.interests.map((item, index) => {
-        return <li key={`interests-${index}`}>{item.name}</li>;
+        return (
+          <li key={`interests-${index}`} className={styles.stackItem}>
+            {/* {addLinks(item.name)} */}
+            {/* {htmlToElement(item.name)} */}
+            {item.name}
+          </li>
+        );
       });
       setInterests(interestsItems);
       const languagesItems = userCtx.data.languages.map((item, index) => {
-        return <li key={`languages-${index}`}>{item.language}</li>;
+        return (
+          <li key={`languages-${index}`} className={styles.stackItem}>
+            {item.language}
+          </li>
+        );
       });
       setLanguages(languagesItems);
       const skillsItems = userCtx.data.skills.map((item, index) => {
-        return <li key={`skills-${index}`}>{item.name}</li>;
+        return (
+          <li key={`skills-${index}`} className={styles.stackItem}>
+            {item.name}
+          </li>
+        );
       });
       setSkills(skillsItems);
       const volunteerItems = userCtx.data.volunteer.map((item, index) => {
@@ -85,40 +133,39 @@ export default function About() {
         <title>Jacques Altounian - Creative Technologist - About</title>
       </Head>
 
-      <Page title="About">
-        <Card>{basics}</Card>
-        <br />
+      <Page title="" className={styles.about}>
         <ul>
-          <li>
+          <li>{userCtx.data ? <BioCard basics={userCtx.data.basics} /> : ""}</li>
+          <li className={styles.section}>
             <Card>
-              <h2>My skills</h2>
-              <ul>{skills}</ul>
-            </Card>
-          </li>
-          <li>
-            <Card>
-              <h1>My languages</h1>
-              <ul>{languages}</ul>
-            </Card>
-          </li>
-          <li>
-            <Card>
-              <h1>My awards</h1>
+              <h2>Awards</h2>
               <ul>{awards}</ul>
             </Card>
           </li>
-          <li>
+          <li className={`${styles.section} ${styles.skills}`}>
             <Card>
-              <h1>My hobbies (guitar/photography/toy collecting)</h1>
+              <h2>Skills</h2>
+              <ul>{skills}</ul>
+            </Card>
+          </li>
+          <li className={styles.section}>
+            <Card>
+              <h2>My Hobbies</h2>
               <ul>{interests}</ul>
             </Card>
           </li>
-          <li>
+          {/* <li className={styles.section}>
             <Card>
-              <h1>volunteer</h1>
+              <h2>Spoken Languages</h2>
+              <ul>{languages}</ul>
+            </Card>
+          </li> */}
+          {/* <li className={styles.section}>
+            <Card>
+              <h2>volunteer</h2>
               <ul>{volunteer}</ul>
             </Card>
-          </li>
+          </li> */}
         </ul>
       </Page>
     </>

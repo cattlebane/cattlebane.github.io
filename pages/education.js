@@ -1,10 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useState, useEffect, useContext } from "react";
-import styles from "@styles/pages/Home.module.scss";
 import Page from "components/Page";
 import userContext from "../store/user-context";
 import Card from "components/Card";
+
+import styles from "@styles/pages/education.module.scss";
+import btnStyles from "@styles/components/button.module.scss";
 
 export default function Education() {
   const [educations, setEducations] = useState(null);
@@ -17,23 +19,21 @@ export default function Education() {
     if (userCtx.data) {
       const educationItems = userCtx.data.education.map((edu, index) => {
         return (
-          <li key={`edu-${index}`}>
+          <li key={`edu-${index}`} className={styles.section}>
             <Card>
-              <ul>
-                <li>
-                  {edu.institution}{" "}
-                  <a href={edu.website} target="_blank" rel="noreferrer">
-                    {edu.website.split("https://www.")[1].split("/")[0]}
-                  </a>
-                </li>
-                <li>
-                  {edu.studyType}, {edu.area}
-                </li>
-                <li>
-                  {month[edu.start.month - 1]} {edu.start.year} - {month[edu.end.month - 1]} {edu.end.year}
-                </li>
-                <li>{edu.activities}</li>
-              </ul>
+              <div className={styles.school}>
+                <h2>{edu.institution}</h2>{" "}
+                <a href={edu.website} target="_blank" rel="noreferrer" className={`${btnStyles["btn-text"]} ${styles["school-link"]}`}>
+                  {edu.website.split("https://www.")[1].split("/")[0]}
+                </a>
+              </div>
+              <p>
+                {edu.studyType}, {edu.area}
+              </p>
+              <h4>
+                {month[edu.start.month - 1]} {edu.start.year} - {month[edu.end.month - 1]} {edu.end.year}
+              </h4>
+              <p>{edu.activities}</p>
             </Card>
           </li>
         );
@@ -61,7 +61,7 @@ export default function Education() {
         <title>Jacques Altounian - Creative Technologist - Education</title>
       </Head>
 
-      <Page title="Education">
+      <Page title="" className={styles.education}>
         <ul>{educations || ""}</ul>
       </Page>
     </>
