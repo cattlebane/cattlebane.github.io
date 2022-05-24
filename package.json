@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "export": "next export",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "chalk": "^5.0.1",
@@ -18,6 +21,8 @@
   "devDependencies": {
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.6",
+    "gh-pages": "^4.0.0",
     "sass": "^1.51.0"
-  }
+  },
+  "homepage": "https://cattlebane.com"
 }

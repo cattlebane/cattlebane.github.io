@@ -1,12 +1,18 @@
-const path = require('path')
+const path = require("path");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, "styles")],
     prependData: `@import "~@styles/abstracts/_variables.scss";`,
   },
-}
+  images: {
+    loader: "akamai",
+    path: "",
+  },
+  // basePath: '/jacques-altounian/retina-to-html',
+  // assetPrefix: '/jacques-altounian/retina-to-html',
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
