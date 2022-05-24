@@ -12,7 +12,7 @@ const nextConfig = {
     path: "",
   },
   // basePath: '/jacques-altounian/retina-to-html',
-  assetPrefix: "/_next/static",
+  // assetPrefix: "/_next/static",
 };
 
 module.exports = nextConfig;
