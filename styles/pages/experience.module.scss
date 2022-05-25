@@ -1,9 +1,12 @@
 .experience {
     .section {
-        display: inline-block;
+        display: block;
+        // display: inline-block;
         vertical-align: top;
         // width: min-content;
         max-width: 790px;
+        margin: 0 auto;
+        list-style: none;
 
         white-space: pre-line;
         
