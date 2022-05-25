@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState, useContext } from "react";
 import styles from "@styles/components/globalNav.module.scss";
-import GlobalNavContext from "../store/globalNav-context";
+import GlobalNavContext from "../store/globalnav-context";
 import { useRouter } from "next/router";
 
 const navData = [
