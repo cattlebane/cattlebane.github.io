@@ -1,0 +1,39 @@
+.projects {
+    display: inline-block;
+    vertical-align: top;
+    width: min-content;
+
+    .content {
+        max-width: 600px;
+        color: $color-grey-dark;
+        padding: 1rem 0;
+        line-height: 2.5rem;
+    }
+
+    .mediaList {
+        // display: flex;
+        // justify-content: space-evenly;
+        
+        li {
+            margin: 1rem auto;
+            display: inline-block;
+            vertical-align: top;
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+          }
+    }
+
+    .stackItem {
+        background-color: $color-grey-light-2;
+        color: $color-grey;
+        border-radius: 6px;
+        font-size: 1.2rem;
+        display: inline-block;
+        padding: 0.1rem 1rem;
+        margin: .5rem auto;
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
+    }
+}
