@@ -1,5 +1,5 @@
 import { useState } from "react";
-import GlobalNavContext from "./globalNav-context";
+import GlobalNavContext from "./globalnav-context";
 
 const GlobalNavProvider = (props) => {
   const [currentSection, setCurrentSection] = useState(null);
