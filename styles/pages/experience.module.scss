@@ -1,0 +1,29 @@
+.experience {
+    .section {
+        display: inline-block;
+        vertical-align: top;
+        // width: min-content;
+        max-width: 790px;
+
+        white-space: pre-line;
+        
+        h3 {
+            line-height: 2.2rem;
+            color: $color-grey;
+        }
+
+        h4 {
+            margin: .6rem 0;
+        }
+
+        .workName {
+            font-family: "SF Pro Display semibold", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style:disc inside;
+        }
+    }
+    
+}
