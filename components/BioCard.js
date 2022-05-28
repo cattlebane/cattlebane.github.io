@@ -12,7 +12,7 @@ const BioCard = (props) => {
             <h1>{name || ""}</h1>
         </li> */}
         <li className={styles.headline}>
-          <img src={image || ""} alt="hero image" style={{ width: "100px" }} />
+          <img src={image || ""} alt="hero image" />
           <div className={styles.copyBlock}>
             <h2>{label || ""}</h2>
             <h3>{headline || ""}</h3>
