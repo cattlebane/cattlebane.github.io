@@ -1,0 +1,540 @@
+<!DOCTYPE HTML>
+<html>
+	<!-- Template: Flashtalking - Base, AdApp: 1.1.99, AdHtml: v2.6.2, Instance: 08/25/16 10:06am -->
+	<head>
+		<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta content="utf-8" http-equiv="encoding">
+
+
+
+		<title>RED[ Hulu | Pre_Fall_and_Fall_Campaign | RichMedia_Quiz | Staging | 970x250 | 1.0 ]</title>
+
+		<script type="text/javascript">
+
+			// standard platform exit - do not assign a url here, or it will override the platform
+			var clickTag 			= [ 1 ];
+
+			// multiple platform exits - do not assign a url here, or it will override the platform
+			/*var secondExit 				= [ 2 ];*/
+
+			// override platform exit
+			/*var overridePlatformExit		= [ 3, "http://example.com" ];*/
+
+			// append query-string to platform exit
+			/*var appendPlatformExit			= [ 4, myFT.getClickTag( 4, "?zipCode=90405" ) ];*/
+
+			var adParams = {
+				networkId				: "STANDARD",
+				adWidth				: 970,
+				adHeight				: 250,
+				environmentId			: "debug",
+				politeLoadAfter		: 1,
+				failoverOnError		: true,
+			};
+
+			var assets = {
+				preloader: {
+					image: "Staging_970x250_preloader.gif",
+					backgroundColor: "#212221",
+				},
+				failover: {
+					image: "Staging_970x250_backup.jpg",
+				},
+				images: [
+					"logo.png",
+					"btnBorder.svg",
+					"btnFill.svg",
+					"btnFillOVER.svg",
+					"circle.svg",
+					"quizHeroGradient.svg",
+					"introGradient.svg",
+				],
+				fonts: [
+					"Flama-ExtraBold-optimized.ttf",
+					"Flama-ExtraboldItalic-optimized.ttf",
+					"Flama-BoldItalic-ALLCAPS.ttf",
+					"Flama-BookItalic-optimized.ttf",
+				],
+				edgeImages: [
+				],
+				
+				payload: {
+					text: [ "Staging_970x250_text_payload.js" ],
+					binary: [],
+				}
+			};
+
+			var environments = [
+				{
+					id: "staging",
+					runPath: "../",
+					adPath: "970x250/",
+				},
+				{
+					id: "debug",
+					runPath: "../",
+					adPath: "970x250/",
+				}
+			];
+
+			var includes = function() { return []};
+
+			var externalIncludes = [
+			];
+
+		</script>
+
+		<style type="text/css">
+			html, body, #redMainContainer {
+				width: 100%;
+				height: 100%;
+			}
+			body {
+				margin: 0px;
+				outline: none;
+				-webkit-tap-highlight-color:rgba(0,0,0,0);
+			}
+		</style>
+
+	</head>
+
+
+	<body>
+		<div id="redMainContainer">
+			<div id="redAdContainer"></div>
+			<div id="redAuxContainer">
+				<div id="preloader"></div>
+				<div id="fail"></div>
+			</div>
+		</div>
+
+		<!-- preload inline scripts...if not needed until the build, use externalIncludes  --> 
+
+
+
+
+		<script type="text/javascript">
+			function failAd() {
+				trace ( "Index.failAd()" );
+				document.getElementById( "redAdContainer" ).style.display = "none";
+				document.getElementById( "redAuxContainer" ).style.display = "block";
+				document.body.style = "width: " + adParams.failoverWidth + "px; height: " + adParams.failoverHeight + "px; overflow: hidden;";
+				document.getElementById( "fail" ).style.cssText = "position: absolute; " +
+					"width: " + adParams.failoverWidth + "px; height: " + adParams.failoverHeight + "px; " +
+					"left:" + adParams.failoverX + "px; top:" + adParams.failoverY + "px; " + 
+					"background-image: url(" + adParams.adPath + assets.failover.image + "); background-size: contain; overflow: hidden; ";
+
+			}
+		</script>
+		<script type="text/javascript">
+			var global = this;
+			var remoteControl = {
+				debug: true
+			};
+			var Network,
+				queryParams,
+				adData;
+
+			/* -- INIT --------------------------------------------------
+			 *
+			 *
+			 */
+			init();
+
+
+			function init() {
+				trace( "DEPLOYED by AdApp: 1.2.26, 08/31/16 05:43pm" );
+				trace( "----------------------------------------------------------------------------------------------------------------------------" );
+				trace( " Staging_970x250_index_STANDARD.html[ Hulu | Pre_Fall_and_Fall_Campaign | RichMedia_Quiz | Staging | 970x250 | 1.0 ]" );
+				trace( "----------------------------------------------------------------------------------------------------------------------------" );
+				trace( "Index.init()" );
+				queryParams = getQueryParams();
+				adParams.politeLoadAfter = isDevEnvironment() ? 0 : adParams.politeLoadAfter;
+				if( adParams.failoverOnError )
+					window.onerror = handleError;
+				prepareEnvironment( getDeployProfile( adParams.environmentId ));
+				preparePreload();
+				prepareDebug();
+			}
+			function handleError() {
+				trace( "Index.handleError() - JAVASCRIPT ERROR!" );
+				window.onerror = function() {}; // after the first error, disable the event listening
+				failAd();
+			}
+
+
+
+
+
+			/* -- PRE LOAD ----------------------------------------------
+			 *
+			 *
+			 */ 
+			function preparePreload() {
+				trace( "Index.preparePreload()" );
+				prepareAdParams();
+				checkForAdTagParams();
+
+				addContainerStyles();
+				preparePreloader();
+
+				prepareNetwork();
+				makeAuxClickable();
+
+			}
+			function prepareAdParams() {
+				adParams.adSize = adParams.adWidth + "x" + adParams.adHeight;
+				adParams.failoverWidth = adParams.preloaderWidth = adParams.adWidth;
+				adParams.failoverHeight = adParams.preloaderHeight = adParams.adHeight;
+				adParams.failoverX = adParams.preloaderX = 0;
+				adParams.failoverY = adParams.preloaderY = 0;
+				
+			}
+			function checkForAdTagParams() {
+				trace( "Index.checkForAdTagParams()" );
+				for( var key in queryParams ) {
+					var value = queryParams[ key ].replace( /^\{/, "" ).replace( /\}$/, "" );
+					if( value != "" ) {
+						trace( " - applying to global." + key + ": " + value );
+						global[ key ] = value;
+					}
+				}
+			}			
+			function addContainerStyles() {
+				document.getElementById( "redMainContainer" ).style.cssText = "position: relative;";
+				var sizeCss = "width: " + adParams.adWidth + "px; height: " + adParams.adHeight + "px; ";
+				if( adParams.responsive )
+					sizeCss = "width: 100%; height: 100%; ";
+				document.getElementById( "redAdContainer" ).style.cssText = "position: absolute; left: 0px; top: 0px; " + sizeCss +
+					"opacity: 0; overflow: hidden; -webkit-user-select: none; -moz-user-select: none; user-select: none";
+			}
+			function preparePreloader() {
+				var sizeCss = "width: " + adParams.preloaderWidth + "px; height: " + adParams.preloaderHeight + "px; ";
+				if( adParams.responsive )
+					sizeCss = "width: 100%; height: 100%; ";
+				document.getElementById( "preloader" ).style.cssText = "position: absolute; " +
+					"top:" + adParams.preloaderY + "px; left:" + adParams.preloaderX + "px; " + sizeCss + 
+					"background-color: " + assets.preloader.backgroundColor + "; background-position: center center; background-repeat: no-repeat; " +
+					"background-image: url( " + adParams.adPath + assets.preloader.image + " ); ";
+			}
+			function removePreloader() {
+				trace( "Index.removePreloader()");
+				var preloader = document.getElementById( "preloader" )
+				if( preloader ) {
+					var redAuxContainer = document.getElementById( "redAuxContainer" );
+					redAuxContainer.style.display = "none";
+					redAuxContainer.removeChild( preloader );
+				}
+			}
+
+
+
+
+
+
+
+
+
+			/* -- NETWORK --------------------------------------------
+			 *
+			 *
+			 */
+			function prepareNetwork() {
+				trace( "Index.prepareNetwork()" );
+				Network = new function() { 
+					this.exit = function( _clickTag ) {
+						trace( "Network -> STANDARD EXIT" );
+						window.open( _clickTag, "_blank" );
+					}
+					this.appendMacro = function( _macro, _clickTag ) {
+						if( _macro.search( /^%%/ ) > -1 )
+							return _clickTag;
+						else return _macro + _clickTag;
+					}					
+				};
+			}
+			// auxiliary exits: preload or failover
+			function makeAuxClickable() {
+				var redAuxContainer = document.getElementById( "redAuxContainer" );
+				redAuxContainer.setAttribute( "onclick", "handleAuxClick()" );
+			}
+			function handleAuxClick() {
+				trace( "Index.handleAuxClick()" );
+				Network.exit( clickTag );
+				if( adParams.redAnalytics )
+					trackExit();
+			}
+
+
+
+
+
+
+
+
+
+
+			/* -- ENVIRONMENT --------------------------------------------
+			 *
+			 *
+			 */ 
+			function prepareEnvironment( environment, temp ) {
+				if(!( temp || false )) adParams.environmentId = environment.id;
+				// run-path + subpaths
+				adParams.runPath = matchProtocolTo( environment.runPath ); 	// must be defined in environment
+				adParams.corePath = adParams.runPath + ( "corePath" in environment ? environment.corePath : "_adlib/core/" );
+				adParams.commonPath = adParams.runPath + ( "commonPath" in environment ? environment.commonPath : "_adlib/common/" );
+				adParams.rcPath = adParams.commonPath + ( "rcPath" in environment ? environment.rcPath : "js/" );
+				adParams.jsPath = adParams.commonPath + ( "jsPath" in environment ? environment.jsPath : "js/" );
+				adParams.loaderPath = adParams.jsPath
+				adParams.fontsPath = adParams.commonPath + ( "fontsPath" in environment ? environment.fontsPath : "fonts/" );
+
+				// ad-path and subpaths
+				adParams.adPath = adParams.runPath + environment.adPath;	// must be defined in environment
+				adParams.imagesPath = adParams.adPath + ( "imagesPath" in environment ? environment.imagesPath : "images/" );
+				adParams.edgePath = adParams.imagesPath + ( "edgePath" in environment ? environment.edgePath : "edge/" );
+				adParams.videosPath = adParams.adPath + ( "videosPath" in environment ? environment.videosPath : "videos/" );
+			}
+			function traceDeployProfile() {
+				var line = Array( 120 ).join( "-" )
+				trace( line );
+				trace( " Template: Flashtalking - Base, AdApp: 1.1.99, AdHtml: v2.6.2, Instance: 08/25/16 10:06am " );
+				trace( line );
+				trace( " NETWORK:", adParams.networkId );
+				trace( " AD SIZE:", adParams.adSize );
+				trace( " ENVIRONMENT:", adParams.environmentId );
+				if( adParams.runPath == "" ) trace( "  RUN PATH:", "./" ); else trace( "  RUN PATH:", adParams.runPath );
+				if( adParams.adPath == "" ) trace( "  AD PATH:", "./" ); else trace( "  AD PATH:", adParams.adPath );
+				if( adParams.adManager ) trace( "  JSON PATH:", adParams.adManager.jsonMapUrl );
+				trace( " POLITE LOAD AFTER:", adParams.politeLoadAfter + 's' );
+				trace( line );
+				trace( " AD PARAMS:", adParams );
+				trace( line );
+			}
+
+
+
+
+			/* -- ASSET LOAD --------------------------------------------
+			 *
+			 *
+			 */ 
+			function prepareDebug() {
+				trace( "Index.prepareDebug()" );
+				remoteControl.disable = false; // emergency disable only!!!
+				var debugModeRequested = "debug" in queryParams && queryParams.debug.match( /^(true|yes|t|y|1)/i );
+				//
+				if( remoteControl.disable && !debugModeRequested ) {
+					prepareEnvironment( getDeployProfile( adParams.environmentId ));
+					traceDeployProfile();
+					trace( " - RemoteControl DISABLED, via remoteControl.disable" );
+					var modeInfo = ", because adParams.environmentId = " + adParams.environmentId;
+					if( isDevEnvironment())
+						trace( "    * DEBUG MODE ON" + modeInfo );
+					else {
+						trace( "    !!! LIVE MODE !!!" + modeInfo ); 
+						traceDebugOptions( );
+					}
+					remoteControl.debug = isDevEnvironment();
+					prepareAssetLoad();
+				}
+				else {
+					var debugEnvironment = getDeployProfile( "debug" );
+					if( !debugEnvironment ) {
+						prepareEnvironment( getDeployProfile( adParams.environmentId ));
+						traceDeployProfile();
+						trace( " - RemoteControl DISABLED, no debug environment defined" );
+						prepareAssetLoad();
+					}
+					else {
+						if( debugModeRequested ) {
+							prepareEnvironment( debugEnvironment );
+							traceDeployProfile();
+							trace( " - DEBUG MODE ON, via query-string ?debug=true" );
+							trace( "    * requires \"to_debug/\" is uploaded to: " + debugEnvironment.runPath );
+							prepareAssetLoad();
+						}
+						else { 
+							// - DEBUG MODE, determined by RemoteControl.js
+							remoteControl.debug = true;
+							prepareEnvironment( debugEnvironment, isTemp=true );
+							var scriptElem = document.createElement( "script" );
+							scriptElem.type = "text/javascript";
+							scriptElem.onload = scriptElem.onerror = handleRemoteControl;
+							scriptElem.src = adParams.rcPath + "RemoteControl.js";
+							document.getElementsByTagName( "head" )[ 0 ].appendChild( scriptElem );
+						}
+					}
+				}
+			}
+			function handleRemoteControl() {
+				if( RC !== undefined ) {
+					if( RC.debug ) {
+						traceDeployProfile();
+						trace( " - DEBUG MODE ON, via " + adParams.rcPath + "RemoteControl.js" );
+					}
+					else {
+						prepareEnvironment( getDeployProfile( adParams.environmentId ));
+						traceDeployProfile();
+						trace( "!!! LIVE MODE !!!, via " + adParams.rcPath + "RemoteControl.js" );
+						traceDebugOptions();
+					}
+					remoteControl = RC;
+				}
+				prepareAssetLoad();
+			}
+			function traceDebugOptions() {
+				trace( "    DEBUG OPTIONS:" );
+				trace( "     1) Test using the \"to_debug/\" index" );
+				trace( "     2) Manually put the \"to_debug/\" content at: " + getDeployProfile( "debug" ).runPath );
+				if( !remoteControl.disable ) trace( "         - use RemoteControl.js to switch to DEBUG MODE" );
+				trace( "         - use query-string ?debug=true" );
+				if( !remoteControl.disable ) trace( "     3) AdApp \"Start Debug\"" );
+			}
+
+			function prepareAssetLoad() {
+				trace( "Index.prepareAssetLoad()" );
+				prepareDependencies();
+				prepareExternalDependencies();
+				concatDependencies();
+				loadLoader();
+			}
+
+
+			function prepareDependencies() {
+				adParams.dependencies = [];
+				adParams.optionalDependencies = [];
+			}
+			function prepareExternalDependencies() {
+				adParams.externalDependencies = [
+					// TweenLite dependencies, cached via widespread usage
+					"https://cdn.flashtalking.com/frameworks/js/gsap/1.18.0/plugins/CSSPlugin.min.js",
+					"https://cdn.flashtalking.com/frameworks/js/gsap/1.18.0/easing/EasePack.min.js",
+					"https://cdn.flashtalking.com/frameworks/js/gsap/1.18.0/TweenLite.min.js",
+				];
+			}
+			function concatDependencies() {
+				assets.payload.text = assets.payload.text.map( function( item ) { return adParams.adPath + item; });
+				adParams.dependencies = adParams.dependencies.concat( adParams.optionalDependencies ).concat( includes.call() ).concat( assets.payload.text );
+				for( var i in adParams.dependencies )
+					adParams.dependencies[i] = getMinified( adParams.dependencies[i] );
+				adParams.dependencies = adParams.dependencies.concat( adParams.externalDependencies ).concat( externalIncludes );
+			}	
+
+
+			function loadLoader() {
+				trace( "Index.loadLoader()" );
+				global.addEventListener ( 'loaderControllerReady', loadDependencies );
+
+				var scriptElem = document.createElement( "script" );
+				scriptElem.type = "text/javascript";
+				scriptElem.onerror = failAd;
+				scriptElem.src = getMinified( adParams.loaderPath + "LoaderController.js" );
+				document.getElementsByTagName( "head" )[ 0 ].appendChild( scriptElem );
+			}
+			function loadDependencies() {
+				trace( "Index.loadDependencies()" );
+				setTimeout( function() {
+					new Loader( adParams.dependencies, {
+						name: "coreLibLoader", 
+						onComplete: prepareCore,
+						onFail: failAd, 
+						scope: global
+					}).load();				
+				}, adParams.politeLoadAfter * 1000 );
+			}
+
+
+			function prepareCore() {
+				trace( "\n\n\n -- Index.prepareCore() --" );
+				PrepareCore.init( prepareCommon );
+			}
+			function prepareCommon() {
+				trace( "\n\n\n -- Index.prepareCommon() --" );
+				PrepareCommon.init( prepareBuild );
+			}	
+			function prepareBuild() {
+				trace( "\n\n\n -- Index.prepareBuild() --" );
+				Control.prepareBuild();
+			}
+
+			
+
+
+
+
+
+
+			/* -- GLOBAL UTILITIES --------------------------------------------
+			 *
+			 *
+			 */ 
+			function getDeployProfile( id ) {
+				for( var i = 0; i < environments.length; i++ ) {
+					if( environments[i].id === id ) 
+						return environments[i];
+				}
+				return false;
+			}
+			function isDevEnvironment() {
+				return adParams.environmentId == 'default' ||
+					adParams.environmentId == 'staging' ||
+					adParams.environmentId == 'debug';
+			}
+			function getMinified( _filename ) {
+				if( !remoteControl.debug ) 
+					return _filename.replace( /\.js$/, ".min.js" );
+				else return _filename
+			}
+			function getQueryParams() {
+				var queryParams = {};
+				var query = window.location.href.split( "?" );
+				if( query.length > 1 ) {
+					var params = query[ 1 ].split( "&" );
+					for( var i in params ) {
+						var keyValue = params[ i ].split( "=" );
+						if( keyValue.length == 2 ) 
+							queryParams[ keyValue[ 0 ]] = decodeURIComponent( keyValue[ 1 ]);
+					}
+				}
+				return queryParams;
+			}
+			function matchProtocolTo( _url ) {
+				if( _url.search( /^http/ ) > -1 ) {
+					var _secure = window.location.href.search( /^https/ ) > -1;
+					var _httpProtocol = _secure ? "https://" : "http://";
+					
+					if( _url.search( /.*edgecastcdn/ ) > -1 ) {
+						var _edgecastContext = _secure ? "ne1." + _url.match( /w(a|p)c/i )[ 0 ] + "." : _url.match( /w(a|p)c\.[a-z0-9]*\./i )[ 0 ];
+						_url = _httpProtocol + _edgecastContext + "edgecastcdn" + _url.replace( /.*edgecastcdn/, "" );
+					} 
+					else if( _url.search( /.*paramount\.com/ ) > -1 ) {
+						var _paramountContext = _secure ? "paramountdlds-a.akamaihd.net" : "downloads.paramount.com";
+						_url = _httpProtocol + _paramountContext + _url.replace( /.*paramount\.com/, "" );
+					}
+					else if( _url.search( /espn\.go\.com/ ) > -1 || _url.search( /secure\.espncdn\.com/ ) > -1 ) {
+						var _espnContext = _secure ? "secure.espncdn.com" : "assets.espn.go.com";
+						_url = _httpProtocol + _espnContext + _url.replace( /^.*\.com/, "" );
+					}
+					else {
+						_url = _url.replace( /^https?\:\/\//i, _httpProtocol );
+					}
+				}
+				return _url;
+			}
+			function trace() {
+				if( console && remoteControl.debug ) {
+					var args = ["RED[ 970x250|1.0 ] "];
+					for( var i=0; i < arguments.length; i++ )
+						args.push( arguments[i] );
+					Function.prototype.apply.call( console.log, console, args );
+				}
+			}
+			function getStaticSchedule() {
+				return StaticGenerator.schedule;
+			}
+
+		</script>
+	</body>
+</html>

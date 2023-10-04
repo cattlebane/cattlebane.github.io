@@ -1,0 +1,47 @@
+.about {
+    .section {
+        display: inline-block;
+        vertical-align: top;
+        // width: min-content;
+        max-width: 600px;
+
+        ul {
+            margin-top: 2rem;
+        }
+        white-space: pre-line;
+    }
+
+
+    .award {
+        margin: 2rem 0;
+    }
+
+    .skills {
+        max-width: 430px;
+    }
+    
+    .stackItem {
+        background-color: $color-grey-light-2;
+        color: $color-grey;
+        border-radius: 6px;
+        font-size: 1.2rem;
+        display: inline-block;
+        padding: 0.1rem 1rem;
+        margin: .5rem auto;
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
+    }
+
+    /* .hobby {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    } */
+
+    /* .card {
+        display: inline-block;
+        vertical-align: top;
+    } */
+}

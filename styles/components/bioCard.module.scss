@@ -1,0 +1,39 @@
+.bioCard {
+  display: inline-block;
+  vertical-align: top;
+
+  max-width: 600px;
+
+  .headline {
+    display: flex;
+    margin-bottom: 2rem;
+  
+    h2 {
+      margin-bottom: .5rem;
+    }
+
+    h3 {
+      line-height: 2.3rem;
+    }
+  
+    img {
+      margin-right: 2rem;
+      border-radius: 11px;
+
+      width: 100px;
+      height: 100px;
+  
+  
+      -webkit-box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.09);
+      box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.09);
+    }
+  
+    .copyBlock {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      max-width: 400px;
+    }
+  }
+}
+

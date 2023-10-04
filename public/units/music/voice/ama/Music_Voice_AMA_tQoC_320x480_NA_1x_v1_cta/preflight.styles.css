@@ -1,0 +1,42 @@
+#preloader {
+	position: absolute;
+	background-color: #000;
+
+	display: grid;
+	place-items: center;
+
+	pointer-events: none;
+
+	box-sizing: border-box;
+	border: 1px solid #515154;
+}
+
+#preloader-chiclet {
+	box-sizing: unset;
+	/* border-radius: 10px; */
+	overflow: hidden;
+	width: 84px;
+	height: 68px;
+	position: relative;
+
+	/* padding: 0 8px; */
+	display: grid;
+	place-items: center;
+
+	/* background-image: linear-gradient(to bottom, #ff7355, #ff2d69); */
+}
+
+.preloader-chiclet-loading {
+	/* animation: color-glow-animation 4s infinite linear; */
+	/* animation: pulse-animation 1s infinite alternate ease-out; */
+}
+
+#preloader-chiclet img {
+	width: 84px;
+	height: 68px;
+	margin: 0 auto;
+	position: relative;
+}
+
+*,*::after,*::before{margin:0;padding:0;box-sizing:inherit}html{font-size:62.5%}
+
