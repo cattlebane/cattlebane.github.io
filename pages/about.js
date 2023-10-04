@@ -9,6 +9,7 @@ import BioCard from "components/BioCard";
 import bioCardStyles from "@styles/components/bioCard.module.scss";
 import styles from "@styles/pages/about.module.scss";
 import btnStyles from "@styles/components/button.module.scss";
+import Link from "next/link";
 
 export default function About() {
   const userCtx = useContext(userContext);
@@ -66,6 +67,10 @@ export default function About() {
       );
       setBasics(basicsItems);
       const awardsItems = userCtx.data.awards.map((item, index) => {
+        const copyAr = item.summary.split("<a>");
+        const summary = copyAr[0];
+        const linkCopy = copyAr[1];
+        const link = linkCopy && linkCopy.replace("<a>", "").replace("</a>", "");
         return (
           <li key={`awards-${index}`} className={styles.award}>
             <h3>{item.title}</h3>
@@ -73,7 +78,17 @@ export default function About() {
               {item.awarder} | {item.fullDate.year}
             </h4>
             {/* <p>{String.raw`${item.summary}`}</p> */}
-            <p>{item.summary}</p>
+            {/* <p>{item.summary}</p> */}
+            <p>
+              {summary}
+              {link && (
+                <Link href={link}>
+                  <a className={btnStyles["btn-text"]} target="_blank">
+                    {link}
+                  </a>
+                </Link>
+              )}
+            </p>
           </li>
         );
       });
