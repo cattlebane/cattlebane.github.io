@@ -17,6 +17,11 @@ export default function Projects() {
     if (userCtx.data) {
       const projectItems = userCtx.data.projects.map((project, index) => {
         const sizes = project.summary.split(",");
+        const projectImages = Object.values(project.images);
+        const projectVideos = Object.values(project.videos);
+        console.log("   » sizes:", sizes);
+        console.log("   » projectImages:", projectImages);
+        console.log("   » projectVideos:", projectVideos);
         const libraries = project.libraries.map((lib) => {
           return (
             <li key={`stack-${lib}`} className={styles.stackItem}>
@@ -41,15 +46,15 @@ export default function Projects() {
                 </li>
                 <li>
                   <ul className={styles.mediaList}>
-                    {project.images.map((imageData, imageIndex) => {
+                    {projectImages.map((imageData, imageIndex) => {
                       return (
                         <li key={`project-${index}-image-${imageIndex}`}>
                           <img src={imageData.resolutions.desktop.url} style={{ maxWidth: "400px" }} alt="" />
                         </li>
                       );
                     })}
-                    {project.videos.map((videoData, videoIndex) => {
-                      const videoSize = sizes[videoIndex].split("x");
+                    {projectVideos.map((videoData, videoIndex) => {
+                      const videoSize = videoIndex < sizes.length ? sizes[videoIndex].split("x") : sizes[sizes.length - 1].split("x");
                       const videoWidth = videoSize[0] > window.innerWidth * 0.8 ? window.innerWidth * 0.8 : videoSize[0];
                       const videoHeight = videoWidth != videoSize[0] ? videoSize[1] * (videoWidth / videoSize[0]) : videoSize[1];
                       return (
