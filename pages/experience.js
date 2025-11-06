@@ -7,6 +7,7 @@ import Card from "components/Card";
 import siteData from "../data/site-data.json";
 
 import styles from "@styles/pages/experience.module.scss";
+import btnStyles from "@styles/components/button.module.scss";
 
 export default function Experience() {
   const [experiences, setExperiences] = useState(null);

@@ -41,10 +41,10 @@
       "startDate": "2022-08-01",
       "summary": "Build web apps, tools, landing pages, and HTML ad campaigns",
       "highlights": [
-        "<a target='_blank' href=\"https://games.apple.com\">https://games.apple.com</a>",
-        "<a target='_blank' href=\"https://learn.applecash.apple/family\">https://learn.applecash.apple/family</a>",
-        "<a target='_blank' href=\"https://learn.applecash.apple/benefits\">https://learn.applecash.apple/benefits</a>",
-        "<a target='_blank' href=\"https://applegiftcard.apple.com\">https://applegiftcard.apple.com</a>",
+        "<a class='btn-text' target='_blank' href=\"https://games.apple.com\">https://games.apple.com</a>",
+        "<a class='btn-text' target='_blank' href=\"https://learn.applecash.apple/family\">https://learn.applecash.apple/family</a>",
+        "<a class='btn-text' target='_blank' href=\"https://learn.applecash.apple/benefits\">https://learn.applecash.apple/benefits</a>",
+        "<a class='btn-text' target='_blank' href=\"https://applegiftcard.apple.com\">https://applegiftcard.apple.com</a>",
         "Apple Pay Websites for commercials.",
         "Apple Pay/Card/Giftcard Landing Pages"
       ],
