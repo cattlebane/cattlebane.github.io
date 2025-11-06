@@ -4,6 +4,7 @@ import { useState, useEffect, useContext } from "react";
 import Page from "components/Page";
 import userContext from "../store/user-context";
 import Card from "components/Card";
+import siteData from "../data/site-data.json";
 
 import styles from "@styles/pages/education.module.scss";
 import btnStyles from "@styles/components/button.module.scss";
@@ -23,9 +24,9 @@ export default function Education() {
             <Card>
               <div className={styles.school}>
                 <h2>{edu.institution}</h2>{" "}
-                <a href={edu.website} target="_blank" rel="noreferrer" className={`${btnStyles["btn-text"]} ${styles["school-link"]}`}>
+                {/* <a href={edu.website} target="_blank" rel="noreferrer" className={`${btnStyles["btn-text"]} ${styles["school-link"]}`}>
                   {edu.website.split("https://www.")[1].split("/")[0]}
-                </a>
+                </a> */}
               </div>
               <p>
                 {edu.studyType}, {edu.area}
@@ -43,6 +44,15 @@ export default function Education() {
     } else {
       const getData = async () => {
         console.log("   » getData()");
+        // using local site-data.json instead of remote API
+        const data = siteData;
+
+        console.log("   » data:", data);
+        userCtx.setData(data);
+      };
+      getData();
+      /* const getData = async () => {
+        console.log("   » getData()");
         // const response = await fetch('/api/projects')
         const response = await fetch("https://gitconnected.com/v1/portfolio/cattlebane");
 
@@ -51,7 +61,7 @@ export default function Education() {
         console.log("   » data:", data);
         userCtx.setData(data);
       };
-      getData();
+      getData(); */
     }
   }, [userCtx.data]);
 

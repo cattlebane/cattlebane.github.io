@@ -4,6 +4,7 @@ import { useState, useEffect, useContext } from "react";
 import Page from "components/Page";
 import userContext from "../store/user-context";
 import Card from "components/Card";
+import siteData from "../data/site-data.json";
 
 import styles from "@styles/pages/experience.module.scss";
 
@@ -30,7 +31,7 @@ export default function Experience() {
               <li>
                 <ul>
                   {work.highlights.map((highlight, index) => {
-                    return <li key={`highlight-${index}`}>{highlight}</li>;
+                    return <li key={`highlight-${index}`} dangerouslySetInnerHTML={{ __html: highlight }} />;
                   })}
                 </ul>
               </li>
@@ -43,6 +44,15 @@ export default function Experience() {
     } else {
       const getData = async () => {
         console.log("   » getData()");
+        // using local site-data.json instead of remote API
+        const data = siteData;
+
+        console.log("   » data:", data);
+        userCtx.setData(data);
+      };
+      getData();
+      /* const getData = async () => {
+        console.log("   » getData()");
         const response = await fetch("https://gitconnected.com/v1/portfolio/cattlebane");
 
         const data = await response.json();
@@ -50,7 +60,7 @@ export default function Experience() {
         console.log("   » data:", data);
         userCtx.setData(data);
       };
-      getData();
+      getData(); */
     }
   }, [userCtx.data]);
 

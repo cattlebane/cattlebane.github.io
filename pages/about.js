@@ -5,6 +5,7 @@ import Page from "components/Page";
 import userContext from "../store/user-context";
 import Card from "components/Card";
 import BioCard from "components/BioCard";
+import siteData from "../data/site-data.json";
 
 import bioCardStyles from "@styles/components/bioCard.module.scss";
 import styles from "@styles/pages/about.module.scss";
@@ -20,31 +21,56 @@ export default function About() {
   const [volunteer, setVolunteer] = useState(null);
   const [basics, setBasics] = useState(null);
 
-  useEffect(() => {
-    console.log("Experience");
-    console.log(" » userCtx.data:", userCtx.data);
-    const addLinks = (copy) => {
-      const splitCopy = copy.split(" ");
-      const processedCopy = splitCopy.map((fragment) => {
-        if (fragment.indexOf(".com") > -1) {
-          return `<a href="http://www.${fragment}" className=${btnStyles["btn-text"]}>${fragment}</a>`;
-          /* return (
+  const htmlToElement = (html) => {
+    var template = document.createElement("template");
+    html = html.trim(); // Never return a text node of whitespace as the result
+    template.innerHTML = html;
+    return template.content.firstChild;
+  };
+
+  const getLink = (copy) => {
+    const copyAr = copy.split("<a>");
+    if (copyAr.length > 1) {
+      const linkCopy = copyAr[1];
+      const linksPair = linkCopy && linkCopy.replace("<a>", "").replace("</a>", "");
+      const links = linksPair.split("|");
+      return (
+        <>
+          {links && (
+            <Link href={links[0]}>
+              <a className={btnStyles["btn-text"]} target="_blank">
+                {links[1]}
+              </a>
+            </Link>
+          )}
+        </>
+      );
+    } else {
+      return copy;
+    }
+  };
+
+  const addLinks = (copy) => {
+    const splitCopy = copy.split(" ");
+    const processedCopy = splitCopy.map((fragment) => {
+      if (fragment.indexOf(".com") > -1) {
+        return `<a href="http://www.${fragment}" className=${btnStyles["btn-text"]}>${fragment}</a>`;
+        /* return (
             <a href={`http://www.${fragment}`} className={btnStyles["btn-text"]}>
               {fragment}
             </a>
           ); */
-        } else {
-          return fragment;
-        }
-      });
-      return <div>{processedCopy.join(" ")}</div>;
-    };
-    const htmlToElement = (html) => {
-      var template = document.createElement("template");
-      html = html.trim(); // Never return a text node of whitespace as the result
-      template.innerHTML = html;
-      return template.content.firstChild;
-    };
+      } else {
+        return fragment;
+      }
+    });
+    return <div>{processedCopy.join(" ")}</div>;
+  };
+
+  useEffect(() => {
+    console.log("Experience");
+    console.log(" » userCtx.data:", userCtx.data);
+
     if (userCtx.data) {
       const { name, label, image, headline, summary } = userCtx.data.basics;
       const basicsItems = (
@@ -98,7 +124,8 @@ export default function About() {
           <li key={`interests-${index}`} className={styles.stackItem}>
             {/* {addLinks(item.name)} */}
             {/* {htmlToElement(item.name)} */}
-            {item.name}
+            {/* {item.name} */}
+            {getLink(item.name)}
           </li>
         );
       });
@@ -126,6 +153,15 @@ export default function About() {
     } else {
       const getData = async () => {
         console.log("   » getData()");
+        // using local site-data.json instead of remote API
+        const data = siteData;
+
+        console.log("   » data:", data);
+        userCtx.setData(data);
+      };
+      getData();
+      /* const getData = async () => {
+        console.log("   » getData()");
         // const response = await fetch('/api/projects')
         const response = await fetch("https://gitconnected.com/v1/portfolio/cattlebane");
 
@@ -134,7 +170,7 @@ export default function About() {
         console.log("   » data:", data);
         userCtx.setData(data);
       };
-      getData();
+      getData(); */
     }
   }, [userCtx.data]);
 
