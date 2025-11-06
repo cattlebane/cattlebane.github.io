@@ -49,6 +49,40 @@ a {
   text-decoration: none;
 }
 
+.btn-text {
+  background: none;
+  border: none;
+  color: #0077ed;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+  
+  &:visited {
+    color: #0077ed;
+  }
+
+  &::after {
+    padding-left: 0.3em;
+    font-family: 'SF Pro Icons';
+    color: inherit;
+    display: inline-block;
+    font-style: normal;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: 1;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    alt: '';
+    content: '';
+  }
+}
+
 main {
   margin: 4.4rem 0 0;
 }
