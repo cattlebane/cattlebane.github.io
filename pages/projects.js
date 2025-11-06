@@ -6,6 +6,7 @@ import userContext from "../store/user-context";
 import Card from "components/Card";
 
 import styles from "@styles/pages/projects.module.scss";
+import siteData from "../data/site-data.json";
 
 export default function Projects() {
   const [projects, setProjects] = useState(null);
@@ -100,6 +101,16 @@ export default function Projects() {
     } else {
       const getData = async () => {
         console.log("   » getData()");
+        // using local site-data.json instead of remote API
+        const data = siteData;
+
+        console.log("   » data:", data);
+        userCtx.setData(data);
+      };
+      getData();
+
+      /* const getData = async () => {
+        console.log("   » getData()");
         // const response = await fetch('/api/projects')
         const response = await fetch("https://gitconnected.com/v1/portfolio/cattlebane");
 
@@ -108,7 +119,7 @@ export default function Projects() {
         console.log("   » data:", data);
         userCtx.setData(data);
       };
-      getData();
+      getData(); */
     }
   }, [userCtx.data]);
 

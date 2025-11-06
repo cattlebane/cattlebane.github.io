@@ -1,0 +1,989 @@
+{
+  "basics": {
+    "name": "Jacques Altounian",
+    "label": "Creative Technologist",
+    "image": "https://avatars0.githubusercontent.com/u/669218?v=4",
+    "email": "cattlebane@gmail.com",
+    "url": "https://www.jacquesaltounian.com",
+    "summary": "I love breathing life into user experiences through intuitive interactive development and animation. Hailing from a background of digital/ad agencies, I specialize in a wide range of digital marketing disciplines. I’m constantly learning new tech and building tools to achieve my goals.",
+    "location": {
+      "city": "Los Angeles",
+      "region": "CA"
+    },
+    "profiles": [
+      {
+        "network": "gitconnected",
+        "username": "cattlebane",
+        "url": "https://gitconnected.com/cattlebane"
+      },
+      {
+        "network": "GitHub",
+        "username": "cattlebane",
+        "url": "https://github.com/cattlebane"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "jacquesaltounian",
+        "url": "https://linkedin.com/in/jacquesaltounian"
+      },
+      {
+        "network": "Twitter",
+        "username": "cattlebane",
+        "url": "https://twitter.com/cattlebane"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Apple",
+      "position": "Creative Technologist",
+      "url": "https://www.apple.com",
+      "startDate": "2022-08-01",
+      "summary": "Build web apps, tools, landing pages, and HTML ad campaigns",
+      "highlights": [
+        "<a target='_blank' href=\"https://games.apple.com\">https://games.apple.com</a>",
+        "<a target='_blank' href=\"https://learn.applecash.apple/family\">https://learn.applecash.apple/family</a>",
+        "<a target='_blank' href=\"https://learn.applecash.apple/benefits\">https://learn.applecash.apple/benefits</a>",
+        "<a target='_blank' href=\"https://applegiftcard.apple.com\">https://applegiftcard.apple.com</a>",
+        "Apple Pay Websites for commercials.",
+        "Apple Pay/Card/Giftcard Landing Pages"
+      ],
+      "location": "Culver City",
+      "isCurrentRole": true,
+      "start": {
+        "year": 2022,
+        "month": 8
+      },
+      "end": {
+        "year": "CURRENT",
+        "month": null
+      },
+      "company": "Apple",
+      "website": "https://www.apple.com"
+    },
+    {
+      "name": "Mathys+Potestio onsite @ Apple",
+      "position": "Creative Technologist",
+      "url": "",
+      "startDate": "2020-11-01",
+      "endDate": "2022-05-01",
+      "summary": "Build web apps, tools, landing pages, and HTML5 ad campaigns.\n",
+      "highlights": [
+        "Developed an HTML5 ad framework to build ads with React/Preact.",
+        "Campaign builder developer tool for efficiently building and previewing entire ad campaigns",
+        "Asset to HTML5 converter"
+      ],
+      "location": "Culver City, CA",
+      "isCurrentRole": false,
+      "start": {
+        "year": 2020,
+        "month": 11
+      },
+      "end": {
+        "year": 2022,
+        "month": 5
+      },
+      "company": "Mathys+Potestio onsite @ Apple",
+      "website": ""
+    },
+    {
+      "name": "160over90 (formerly RED Interactive)",
+      "position": "Senior Interactive Developer and Animator",
+      "url": "https://www.160over90.com/",
+      "startDate": "2019-10-01",
+      "endDate": "2020-09-01",
+      "summary": "Digital marketing (Web sites, mobile games, banner ads, HTML emails, social video production) for major brands Disney, Dreamworks, ESPN, Hulu, Live Nation, Matell, Netflix, Nike, Paramount, Quibi, Ubisoft, UFC, Under Armor, Universal, etc",
+      "highlights": [
+        "2015 - 2020 | Sr Developer Interactive Online Marketing",
+        "2013 - 2015 | Mobile Games Developer and Animator",
+        "2010 - 2013 | Sr Flash Developer"
+      ],
+      "location": "Santa Monica, CA 90405",
+      "isCurrentRole": false,
+      "start": {
+        "year": 2019,
+        "month": 10
+      },
+      "end": {
+        "year": 2020,
+        "month": 9
+      },
+      "company": "160over90 (formerly RED Interactive)",
+      "website": "https://www.160over90.com/"
+    },
+    {
+      "name": "Ted.Perez. + Associates",
+      "position": "Flash Developer",
+      "url": "https://www.tedperez.com/",
+      "startDate": "2005-10-01",
+      "endDate": "2009-11-01",
+      "summary": "Built Web sites, games, and features for the film industry and ad agencies. Clients include Universal Pictures, Paramount Pictures, FOX, IMAX, SONY, Leo Burnet, Sprint, Goodby Silverstein & Partners, etc.",
+      "highlights": [
+        "Leatherheads theatrical Web site (Universal)",
+        "Las King of Scotland theatrical Web Site (FOX Searchlight)",
+        "Evan Almighty theatrical Web site (Universal)",
+        "XTRAS Web site (IMAX)",
+        "Love Guru theatrical Web site (Paramount)",
+        "NOW Network (Sprint)",
+        "Despicable Me theatrical Web site (Universal)"
+      ],
+      "location": "Venice, CA",
+      "isCurrentRole": false,
+      "start": {
+        "year": 2005,
+        "month": 10
+      },
+      "end": {
+        "year": 2009,
+        "month": 11
+      },
+      "company": "Ted.Perez. + Associates",
+      "website": "https://www.tedperez.com/"
+    },
+    {
+      "name": "Philadelphia University (now Thomas Jefferson University)",
+      "position": "Adjunct Professor",
+      "url": "",
+      "startDate": "2003-09-01",
+      "endDate": "2005-05-01",
+      "summary": "Taught Digital Design class that introduced students to Photoshop, Flash, Director, and Final Cut Pro. Instructed basic programming and animation/motion graphics techniques as well as Web publishing and optimization. Also provided mentorship for two students with their graduate thesis.",
+      "highlights": [],
+      "location": "Philadelphia, PA",
+      "isCurrentRole": false,
+      "start": {
+        "year": 2003,
+        "month": 9
+      },
+      "end": {
+        "year": 2005,
+        "month": 5
+      },
+      "company": "Philadelphia University (now Thomas Jefferson University)",
+      "website": ""
+    },
+    {
+      "name": "I-SITE Inc",
+      "position": "Interactive Developer and Multimedia Specialist",
+      "url": "https://www.i-site.com/",
+      "startDate": "2001-06-01",
+      "endDate": "2005-05-01",
+      "summary": "Clients include Lactaid, Mid Atlantic Dairy Association, National Dairy Council, Deloitte, Susan G Komen Foundation.",
+      "highlights": [],
+      "location": "Philadelphia, PA",
+      "isCurrentRole": false,
+      "start": {
+        "year": 2001,
+        "month": 6
+      },
+      "end": {
+        "year": 2005,
+        "month": 5
+      },
+      "company": "I-SITE Inc",
+      "website": "https://www.i-site.com/"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Reading To Kids",
+      "position": "Volunteer Reader",
+      "url": "https://www.readingtokids.org/",
+      "startDate": "2010-01-01",
+      "endDate": "2013-01-01",
+      "summary": "",
+      "highlights": [],
+      "location": "Los Angeles, CA",
+      "start": {
+        "year": 2010,
+        "month": null
+      },
+      "end": {
+        "year": 2013,
+        "month": null
+      },
+      "isCurrentRole": false,
+      "website": "https://www.readingtokids.org/"
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of the Arts",
+      "url": "https://www.uarts.edu/",
+      "area": "Multimedia",
+      "studyType": "Bachelor's of Fine Arts",
+      "startDate": "1998-09-01",
+      "endDate": "2001-05-01",
+      "score": "",
+      "courses": [],
+      "description": "",
+      "activities": "Resident Assistant (RA). Teacher Assistant (TA).  Member of student council and chair of student body.",
+      "start": {
+        "year": 1998,
+        "month": 9
+      },
+      "end": {
+        "year": 2001,
+        "month": 5
+      },
+      "website": "https://www.uarts.edu/",
+      "gpa": ""
+    }
+  ],
+  "awards": [
+    {
+      "title": "Mobile of the Day & FWA of the Day",
+      "date": "2015-01-01",
+      "awarder": "The FWA",
+      "summary": "Empire Run, Kwazy Cupcakes, Boxtrolls Slide N Sneak, Tiger Trails, UFC Social, SD Zoo Safari Park. \n<a>https://bit.ly/2VyuoCM</a>",
+      "fullDate": {
+        "year": 2015,
+        "month": null
+      }
+    },
+    {
+      "title": "Web site feature",
+      "date": "2009-05-01",
+      "awarder": "Comm Arts",
+      "summary": "Leatherheads theatrical web site. \n<a>https://bit.ly/2H6Uvhd</a>",
+      "fullDate": {
+        "year": 2009,
+        "month": 5
+      }
+    }
+  ],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "ES6",
+      "level": "Expert",
+      "keywords": [],
+      "rating": 5,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "React",
+      "level": "Advanced",
+      "keywords": [],
+      "rating": 4,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Next.js",
+      "level": "Advanced",
+      "keywords": [],
+      "rating": 4,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "HTML5",
+      "level": "Advanced",
+      "keywords": [],
+      "rating": 4,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "CSS/SCSS",
+      "level": "Advanced",
+      "keywords": [],
+      "rating": 4,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Node.js",
+      "level": "Intermediate",
+      "keywords": [],
+      "rating": 3,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "REST API",
+      "level": "Intermediate",
+      "keywords": [],
+      "rating": 3,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Express.js",
+      "level": "Intermediate",
+      "keywords": [],
+      "rating": 3,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Sketch",
+      "level": "Advanced",
+      "keywords": [],
+      "rating": 4,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Photoshop",
+      "level": "Expert",
+      "keywords": [],
+      "rating": 5,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "After Effects",
+      "level": "Advanced",
+      "keywords": [],
+      "rating": 4,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Unity",
+      "level": "Intermediate",
+      "keywords": [],
+      "rating": 3,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "C#",
+      "level": "Intermediate",
+      "keywords": [],
+      "rating": 3,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "JavaScript",
+      "level": "Expert",
+      "keywords": [],
+      "rating": 5,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "Premiere Pro",
+      "level": "Intermediate",
+      "keywords": [],
+      "rating": 3,
+      "yearsOfExperience": null
+    }
+  ],
+  "languages": [
+    {
+      "language": "French",
+      "fluency": "Casual"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Music: Guitar & Piano",
+      "keywords": [
+        "music"
+      ]
+    },
+    {
+      "name": "Fitness: Hicking, Cycling, Weights",
+      "keywords": []
+    },
+    {
+      "name": "Toy photography",
+      "keywords": [
+        "toy",
+        "photography",
+        "instagram"
+      ]
+    },
+    {
+      "name": "Gen A.I.",
+      "keywords": []
+    },
+    {
+      "name": "<a>https://www.instagram.com/cattlebane|instagram 85k</a>",
+      "keywords": [
+        "toy",
+        "photography",
+        "instagram"
+      ]
+    },
+    {
+      "name": "<a>https://www.tiktok.com/@cattlebane|TikTok 35k</a>",
+      "keywords": []
+    },
+    {
+      "name": "<a>https://www.youtube.com/@cattlebane|YouTube 5k</a>",
+      "keywords": []
+    }
+  ],
+  "references": [],
+  "projects": [
+    {
+      "name": "Hulu - Quiz - HTML5 ad",
+      "description": "1280x328",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "Hulu - Quiz - HTML5 ad",
+      "website": "",
+      "summary": "1280x328",
+      "primaryLanguage": "",
+      "languages": [
+        "CSS",
+        "ES6",
+        "HTML5",
+        "JavaScript"
+      ],
+      "libraries": [
+        "FF0000 Ad Tech",
+        "Google Dynamic Content",
+        "Greensock",
+        "Tweenlite",
+        "DC Studio"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "de9f18a7-58f9-4e29-b877-d8f5ebaa8de8": {
+          "id": "de9f18a7-58f9-4e29-b877-d8f5ebaa8de8",
+          "url": "https://youtu.be/QBdDob7edBk",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "QBdDob7edBk"
+        }
+      }
+    },
+    {
+      "name": "Hulu - MoodSlider - HTML5 ad",
+      "description": "1280x660",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "Hulu - MoodSlider - HTML5 ad",
+      "website": "",
+      "summary": "1280x660",
+      "primaryLanguage": "",
+      "languages": [
+        "HTML5",
+        "JavaScript",
+        "ES6",
+        "CSS"
+      ],
+      "libraries": [
+        "Greensock",
+        "Google Dynamic Content",
+        "DC Studio",
+        "Tweenlite",
+        "FF0000 Ad Tech"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "ffde3448-7f7b-4a1e-a03f-c82b8a24e28a": {
+          "id": "ffde3448-7f7b-4a1e-a03f-c82b8a24e28a",
+          "url": "https://youtu.be/ttxND3sw7mk",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "ttxND3sw7mk"
+        }
+      }
+    },
+    {
+      "name": "Quibi Growth - HTML5 ads",
+      "description": "300x250, 320x480",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "Quibi Growth - HTML5 ads",
+      "website": "",
+      "summary": "300x250, 320x480",
+      "primaryLanguage": "",
+      "languages": [
+        "HTML5",
+        "CSS",
+        "JavaScript"
+      ],
+      "libraries": [
+        "GSAP",
+        "FF0000 Ad Tech"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "3c658231-1da8-4983-9de4-641f850f31cf": {
+          "id": "3c658231-1da8-4983-9de4-641f850f31cf",
+          "url": "https://youtu.be/FIcGCRwVyOI",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "FIcGCRwVyOI"
+        },
+        "b40f6be7-52e9-46ed-90fe-94d9542eeeeb": {
+          "id": "b40f6be7-52e9-46ed-90fe-94d9542eeeeb",
+          "url": "https://youtu.be/RKFI2TH17Ao",
+          "rank": 1,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "RKFI2TH17Ao"
+        }
+      }
+    },
+    {
+      "name": "Hulu - Lifestyle - HTML5 ad - GDC - 2017",
+      "description": "300x250",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "Hulu - Lifestyle - HTML5 ad - GDC - 2017",
+      "website": "",
+      "summary": "300x250",
+      "primaryLanguage": "",
+      "languages": [
+        "JavaScript",
+        "HTML5",
+        "ES6"
+      ],
+      "libraries": [
+        "Tweenlite",
+        "DC Studio",
+        "FF0000 Ad Tech",
+        "Greensock",
+        "Google Dynamic Content"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "9467dcd9-b969-4aa1-8b70-bd98bee92970": {
+          "id": "9467dcd9-b969-4aa1-8b70-bd98bee92970",
+          "url": "https://youtu.be/P2j2YmxgaAE",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "P2j2YmxgaAE"
+        }
+      }
+    },
+    {
+      "name": "ESPN - College Football - PrePost - HTML5 ad",
+      "description": "300x250",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "ESPN - College Football - PrePost - HTML5 ad",
+      "website": "",
+      "summary": "300x250",
+      "primaryLanguage": "",
+      "languages": [
+        "JavaScript",
+        "HTML5",
+        "ES6"
+      ],
+      "libraries": [
+        "Tweenlite",
+        "Greensock",
+        "FF0000 Ad Tech"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "850cd3d7-6e37-453d-83ea-ed4480cdc4b1": {
+          "id": "850cd3d7-6e37-453d-83ea-ed4480cdc4b1",
+          "url": "https://youtu.be/vzxPwjAfqVs",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "vzxPwjAfqVs"
+        }
+      }
+    },
+    {
+      "name": "ESPN - WatchESPN - Transform - Flash ad",
+      "description": "300x250",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "ESPN - WatchESPN - Transform - Flash ad",
+      "website": "",
+      "summary": "300x250",
+      "primaryLanguage": "",
+      "languages": [
+        "ActionScript 3"
+      ],
+      "libraries": [
+        "Adobe Flash"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "db53e035-3d3b-4ae6-92f5-b3663c2ae389": {
+          "id": "db53e035-3d3b-4ae6-92f5-b3663c2ae389",
+          "url": "https://youtu.be/EfTtBc1PHLw",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "EfTtBc1PHLw"
+        }
+      }
+    },
+    {
+      "name": "Hulu - The Awesomes - Character Animation",
+      "description": "700x500",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "Hulu - The Awesomes - Character Animation",
+      "website": "",
+      "summary": "700x500",
+      "primaryLanguage": "",
+      "languages": [
+        "JavaScript"
+      ],
+      "libraries": [
+        "Adobe Photoshop",
+        "Adobe Fash"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "91e79f4d-a664-4eb2-bd4b-7ee2889c2e41": {
+          "id": "91e79f4d-a664-4eb2-bd4b-7ee2889c2e41",
+          "url": "https://youtu.be/MIHuH5NihE8",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": false,
+          "sourceId": "MIHuH5NihE8"
+        }
+      }
+    },
+    {
+      "name": "Netflix - Love Season 2 - HTML5 ad",
+      "description": "300x600, 300x250",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "Netflix - Love Season 2 - HTML5 ad",
+      "website": "",
+      "summary": "300x600, 300x250",
+      "primaryLanguage": "",
+      "languages": [
+        "JavaScript",
+        "CSS",
+        "HTML5",
+        "ES6"
+      ],
+      "libraries": [
+        "Tweenlite",
+        "Greensock",
+        "FF0000 Ad Tech"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "33dc49ff-cf4b-496a-8c27-95e79418b34d": {
+          "id": "33dc49ff-cf4b-496a-8c27-95e79418b34d",
+          "url": "https://youtu.be/Etrmri4T8Bc",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": false,
+          "sourceId": "Etrmri4T8Bc"
+        },
+        "83db2d3f-ec1f-43ba-95ba-0cedb0c164eb": {
+          "id": "83db2d3f-ec1f-43ba-95ba-0cedb0c164eb",
+          "url": "https://youtu.be/Etrmri4T8Bc",
+          "rank": 1,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "Etrmri4T8Bc"
+        },
+        "8485b667-d7dc-48d7-b787-832f92098c03": {
+          "id": "8485b667-d7dc-48d7-b787-832f92098c03",
+          "url": "https://youtu.be/VQZoTWaNbA0",
+          "rank": 1,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "VQZoTWaNbA0"
+        }
+      }
+    },
+    {
+      "name": "Empire Run",
+      "description": "1024x768",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "Empire Run",
+      "website": "",
+      "summary": "1024x768",
+      "primaryLanguage": "",
+      "languages": [
+        "ActionScript 3"
+      ],
+      "libraries": [
+        "Adobe AIR for mobile",
+        "Adobe Flash"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {
+        "410d3ffc-8506-4383-b89e-6ba773f429a2": {
+          "id": "410d3ffc-8506-4383-b89e-6ba773f429a2",
+          "rank": 4,
+          "isActive": true,
+          "resolutions": {
+            "micro": {
+              "url": "https://s3.us-west-1.amazonaws.com/project-images.gitconnectedcontent.com/0e99ee3e-1bba-4f0e-946f-b7b4be061b0f-micro",
+              "size": 525,
+              "width": 32,
+              "height": 24
+            },
+            "mobile": {
+              "url": "https://s3.us-west-1.amazonaws.com/project-images.gitconnectedcontent.com/0e99ee3e-1bba-4f0e-946f-b7b4be061b0f-mobile",
+              "size": 113140,
+              "width": 600,
+              "height": 450
+            },
+            "desktop": {
+              "url": "https://s3.us-west-1.amazonaws.com/project-images.gitconnectedcontent.com/0e99ee3e-1bba-4f0e-946f-b7b4be061b0f-desktop",
+              "size": 264600,
+              "width": 1024,
+              "height": 768
+            },
+            "thumbnail": {
+              "url": "https://s3.us-west-1.amazonaws.com/project-images.gitconnectedcontent.com/0e99ee3e-1bba-4f0e-946f-b7b4be061b0f-thumbnail",
+              "size": 21904,
+              "width": 224,
+              "height": 168
+            }
+          }
+        },
+        "65dccb7d-33e8-4e67-bd08-b16c8e183055": {
+          "id": "65dccb7d-33e8-4e67-bd08-b16c8e183055",
+          "rank": 1,
+          "isActive": true,
+          "resolutions": {
+            "micro": {
+              "url": "https://s3.us-west-1.amazonaws.com/project-images.gitconnectedcontent.com/b371cff0-2b1e-4994-85cc-e15e6bb068e8-micro",
+              "size": 525,
+              "width": 32,
+              "height": 24
+            },
+            "mobile": {
+              "url": "https://s3.us-west-1.amazonaws.com/project-images.gitconnectedcontent.com/b371cff0-2b1e-4994-85cc-e15e6bb068e8-mobile",
+              "size": 113157,
+              "width": 600,
+              "height": 450
+            },
+            "desktop": {
+              "url": "https://s3.us-west-1.amazonaws.com/project-images.gitconnectedcontent.com/b371cff0-2b1e-4994-85cc-e15e6bb068e8-desktop",
+              "size": 262638,
+              "width": 1024,
+              "height": 768
+            },
+            "thumbnail": {
+              "url": "https://s3.us-west-1.amazonaws.com/project-images.gitconnectedcontent.com/b371cff0-2b1e-4994-85cc-e15e6bb068e8-thumbnail",
+              "size": 21869,
+              "width": 224,
+              "height": 168
+            }
+          }
+        },
+        "c8e1eaf4-ac21-4847-8afa-e62ac7b181a2": {
+          "id": "c8e1eaf4-ac21-4847-8afa-e62ac7b181a2",
+          "rank": 2,
+          "isActive": true,
+          "resolutions": {
+            "micro": {
+              "url": "https://s3.us-west-1.amazonaws.com/project-images.gitconnectedcontent.com/48900c2c-6b21-4de8-8d0d-b8331369e8ec-micro",
+              "size": 532,
+              "width": 32,
+              "height": 24
+            },
+            "mobile": {
+              "url": "https://s3.us-west-1.amazonaws.com/project-images.gitconnectedcontent.com/48900c2c-6b21-4de8-8d0d-b8331369e8ec-mobile",
+              "size": 123245,
+              "width": 600,
+              "height": 450
+            },
+            "desktop": {
+              "url": "https://s3.us-west-1.amazonaws.com/project-images.gitconnectedcontent.com/48900c2c-6b21-4de8-8d0d-b8331369e8ec-desktop",
+              "size": 285062,
+              "width": 1024,
+              "height": 768
+            },
+            "thumbnail": {
+              "url": "https://s3.us-west-1.amazonaws.com/project-images.gitconnectedcontent.com/48900c2c-6b21-4de8-8d0d-b8331369e8ec-thumbnail",
+              "size": 24047,
+              "width": 224,
+              "height": 168
+            }
+          }
+        }
+      },
+      "videos": {
+      }
+    }
+  ],
+  "meta": {
+    "canonical": "https://gitconnected.com/api/v1/portfolio/cattlebane",
+    "version": "v1.0.0",
+    "lastModified": "2025-11-06T05:24:22.264Z",
+    "theme": "elegant"
+  }
+}

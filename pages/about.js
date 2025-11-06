@@ -5,6 +5,7 @@ import Page from "components/Page";
 import userContext from "../store/user-context";
 import Card from "components/Card";
 import BioCard from "components/BioCard";
+import siteData from "../data/site-data.json";
 
 import bioCardStyles from "@styles/components/bioCard.module.scss";
 import styles from "@styles/pages/about.module.scss";
@@ -152,6 +153,15 @@ export default function About() {
     } else {
       const getData = async () => {
         console.log("   » getData()");
+        // using local site-data.json instead of remote API
+        const data = siteData;
+
+        console.log("   » data:", data);
+        userCtx.setData(data);
+      };
+      getData();
+      /* const getData = async () => {
+        console.log("   » getData()");
         // const response = await fetch('/api/projects')
         const response = await fetch("https://gitconnected.com/v1/portfolio/cattlebane");
 
@@ -160,7 +170,7 @@ export default function About() {
         console.log("   » data:", data);
         userCtx.setData(data);
       };
-      getData();
+      getData(); */
     }
   }, [userCtx.data]);
 
