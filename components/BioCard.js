@@ -20,7 +20,8 @@ const BioCard = (props) => {
         </li>
         <li></li>
         <li>
-          <p>{summary || ""}</p>
+          {/* <p>{summary || ""}</p> */}
+          <p dangerouslySetInnerHTML={{ __html: summary }} />
         </li>
       </ul>
     </Card>
