@@ -408,6 +408,57 @@
   "references": [],
   "projects": [
     {
+      "name": "Apple Games - Landing Page",
+      "description": "A dynamic and visually refined landing page introducing the new Apple Games app—showcasing what it is, its key features, and why users should explore it. The site delivers an elegant, immersive experience featuring smooth scrolling animations, parallax effects, subtle content reveals, and sticky sections that enhance storytelling and engagement.<br /><br /><a class='btn-text' target='_blank' href='https://games.apple.com'>https://games.apple.com</a>",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "Apple Games - Landing Page",
+      "website": "",
+      "summary": "976x720",
+      "primaryLanguage": "",
+      "languages": [
+        "CSS",
+        "ES6",
+        "HTML5",
+        "JavaScript"
+      ],
+      "libraries": [
+        "SassKit",
+        "GSAP"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "de9f18a7-58f9-4e29-b877-d8f5ebaa8de8c": {
+          "id": "de9f18a7-58f9-4e29-b877-d8f5ebaa8de8c",
+          "url": "https://youtu.be/kwogxpxc3D4",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "kwogxpxc3D4"
+        }
+      }
+    },
+    {
       "name": "Apple Gift Card - Landing Page",
       "description": "A holiday-themed Apple Gift Card landing page designed to help shoppers find the perfect gift for friends or family. The experience guides users based on the recipient’s persona and includes a suggestion calculator that recommends an ideal gift card amount—showing what products or services the recipient could enjoy with it.<br /><br /><a class='btn-text' target='_blank' href='https://applegiftcard.apple.com'>https://applegiftcard.apple.com</a>",
       "highlights": [],
