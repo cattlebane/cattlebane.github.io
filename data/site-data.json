@@ -5,7 +5,7 @@
     "image": "https://avatars0.githubusercontent.com/u/669218?v=4",
     "email": "cattlebane@gmail.com",
     "url": "https://www.jacquesaltounian.com",
-    "summary": "I love breathing life into user experiences through intuitive interactive development and animation. Hailing from a background of digital/ad agencies, I specialize in a wide range of digital marketing disciplines. I’m constantly learning new tech and building tools to achieve my goals.",
+    "summary": "I love breathing life into user experiences through intuitive interactive development and animation. Hailing from a background of digital/ad agencies, I specialize in a wide range of digital marketing disciplines. I&apos;m constantly learning new tech and building tools to achieve my goals.",
     "location": {
       "city": "Los Angeles",
       "region": "CA"
@@ -69,11 +69,11 @@
       "url": "",
       "startDate": "2020-11-01",
       "endDate": "2022-05-01",
-      "summary": "Build web apps, tools, landing pages, and HTML5 ad campaigns.\n",
+      "summary": "Build web apps, tools, landing pages, and HTML ad campaigns.\n",
       "highlights": [
-        "Developed an HTML5 ad framework to build ads with React/Preact.",
+        "Developed an HTML ad framework to build ads with React/Preact.",
         "Campaign builder developer tool for efficiently building and previewing entire ad campaigns",
-        "Asset to HTML5 converter"
+        "Asset to HTML converter"
       ],
       "location": "Culver City, CA",
       "isCurrentRole": false,
@@ -285,7 +285,7 @@
       "yearsOfExperience": null
     },
     {
-      "name": "HTML5",
+      "name": "HTML",
       "level": "Advanced",
       "keywords": [],
       "rating": 4,
@@ -425,9 +425,8 @@
       "summary": "976x720",
       "primaryLanguage": "",
       "languages": [
-        "CSS",
-        "ES6",
-        "HTML5",
+        "SCSS",
+        "HTML",
         "JavaScript"
       ],
       "libraries": [
@@ -460,7 +459,7 @@
     },
     {
       "name": "Apple Gift Card - Landing Page",
-      "description": "A holiday-themed Apple Gift Card landing page designed to help shoppers find the perfect gift for friends or family. The experience guides users based on the recipient’s persona and includes a suggestion calculator that recommends an ideal gift card amount—showing what products or services the recipient could enjoy with it.<br /><br /><a class='btn-text' target='_blank' href='https://applegiftcard.apple.com'>https://applegiftcard.apple.com</a>",
+      "description": "A holiday-themed Apple Gift Card landing page designed to help shoppers find the perfect gift for friends or family. The experience guides users based on the recipient&apos;s persona and includes a suggestion calculator that recommends an ideal gift card amount—showing what products or services the recipient could enjoy with it.<br /><br /><a class='btn-text' target='_blank' href='https://applegiftcard.apple.com'>https://applegiftcard.apple.com</a>",
       "highlights": [],
       "keywords": [],
       "startDate": "",
@@ -476,9 +475,8 @@
       "summary": "976x720",
       "primaryLanguage": "",
       "languages": [
-        "CSS",
-        "ES6",
-        "HTML5",
+        "SCSS",
+        "HTML",
         "JavaScript"
       ],
       "libraries": [
@@ -527,9 +525,8 @@
       "summary": "852x720",
       "primaryLanguage": "",
       "languages": [
-        "CSS",
-        "ES6",
-        "HTML5",
+        "SCSS",
+        "HTML",
         "JavaScript"
       ],
       "libraries": [
@@ -578,9 +575,8 @@
       "summary": "994x720",
       "primaryLanguage": "",
       "languages": [
-        "CSS",
-        "ES6",
-        "HTML5",
+        "SCSS",
+        "HTML",
         "JavaScript"
       ],
       "libraries": [
@@ -612,8 +608,8 @@
       }
     },
     {
-      "name": "Hulu - Quiz - HTML5 ad",
-      "description": "1280x328",
+      "name": "Hulu - Quiz - HTML ad",
+      "description": "Developed an HTML-based interactive quiz ad that challenges users with the prompt: “If you know TV, you should get all these answers right.” The ad features a series of zoomed-in stills from various shows and movies, prompting users to identify the source by selecting from multiple-choice options, creating an engaging and immersive experience.",
       "highlights": [],
       "keywords": [],
       "startDate": "",
@@ -624,20 +620,19 @@
       ],
       "entity": "Personal",
       "type": "Application",
-      "displayName": "Hulu - Quiz - HTML5 ad",
+      "displayName": "Hulu - Quiz - HTML ad",
       "website": "",
       "summary": "1280x328",
       "primaryLanguage": "",
       "languages": [
         "CSS",
-        "ES6",
-        "HTML5",
+        "HTML",
         "JavaScript"
       ],
       "libraries": [
         "FF0000 Ad Tech",
         "Google Dynamic Content",
-        "Greensock",
+        "GSAP",
         "Tweenlite",
         "DC Studio"
       ],
@@ -666,8 +661,8 @@
       }
     },
     {
-      "name": "Hulu - MoodSlider - HTML5 ad",
-      "description": "1280x660",
+      "name": "Hulu - MoodSlider - HTML Microsite ad",
+      "description": "Developed an interactive microsite hosted within expandable ad placements, allowing users to select their mood via an intuitive slider. Based on their selection, the microsite delivers five curated content recommendations. Users can watch trailers directly within the microsite and click through to stream the selected content on Hulu, providing a personalized and engaging user experience.",
       "highlights": [],
       "keywords": [],
       "startDate": "",
@@ -678,18 +673,17 @@
       ],
       "entity": "Personal",
       "type": "Application",
-      "displayName": "Hulu - MoodSlider - HTML5 ad",
+      "displayName": "Hulu - MoodSlider - HTML Microsite ad",
       "website": "",
       "summary": "1280x660",
       "primaryLanguage": "",
       "languages": [
-        "HTML5",
+        "HTML",
         "JavaScript",
-        "ES6",
         "CSS"
       ],
       "libraries": [
-        "Greensock",
+        "GSAP",
         "Google Dynamic Content",
         "DC Studio",
         "Tweenlite",
@@ -720,217 +714,8 @@
       }
     },
     {
-      "name": "Quibi Growth - HTML5 ads",
-      "description": "300x250, 320x480",
-      "highlights": [],
-      "keywords": [],
-      "startDate": "",
-      "endDate": "",
-      "url": "",
-      "roles": [
-        "Developer"
-      ],
-      "entity": "Personal",
-      "type": "Application",
-      "displayName": "Quibi Growth - HTML5 ads",
-      "website": "",
-      "summary": "300x250, 320x480",
-      "primaryLanguage": "",
-      "languages": [
-        "HTML5",
-        "CSS",
-        "JavaScript"
-      ],
-      "libraries": [
-        "GSAP",
-        "FF0000 Ad Tech"
-      ],
-      "githubUrl": "",
-      "repositoryUrl": "",
-      "start": {
-        "year": null,
-        "month": null,
-        "day": null
-      },
-      "end": {
-        "year": null,
-        "month": null,
-        "day": null
-      },
-      "images": {},
-      "videos": {
-        "3c658231-1da8-4983-9de4-641f850f31cf": {
-          "id": "3c658231-1da8-4983-9de4-641f850f31cf",
-          "url": "https://youtu.be/FIcGCRwVyOI",
-          "rank": 0,
-          "source": "youtube",
-          "isActive": true,
-          "sourceId": "FIcGCRwVyOI"
-        },
-        "b40f6be7-52e9-46ed-90fe-94d9542eeeeb": {
-          "id": "b40f6be7-52e9-46ed-90fe-94d9542eeeeb",
-          "url": "https://youtu.be/RKFI2TH17Ao",
-          "rank": 1,
-          "source": "youtube",
-          "isActive": true,
-          "sourceId": "RKFI2TH17Ao"
-        }
-      }
-    },
-    {
-      "name": "Hulu - Lifestyle - HTML5 ad - GDC - 2017",
-      "description": "300x250",
-      "highlights": [],
-      "keywords": [],
-      "startDate": "",
-      "endDate": "",
-      "url": "",
-      "roles": [
-        "Developer"
-      ],
-      "entity": "Personal",
-      "type": "Application",
-      "displayName": "Hulu - Lifestyle - HTML5 ad - GDC - 2017",
-      "website": "",
-      "summary": "300x250",
-      "primaryLanguage": "",
-      "languages": [
-        "JavaScript",
-        "HTML5",
-        "ES6"
-      ],
-      "libraries": [
-        "Tweenlite",
-        "DC Studio",
-        "FF0000 Ad Tech",
-        "Greensock",
-        "Google Dynamic Content"
-      ],
-      "githubUrl": "",
-      "repositoryUrl": "",
-      "start": {
-        "year": null,
-        "month": null,
-        "day": null
-      },
-      "end": {
-        "year": null,
-        "month": null,
-        "day": null
-      },
-      "images": {},
-      "videos": {
-        "9467dcd9-b969-4aa1-8b70-bd98bee92970": {
-          "id": "9467dcd9-b969-4aa1-8b70-bd98bee92970",
-          "url": "https://youtu.be/P2j2YmxgaAE",
-          "rank": 0,
-          "source": "youtube",
-          "isActive": true,
-          "sourceId": "P2j2YmxgaAE"
-        }
-      }
-    },
-    {
-      "name": "ESPN - College Football - PrePost - HTML5 ad",
-      "description": "300x250",
-      "highlights": [],
-      "keywords": [],
-      "startDate": "",
-      "endDate": "",
-      "url": "",
-      "roles": [
-        "Developer"
-      ],
-      "entity": "Personal",
-      "type": "Application",
-      "displayName": "ESPN - College Football - PrePost - HTML5 ad",
-      "website": "",
-      "summary": "300x250",
-      "primaryLanguage": "",
-      "languages": [
-        "JavaScript",
-        "HTML5",
-        "ES6"
-      ],
-      "libraries": [
-        "Tweenlite",
-        "Greensock",
-        "FF0000 Ad Tech"
-      ],
-      "githubUrl": "",
-      "repositoryUrl": "",
-      "start": {
-        "year": null,
-        "month": null,
-        "day": null
-      },
-      "end": {
-        "year": null,
-        "month": null,
-        "day": null
-      },
-      "images": {},
-      "videos": {
-        "850cd3d7-6e37-453d-83ea-ed4480cdc4b1": {
-          "id": "850cd3d7-6e37-453d-83ea-ed4480cdc4b1",
-          "url": "https://youtu.be/vzxPwjAfqVs",
-          "rank": 0,
-          "source": "youtube",
-          "isActive": true,
-          "sourceId": "vzxPwjAfqVs"
-        }
-      }
-    },
-    {
-      "name": "ESPN - WatchESPN - Transform - Flash ad",
-      "description": "300x250",
-      "highlights": [],
-      "keywords": [],
-      "startDate": "",
-      "endDate": "",
-      "url": "",
-      "roles": [
-        "Developer"
-      ],
-      "entity": "Personal",
-      "type": "Application",
-      "displayName": "ESPN - WatchESPN - Transform - Flash ad",
-      "website": "",
-      "summary": "300x250",
-      "primaryLanguage": "",
-      "languages": [
-        "ActionScript 3"
-      ],
-      "libraries": [
-        "Adobe Flash"
-      ],
-      "githubUrl": "",
-      "repositoryUrl": "",
-      "start": {
-        "year": null,
-        "month": null,
-        "day": null
-      },
-      "end": {
-        "year": null,
-        "month": null,
-        "day": null
-      },
-      "images": {},
-      "videos": {
-        "db53e035-3d3b-4ae6-92f5-b3663c2ae389": {
-          "id": "db53e035-3d3b-4ae6-92f5-b3663c2ae389",
-          "url": "https://youtu.be/EfTtBc1PHLw",
-          "rank": 0,
-          "source": "youtube",
-          "isActive": true,
-          "sourceId": "EfTtBc1PHLw"
-        }
-      }
-    },
-    {
       "name": "Hulu - The Awesomes - Character Animation",
-      "description": "700x500",
+      "description": "Developed looping character animations for all main characters from Hulu&apos;s animated series The Awesomes. These animations capture each character&apos;s unique personality and were featured prominently on the show&apos;s official website homepage to enhance audience engagement and brand storytelling.",
       "highlights": [],
       "keywords": [],
       "startDate": "",
@@ -977,8 +762,8 @@
       }
     },
     {
-      "name": "Netflix - Love Season 2 - HTML5 ad",
-      "description": "300x600, 300x250",
+      "name": "Hulu - Lifestyle - HTML ad - GDC - 2017",
+      "description": "Designed elegant UI and transition animations that capture and maintain user attention, reflecting the sophistication and lifestyle aesthetic of the Hulu brand.",
       "highlights": [],
       "keywords": [],
       "startDate": "",
@@ -989,19 +774,264 @@
       ],
       "entity": "Personal",
       "type": "Application",
-      "displayName": "Netflix - Love Season 2 - HTML5 ad",
+      "displayName": "Hulu - Lifestyle - HTML ad - GDC - 2017",
+      "website": "",
+      "summary": "300x250",
+      "primaryLanguage": "",
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "libraries": [
+        "Tweenlite",
+        "DC Studio",
+        "FF0000 Ad Tech",
+        "GSAP",
+        "Google Dynamic Content"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "9467dcd9-b969-4aa1-8b70-bd98bee92970": {
+          "id": "9467dcd9-b969-4aa1-8b70-bd98bee92970",
+          "url": "https://youtu.be/P2j2YmxgaAE",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "P2j2YmxgaAE"
+        }
+      }
+    },
+    {
+      "name": "ESPN - College Football - PrePost - HTML ad",
+      "description": "Developed an HTML ad campaign for ESPN&apos;s College Football pre- and post-season, featuring dynamic animations and integrated team imagery to engage users and build excitement for the season.",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "ESPN - College Football - PrePost - HTML ad",
+      "website": "",
+      "summary": "300x250",
+      "primaryLanguage": "",
+      "languages": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "libraries": [
+        "Tweenlite",
+        "GSAP",
+        "FF0000 Ad Tech"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "850cd3d7-6e37-453d-83ea-ed4480cdc4b1": {
+          "id": "850cd3d7-6e37-453d-83ea-ed4480cdc4b1",
+          "url": "https://youtu.be/vzxPwjAfqVs",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "vzxPwjAfqVs"
+        }
+      }
+    },
+    {
+      "name": "ESPN - WatchESPN - Transform - Flash ad",
+      "description": "Developed an HTML ad campaign demonstrating how Watch ESPN can be streamed across all devices, including desktops, laptops, tablets, and smartphones. Featured elegant device transition animations and highlighted an upcoming live game on the end frame using a dynamic API to deliver real-time content.",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "ESPN - WatchESPN - Transform - Flash ad",
+      "website": "",
+      "summary": "300x250",
+      "primaryLanguage": "",
+      "languages": [
+        "ActionScript 3"
+      ],
+      "libraries": [
+        "Adobe Flash"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "db53e035-3d3b-4ae6-92f5-b3663c2ae389": {
+          "id": "db53e035-3d3b-4ae6-92f5-b3663c2ae389",
+          "url": "https://youtu.be/EfTtBc1PHLw",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "EfTtBc1PHLw"
+        }
+      }
+    },
+    {
+      "name": "Leatherheads - Theatrical Website",
+      "description": "<h3>Overview from the Commarts article:</h3>Set in the 1920s, Leatherheads is part light-hearted look at the early days of professional football in America and part romantic comedy. This destination site for the film is a character showcase and a comprehensive and engaging home for the film's marketing materials. Loaded with the same rich atmospheres, intriguing characters and beautiful compositions as the film, it's a successful online translation of a period film complete with 50 plus images, 9 videos and a vintage newsreel report on how the game of today compares to the early days.<br /><br /><ul class='bulleted-list'><li>From concept to launch, the site took five months to develop.</li><li>Content is split into two sections: About The Film (all marketing materials) and Meet The Players (a showcase for the key roles).</li><li>The site was the centerpiece of the film's marketing campaign which also included broadcast advertising, in-theater materials, print, outdoor and radio.</li></ul><br /><br /><a class='btn-text' target='_blank' href='https://bit.ly/2H6Uvhd'>https://bit.ly/2H6Uvhd</a>",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "Leatherheads - Theatrical Website",
+      "website": "",
+      "summary": "640x574",
+      "primaryLanguage": "",
+      "languages": [
+        "Flash",
+        "AS3",
+        "JavaScript"
+      ],
+      "libraries": [
+        "GSAP",
+        "Tweenlite"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {
+        "410d3ffc-8506-4383-b89e-6ba773f429a2a": {
+          "id": "410d3ffc-8506-4383-b89e-6ba773f429a2a",
+          "rank": 4,
+          "isActive": true,
+          "resolutions": {
+            "desktop": {
+              "url": "/images/leatherheads/leatherheads-01-home.jpg",
+              "size": 264600,
+              "width": 1160,
+              "height": 1040
+            }
+          }
+        },
+        "410d3ffc-8506-4383-b89e-6ba773f429a2c": {
+          "id": "410d3ffc-8506-4383-b89e-6ba773f429a2c",
+          "rank": 4,
+          "isActive": true,
+          "resolutions": {
+            "desktop": {
+              "url": "/images/leatherheads/leatherheads-03-video.jpg",
+              "size": 264600,
+              "width": 1160,
+              "height": 1040
+            }
+          }
+        },
+        "410d3ffc-8506-4383-b89e-6ba773f429a2d": {
+          "id": "410d3ffc-8506-4383-b89e-6ba773f429a2d",
+          "rank": 4,
+          "isActive": true,
+          "resolutions": {
+            "desktop": {
+              "url": "/images/leatherheads/leatherheads-gallery-01.jpg",
+              "size": 264600,
+              "width": 1160,
+              "height": 1040
+            }
+          }
+        },
+        "410d3ffc-8506-4383-b89e-6ba773f429a2e": {
+          "id": "410d3ffc-8506-4383-b89e-6ba773f429a2e",
+          "rank": 4,
+          "isActive": true,
+          "resolutions": {
+            "desktop": {
+              "url": "/images/leatherheads/leatherheads-card-john.jpg",
+              "size": 264600,
+              "width": 1160,
+              "height": 1040
+            }
+          }
+        }
+      },
+      "videos": {
+      }
+    },
+    {
+      "name": "Netflix - Love Season 2 - HTML ad",
+      "description": "Developed an interactive HTML ad campaign for Love Season 2 on Netflix, featuring sophisticated blend mode and masking reveal animations implemented through the HTML canvas element. These dynamic visual effects brought depth and motion to the creative, adding a sense of vitality and refinement to the campaign.",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "Netflix - Love Season 2 - HTML ad",
       "website": "",
       "summary": "300x600, 300x250",
       "primaryLanguage": "",
       "languages": [
         "JavaScript",
         "CSS",
-        "HTML5",
-        "ES6"
+        "HTML"
       ],
       "libraries": [
+        "GSAP",
         "Tweenlite",
-        "Greensock",
         "FF0000 Ad Tech"
       ],
       "githubUrl": "",
@@ -1045,8 +1075,66 @@
       }
     },
     {
+      "name": "Quibi Growth - HTML ads",
+      "description": "Developed an engaging HTML ad campaign for Quibi featuring dynamic masking animations that deliver an energetic, visually compelling experience. The interactive design extends seamlessly to user rollovers, enhancing engagement and reinforcing the campaign&apos;s sense of motion and excitement.",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "Quibi Growth - HTML ads",
+      "website": "",
+      "summary": "300x250, 320x480",
+      "primaryLanguage": "",
+      "languages": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "libraries": [
+        "GSAP",
+        "FF0000 Ad Tech"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "3c658231-1da8-4983-9de4-641f850f31cf": {
+          "id": "3c658231-1da8-4983-9de4-641f850f31cf",
+          "url": "https://youtu.be/FIcGCRwVyOI",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "FIcGCRwVyOI"
+        },
+        "b40f6be7-52e9-46ed-90fe-94d9542eeeeb": {
+          "id": "b40f6be7-52e9-46ed-90fe-94d9542eeeeb",
+          "url": "https://youtu.be/RKFI2TH17Ao",
+          "rank": 1,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "RKFI2TH17Ao"
+        }
+      }
+    },
+    {
       "name": "Empire Run",
-      "description": "1024x768",
+      "description": "Served as the Lead UI and Character Animator for A&E&apos;s Empire Run mobile game, overseeing the creation of engaging animations that enhanced gameplay and user experience.",
       "highlights": [],
       "keywords": [],
       "startDate": "",
