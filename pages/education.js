@@ -34,6 +34,8 @@ export default function Education() {
               <h4>
                 {month[edu.start.month - 1]} {edu.start.year} - {month[edu.end.month - 1]} {edu.end.year}
               </h4>
+              <p>{edu.description}</p>
+              <br />
               <p>{edu.activities}</p>
             </Card>
           </li>
