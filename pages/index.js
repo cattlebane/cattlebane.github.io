@@ -31,9 +31,5 @@ export default function Home() {
   // return <Page title="">{userCtx.data ? <BioCard basics={userCtx.data.basics} /> : ""}</Page>;
   // return <Page title="">{userCtx.data ? <About basics={userCtx.data.basics} /> : ""}</Page>;
   // return <Page title="">{userCtx.data ? <About /> : ""}</Page>;
-  return (
-    <Page title="">
-      <About />
-    </Page>
-  );
+  return <About />;
 }
