@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
-import userContext from "../store/user-context";
+// import userContext from "../store/user-context";
 // import styles from "@styles/pages/Home.module.scss";
-import Page from "components/Page";
+// import Page from "components/Page";
 // import Card from "components/Card";
-import BioCard from "components/BioCard";
-import siteData from "../data/site-data.json";
+// import BioCard from "components/BioCard";
+// import siteData from "../data/site-data.json";
 import About from "./about";
 
 export default function Home() {
