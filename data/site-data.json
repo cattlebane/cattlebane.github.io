@@ -41,12 +41,14 @@
       "startDate": "2022-08-01",
       "summary": "Build web apps, tools, landing pages, and HTML ad campaigns",
       "highlights": [
-        "<a class='btn-text' target='_blank' href=\"https://games.apple.com\">https://games.apple.com</a>",
-        "<a class='btn-text' target='_blank' href=\"https://learn.applecash.apple/family\">https://learn.applecash.apple/family</a>",
-        "<a class='btn-text' target='_blank' href=\"https://learn.applecash.apple/benefits\">https://learn.applecash.apple/benefits</a>",
-        "<a class='btn-text' target='_blank' href=\"https://applegiftcard.apple.com\">https://applegiftcard.apple.com</a>",
-        "Apple Pay Websites for commercials.",
-        "Apple Pay/Card/Giftcard Landing Pages"
+        "Build functional Websites for commercials.",
+        "Apple Landing Pages",
+        "Participate in Gen AI exploration and prototyping for marketing use cases.",
+        "Developed internal tools to help streamline marketing production workflows.",
+        "Manage our team's internal hosting and production pipelines.",
+        "Create demos and tutorials to help onboard new team members.",
+        "Collaborate with designers, marketers, and engineering teams to deliver high-quality digital experiences."
+
       ],
       "location": "Culver City",
       "isCurrentRole": true,
@@ -215,8 +217,8 @@
       "endDate": "2001-05-01",
       "score": "",
       "courses": [],
-      "description": "",
-      "activities": "Resident Assistant (RA). Teacher Assistant (TA).  Member of student council and chair of student body.",
+      "description": "Specialized in Multimedia Arts with a focus on interactive media, animation, video production, and graphic design. Gained hands-on experience with industry-standard software and technologies, preparing for a career in digital media and interactive development.\n\nRelevant coursework included:\n- Interactive Media Design\n- Animation Techniques\n- Video Production and Editing\n- Graphic Design Principles\n- Web Design and Development\n- Interactive Narrative\n- UX/UI Design\n\nDeveloped a strong foundation in both the technical and creative aspects of multimedia arts, culminating in a senior project that showcased my skills in creating engaging interactive experiences.",
+      "activities": "Extra curricular activities & responsibilities:\n- Resident Assistant (RA)\n- Teacher Assistant (TA)\n- Member of student council\n- Chair of student body",
       "start": {
         "year": 1998,
         "month": 9
@@ -255,7 +257,7 @@
   "publications": [],
   "skills": [
     {
-      "name": "ES6",
+      "name": "JavaScript",
       "level": "Expert",
       "keywords": [],
       "rating": 5,
@@ -270,6 +272,13 @@
     },
     {
       "name": "Next.js",
+      "level": "Advanced",
+      "keywords": [],
+      "rating": 4,
+      "yearsOfExperience": null
+    },
+    {
+      "name": "JSX",
       "level": "Advanced",
       "keywords": [],
       "rating": 4,
@@ -325,31 +334,17 @@
       "yearsOfExperience": null
     },
     {
+      "name": "Illustrator",
+      "level": "Expert",
+      "keywords": [],
+      "rating": 5,
+      "yearsOfExperience": null
+    },
+    {
       "name": "After Effects",
       "level": "Advanced",
       "keywords": [],
       "rating": 4,
-      "yearsOfExperience": null
-    },
-    {
-      "name": "Unity",
-      "level": "Intermediate",
-      "keywords": [],
-      "rating": 3,
-      "yearsOfExperience": null
-    },
-    {
-      "name": "C#",
-      "level": "Intermediate",
-      "keywords": [],
-      "rating": 3,
-      "yearsOfExperience": null
-    },
-    {
-      "name": "JavaScript",
-      "level": "Expert",
-      "keywords": [],
-      "rating": 5,
       "yearsOfExperience": null
     },
     {
@@ -412,6 +407,159 @@
   ],
   "references": [],
   "projects": [
+    {
+      "name": "Apple Gift Card - Landing Page",
+      "description": "Landing page for Apple Gift Card for the Holidays to help people who are looking to gift a friend or family member a gift card based on the persona they are shopping for. It includes a suggestion calculator to help the buyer choose the amount they'd like to purchase for based on what they would get out of it.<br /><br /><a class='btn-text' target='_blank' href='https://applegiftcard.apple.com'>https://applegiftcard.apple.com</a>",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "Apple Gift Card - Landing Page",
+      "website": "",
+      "summary": "976x720",
+      "primaryLanguage": "",
+      "languages": [
+        "CSS",
+        "ES6",
+        "HTML5",
+        "JavaScript"
+      ],
+      "libraries": [
+        "SassKit",
+        "GSAP"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "de9f18a7-58f9-4e29-b877-d8f5ebaa8de8a": {
+          "id": "de9f18a7-58f9-4e29-b877-d8f5ebaa8de8a",
+          "url": "https://youtu.be/rMIhnfcIrM4",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "rMIhnfcIrM4"
+        }
+      }
+    },
+    {
+      "name": "Apple Card Boost Offers - Landing Page",
+      "description": "Landing Page for Apple Card to boost the special offers that come with using the Apple Card. A simple build showing off elegant scroll based animations using GSAP and ScrollTrigger to highlight the various offers available to Apple Card users.",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "Apple Card Boost Offers - Landing Page",
+      "website": "",
+      "summary": "852x720",
+      "primaryLanguage": "",
+      "languages": [
+        "CSS",
+        "ES6",
+        "HTML5",
+        "JavaScript"
+      ],
+      "libraries": [
+        "SassKit",
+        "GSAP"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "de9f18a7-58f9-4e29-b877-d8f5ebaa8de8b": {
+          "id": "de9f18a7-58f9-4e29-b877-d8f5ebaa8de8b",
+          "url": "https://youtu.be/B43lQKFY1Hw",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "B43lQKFY1Hw"
+        }
+      }
+    },
+    {
+      "name": "Apple Pay - Benefits over the competition",
+      "description": "A Landing Page showing the benefits of Apple Pay over competitor services like Zelle and Venmo. A simple build showing off a few elegant video solutions for backgrounds and screens on phones using JavaScript observers to optimize performance by only playing videos that are currently within the viewport.<br /><br /><a class='btn-text' target='_blank' href='https://learn.applecash.apple/benefits'>https://learn.applecash.apple/benefits</a>",
+      "highlights": [],
+      "keywords": [],
+      "startDate": "",
+      "endDate": "",
+      "url": "",
+      "roles": [
+        "Developer"
+      ],
+      "entity": "Personal",
+      "type": "Application",
+      "displayName": "Apple Card Boost Offers - Landing Page",
+      "website": "",
+      "summary": "994x720",
+      "primaryLanguage": "",
+      "languages": [
+        "CSS",
+        "ES6",
+        "HTML5",
+        "JavaScript"
+      ],
+      "libraries": [
+        "SassKit",
+        "GSAP"
+      ],
+      "githubUrl": "",
+      "repositoryUrl": "",
+      "start": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "end": {
+        "year": null,
+        "month": null,
+        "day": null
+      },
+      "images": {},
+      "videos": {
+        "de9f18a7-58f9-4e29-b877-d8f5ebaa8de8b": {
+          "id": "de9f18a7-58f9-4e29-b877-d8f5ebaa8de8b",
+          "url": "https://youtu.be/9qQzFLSsDGY",
+          "rank": 0,
+          "source": "youtube",
+          "isActive": true,
+          "sourceId": "9qQzFLSsDGY"
+        }
+      }
+    },
     {
       "name": "Hulu - Quiz - HTML5 ad",
       "description": "1280x328",

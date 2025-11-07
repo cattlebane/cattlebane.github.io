@@ -80,7 +80,8 @@ export default function Projects() {
                     })}
                   </ul>
                 </li>
-                <li className={styles.content}>{project.description}</li>
+                {/* <li className={styles.content}>{project.description}</li> */}
+                <li className={styles.content} dangerouslySetInnerHTML={{ __html: project.description }} />
                 <li className={styles.content}>
                   <h4>Tech Stack</h4>
                   <ul>{stack}</ul>
